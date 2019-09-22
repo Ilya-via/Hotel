@@ -1,0 +1,3975 @@
+$color-first: rgb(80, 106, 133);
+$color-second-font: rgb(255, 255, 255);
+$footer-color: #a3b1bf;
+$carousel-item_content-p-color: rgba(255, 255, 255, 0.5);
+$cursor-properties: pointer;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+@mixin font-family {
+    font-family: "SourceSansProRegular";
+}
+
+@mixin dropdown-invisible {
+    .dropdown {
+        display: none;
+    }
+}
+
+@mixin background-repeat-once {
+    background-repeat: no-repeat;
+}
+
+@mixin background-repeat-duplicate {
+    background-repeat: repeat;
+}
+
+@mixin global-font {
+    @font-face {
+        font-family: font-family;
+        src: url("../fonts/SourceSansProRegular.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;
+    }
+}
+
+@mixin header-font-all-p {
+    header p {
+        font-family: font-family;
+        font-size: 12px;
+        color: $color-first;
+    }
+}
+
+@mixin navbar-header-properties {
+    .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@mixin navbar-header_contact_mail-properties {
+    background-image: url('../img/header/mail_icon.png');
+    background-position: left center;
+    @include background-repeat-once;
+    width: 95px;
+    text-align: right;
+    padding: 0 25px 0 5px;
+}
+
+@mixin navbar-header_contact_number-properties {
+    background-image: url('../img/header/mobile_icon.png');
+    background-position: left center;
+    @include background-repeat-once;
+    width: 111px;
+    text-align: right;
+    padding: 0 0 0 0px;
+}
+
+@mixin navbar_container-properties {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin navbar-header_contact-properties {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+@mixin button-hover-properties {
+    button:hover {
+        background: rgba(255, 166, 0, 0.8);
+        border-radius: 2%;
+    }
+}
+
+// Вставить медиа запрос к конкретному блоку
+// .block {
+//     background: #9edc15;
+//     @media(max-width: 767px) {
+//       font-size: 22px;
+//     }
+//   } 
+
+@media (min-width: 1200px) {
+
+    @include dropdown-invisible;
+
+    .navbar-header,
+    .navbar_container,
+    .carousel_container,
+    .who-we-are_article_container,
+    .check-out-our-latest-works_container,
+    .get-in-touch,
+    .footer_container,
+    .footer_footer-ending {
+        position: relative;
+        margin: 0 auto;
+        width: 1170px;
+        padding: 0 15px;
+    }
+
+
+    header {
+        background-image: url('../img/header/background_contacts.png');
+        @include background-repeat-duplicate;
+    }
+
+    .navbar {
+        background-image: url('../img/nav/background_nav.png');
+        @include background-repeat-duplicate;
+    }
+
+    .carousel {
+        background: url("../img/coruosel/item_designers.png");
+        @include background-repeat-duplicate;
+    }
+
+    .check-out-our-latest-works {
+        background-image: url('../img/check-out-our-latest-works/background_check-out-our-latest-works.png');
+        @include background-repeat-duplicate;
+    }
+
+    .footer_footer-ending_container {
+        background-image: url('../img/footer/footer ending/background_footer-ending.png');
+        @include background-repeat-duplicate;
+    }
+
+    @include global-font;
+    @include header-font-all-p;
+    @include navbar-header-properties;
+
+
+    .navbar-header_contact_mail {
+        @include navbar-header_contact_mail-properties;
+    }
+
+    .navbar-header_contact_number {
+        @include navbar-header_contact_number-properties;
+    }
+
+    .navbar-header_social {
+        right: 22px;
+        width: 159px;
+    }
+
+    .navbar-header_contact {
+        @include navbar-header_contact-properties;
+        margin: 14px 0;
+    }
+
+    .navbar-header_social {
+        display: flex;
+        align-items: center;
+        margin: 0 10px 0 0;
+    }
+
+    .navbar-header_social ol {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-header_social ol li {
+        list-style-type: none;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+1) {
+        width: 28px;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+2) {
+        width: 30px;
+    }
+
+    .navbar-header_social ol li:nth-child(3) {
+        width: 31px;
+    }
+
+    .navbar-header_social ol li:last-child {
+        width: 12px;
+    }
+
+
+
+    .navbar_container {
+        @include navbar_container-properties;
+    }
+
+    .nav {
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 0 0 88px;
+
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+            text-transform: uppercase;
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    .nav ul li>span {
+        font-family: font-family;
+        font-size: 15px;
+        font-weight: bold;
+        color: $color-first;
+        cursor: $cursor-properties;
+    }
+
+    .navbar_logo {
+        margin: 36px 0;
+    }
+
+    .nav_home {
+        padding: 0 40px 0 0;
+    }
+
+    .nav_portfolio,
+    .nav_pages,
+    .nav_features,
+    .nav_mega-menu {
+        padding: 0 42px 0 0;
+    }
+
+    .nav_blog {
+        padding: 0 44px 0 0;
+    }
+
+
+
+    .carousel_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-item_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow-prev,
+    .arrow-next {
+        cursor: $cursor-properties;
+    }
+
+    .carousel-item_heading p {
+        font-family: font-family;
+        font-size: 58px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    .carousel-item_heading {
+        margin: 300px 0 40px 0;
+    }
+
+    .carousel-item_content p {
+        font-family: font-family;
+        font-size: 20px;
+        color: $carousel-item_content-p-color;
+        text-align: center;
+    }
+
+    .carousel-item_button {
+        margin: 68px 0 0 0;
+    }
+
+    .carousel-item_button button {
+        background: url("../img/coruosel/icon_btn_made_for_designers.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 295px;
+        height: 65px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    button p {
+        font-family: font-family;
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    @include button-hover-properties;
+
+    .carousel-item_paginator {
+        width: 145px;
+        height: 45px;
+        background: url("../img/coruosel/icon_pagination_background.png");
+        @include background-repeat-once;
+        margin: 0 0 -23px 0;
+        margin-top: 260px;
+
+
+        ul {
+            text-align: center;
+            padding-top: 17px;
+
+
+            li {
+                left: 0;
+                display: inline-block;
+                height: 45px;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .carousel-item_paginator ul li:last-child {
+        width: 15px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:first-child {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_green.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(2) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(3) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(4) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+
+
+    .who-we-are_article h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container h2 {
+        font-family: font-family;
+        font-size: 26px;
+        color: $color-first;
+        margin: 0 0 35px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container p {
+        font-family: font-family;
+        font-size: 16px;
+        color: $color-first;
+    }
+
+    .who-we-are_passion-creativity-quality_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 90px 0 130px 0;
+    }
+
+    .who-we-are_passions,
+    .who-we-are_creativity,
+    .who-we-are_quality {
+        padding-left: 100px;
+        @include background-repeat-once;
+    }
+
+    .who-we-are_passions {
+        background-image: url('../img/who-we-are/icon-heart-empty-1.png');
+    }
+
+    .who-we-are_creativity {
+        background-image: url('../img/who-we-are/icon-lamp.png');
+    }
+
+    .who-we-are_quality {
+        background-image: url('../img/who-we-are/icon-star-empty-1.png');
+        padding-right: 15px;
+    }
+
+    .who-we-are_article p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .who-we-are_article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 140px 0 0;
+    }
+
+
+
+    .big_article {
+        padding: 140px 0 83px 0;
+        text-align: center;
+    }
+
+    .big_font-banner {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .big_font-content {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .check-out-our-latest-works-box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 150px 0 130px;
+    }
+
+    .check-out-our-latest-works_box_brand_content h3 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-first;
+        padding: 32px 0 10px 0;
+    }
+
+    .check-out-our-latest-works_box_brand_content p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $color-first;
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        width: inherit;
+        @include background-repeat-once;
+    }
+
+    .check-out-our-latest-works_box_brand_content {
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        text-align: center;
+        @include background-repeat-once;
+        height: 111px;
+    }
+
+    .brand_brand_content_container {
+        flex-basis: 570px;
+    }
+
+
+
+    .get-in-touch {
+        text-align: center;
+        padding-bottom: 130px;
+    }
+
+    .get-in-touch_big_article {
+        padding: 130px 0 40px 0;
+    }
+
+    .get-in-touch_content h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .get-in-touch_content p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .get-in-touch_button button {
+        background: url("../img/get-in-touch/get-in-touch_button.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: $cursor-properties;
+        margin-top: 46px;
+    }
+
+    @include button-hover-properties;
+
+
+
+    footer {
+        background: url("../img/footer/footer_background.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_who-we-are p:nth-child(2) {
+        font-family: font-family;
+        font-size: 14px;
+        font-weight: bold;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are,
+    .footer_get-in-touch {
+        flex-basis: 270px;
+    }
+
+    .footer_logo {
+        margin-bottom: 22px;
+        cursor: $cursor-properties;
+        width: 130px;
+    }
+
+    .footer_who-we-are :nth-child(3),
+    .footer_get-in-touch p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are h5 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        font-weight: bold;
+        margin-top: 20px;
+        background: url("../img/footer/who-we-are/icon-right.png");
+        @include background-repeat-once;
+        background-position: right center;
+        width: 105px;
+        cursor: $cursor-properties;
+    }
+
+    .footer_container h4 {
+        font-family: font-family;
+        font-size: 16px;
+        font-weight: bold;
+        color: $color-second-font;
+        margin: 70px 0 25px;
+        text-transform: uppercase;
+    }
+
+    .footer_latest-works {
+        flex-basis: 570px;
+        margin-bottom: 70px;
+    }
+
+    .footer_get-in-touch ol {
+        list-style-type: none;
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        margin-top: 20px;
+    }
+
+    .footer_get-in-touch ol li {
+        padding: 0 0 0 20px;
+
+    }
+
+    .footer_get-in-touch ol li>span {
+        cursor: $cursor-properties;
+    }
+
+    .footer_get-in-touch ol li:first-child {
+        background: url("../img/footer/get-in-touch/icon-location.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(2) {
+        background: url("../img/footer/get-in-touch/icon-mobile.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(3) {
+        background: url("../img/footer/get-in-touch/icon-mail.png");
+        @include background-repeat-once;
+        background-position: left 4px;
+    }
+
+    .footer_get-in-touch {
+        padding-left: 15px;
+    }
+
+    .footer_latest-works_image-container {
+        padding-right: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer_latest-works_image-container>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    .footer_latest-works_image-container>div>div {
+        margin-right: 5px;
+    }
+
+    .footer_container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .footer_footer-ending {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_footer-ending h1 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        padding: 35px 0;
+    }
+
+    .footer_footer-ending h1>span {
+        cursor: $cursor-properties;
+    }
+
+    .btn-scrollUp {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+    }
+
+}
+
+
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    @include dropdown-invisible;
+
+    header {
+        background-image: url('../img/header/background_contacts.png');
+        @include background-repeat-duplicate;
+    }
+
+    .navbar {
+        background-image: url('../img/nav/background_nav.png');
+        @include background-repeat-duplicate;
+    }
+
+    .carousel {
+        background: url("../img/coruosel/item_designers.png");
+        @include background-repeat-duplicate;
+    }
+
+    .check-out-our-latest-works {
+        background-image: url('../img/check-out-our-latest-works/background_check-out-our-latest-works.png');
+        @include background-repeat-duplicate;
+    }
+
+    .footer_footer-ending_container {
+        background-image: url('../img/footer/footer ending/background_footer-ending.png');
+        @include background-repeat-duplicate;
+    }
+
+    @include global-font;
+
+    @include header-font-all-p;
+
+    @include navbar-header-properties;
+
+
+    .navbar-header_contact_mail {
+        @include navbar-header_contact_mail-properties;
+        margin: 0 0 0 10px;
+    }
+
+    .navbar-header_contact_number {
+        @include navbar-header_contact_number-properties;
+    }
+
+    .navbar-header_social {
+        right: 22px;
+        width: 159px;
+    }
+
+    .navbar-header_contact {
+        @include navbar-header_contact-properties;
+        margin: 14px 0;
+    }
+
+    .navbar-header_social {
+        display: flex;
+        align-items: center;
+        margin: 0 10px 0 0;
+    }
+
+    .navbar-header_social ol {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-header_social ol li {
+        list-style-type: none;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+1) {
+        width: 28px;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+2) {
+        width: 30px;
+    }
+
+    .navbar-header_social ol li:nth-child(3) {
+        width: 31px;
+    }
+
+    .navbar-header_social ol li:last-child {
+        width: 12px;
+    }
+
+
+
+    .navbar_container {
+        @include navbar_container-properties;
+    }
+
+    .nav {
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 0 0 88px;
+
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+            text-transform: uppercase;
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    .nav ul li>span {
+        font-family: font-family;
+        font-size: 15px;
+        font-weight: bold;
+        color: $color-first;
+        cursor: $cursor-properties;
+    }
+
+    .navbar_logo {
+        margin: 36px 0 36px 10px;
+    }
+
+    .nav_home {
+        padding: 0 40px 0 0;
+    }
+
+    .nav_portfolio,
+    .nav_pages,
+    .nav_features,
+    .nav_mega-menu {
+        padding: 0 42px 0 0;
+    }
+
+    .nav_blog {
+        padding: 0 44px 0 0;
+    }
+
+
+
+    .carousel_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-item_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow-prev,
+    .arrow-next {
+        cursor: $cursor-properties;
+    }
+
+    .carousel-item_heading p {
+        font-family: font-family;
+        font-size: 58px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    .carousel-item_heading {
+        margin: 200px 0 40px 0;
+    }
+
+    .carousel-item_content p {
+        font-family: font-family;
+        font-size: 20px;
+        color: $carousel-item_content-p-color;
+        text-align: center;
+    }
+
+    .carousel-item_button {
+        margin: 68px 0 0 0;
+    }
+
+    .carousel-item_button button {
+        background: url("../img/coruosel/icon_btn_made_for_designers.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 295px;
+        height: 65px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    button p {
+        font-family: font-family;
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    @include button-hover-properties;
+
+    .carousel-item_paginator {
+        width: 145px;
+        height: 45px;
+        background: url("../img/coruosel/icon_pagination_background.png");
+        @include background-repeat-once;
+        margin: 0 0 -23px 0;
+        margin-top: 160px;
+
+        ul {
+            text-align: center;
+            padding-top: 17px;
+
+
+            li {
+                left: 0;
+                display: inline-block;
+                height: 45px;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .carousel-item_paginator ul li:last-child {
+        width: 15px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:first-child {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_green.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(2) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(3) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(4) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+
+
+    .who-we-are_article h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container h2 {
+        font-family: font-family;
+        font-size: 26px;
+        color: $color-first;
+        margin: 0 0 35px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container p {
+        font-family: font-family;
+        font-size: 16px;
+        color: $color-first;
+    }
+
+    .who-we-are_passion-creativity-quality_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 70px 0;
+    }
+
+    .who-we-are_passions,
+    .who-we-are_creativity,
+    .who-we-are_quality {
+        padding-left: 70px;
+        @include background-repeat-once;
+    }
+
+    .who-we-are_passions {
+        background-image: url('../img/who-we-are/icon-heart-empty-1.png');
+        margin-left: 25px;
+    }
+
+    .who-we-are_creativity {
+        background-image: url('../img/who-we-are/icon-lamp.png');
+    }
+
+    .who-we-are_quality {
+        background-image: url('../img/who-we-are/icon-star-empty-1.png');
+        padding-right: 15px;
+    }
+
+    .who-we-are_article p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .who-we-are_article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 70px 0 0;
+    }
+
+
+
+    .big_article {
+        padding: 70px 0 70px 0;
+        text-align: center;
+    }
+
+    .big_font-banner {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .big_font-content {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .check-out-our-latest-works-box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+    .check-out-our-latest-works_container>div:last-child {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+    .check-out-our-latest-works_box_brand_content h3 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-first;
+        padding: 32px 0 10px 0;
+    }
+
+    .check-out-our-latest-works_box_brand_content p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $color-first;
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        width: inherit;
+        @include background-repeat-once;
+    }
+
+    .check-out-our-latest-works_box_brand_content {
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        text-align: center;
+        @include background-repeat-once;
+        height: 111px;
+    }
+
+    .brand_brand_content_container {
+        flex-basis: 570px;
+    }
+
+    .check-out-our-latest-works_container>div:last-child>div {
+        padding: 0 65px;
+    }
+
+
+
+    .get-in-touch {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .get-in-touch_big_article {
+        padding: 60px 0 40px 0;
+    }
+
+    .get-in-touch_content h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .get-in-touch_content p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .get-in-touch_button button {
+        background: url("../img/get-in-touch/get-in-touch_button.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    @include button-hover-properties;
+
+
+
+    footer {
+        background: url("../img/footer/footer_background.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_who-we-are p:nth-child(2) {
+        font-family: font-family;
+        font-size: 14px;
+        font-weight: bold;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are,
+    .footer_get-in-touch {
+        flex-basis: 270px;
+        margin: 0 10px;
+    }
+
+    .footer_logo {
+        margin-bottom: 22px;
+        cursor: $cursor-properties;
+        width: 130px;
+    }
+
+    .footer_who-we-are :nth-child(3),
+    .footer_get-in-touch p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are h5 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        font-weight: bold;
+        margin-top: 20px;
+        background: url("../img/footer/who-we-are/icon-right.png");
+        @include background-repeat-once;
+        background-position: right center;
+        width: 105px;
+        cursor: $cursor-properties;
+    }
+
+    .footer_container h4 {
+        font-family: font-family;
+        font-size: 16px;
+        font-weight: bold;
+        color: $color-second-font;
+        margin: 40px 0 25px;
+        text-transform: uppercase;
+    }
+
+    .footer_latest-works>h4 {
+        text-align: center;
+    }
+
+    .footer_latest-works {
+        flex-basis: 40%;
+        margin-bottom: 20px;
+    }
+
+    .footer_get-in-touch ol {
+        list-style-type: none;
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        margin-top: 20px;
+    }
+
+    .footer_get-in-touch ol li {
+        padding: 0 0 0 20px;
+
+    }
+
+    .footer_get-in-touch ol li>span {
+        cursor: $cursor-properties;
+    }
+
+    .footer_get-in-touch ol li:first-child {
+        background: url("../img/footer/get-in-touch/icon-location.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(2) {
+        background: url("../img/footer/get-in-touch/icon-mobile.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(3) {
+        background: url("../img/footer/get-in-touch/icon-mail.png");
+        @include background-repeat-once;
+        background-position: left 4px;
+    }
+
+    .footer_get-in-touch {
+        padding-left: 15px;
+    }
+
+    .footer_latest-works_image-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .footer_latest-works_image-container>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+        padding: 0 0 20px 0;
+    }
+
+    .footer_latest-works_image-container>div>div {
+        margin: 0 25px;
+    }
+
+    .footer_container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .footer_footer-ending {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_footer-ending h1 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        padding: 35px 10px;
+    }
+
+    .footer_footer-ending h1:last-child {
+        padding: 35px 65px 35px 0;
+    }
+
+    .footer_footer-ending h1>span {
+        cursor: $cursor-properties;
+    }
+
+    .btn-scrollUp {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+    }
+
+
+    @media (min-width: 992px) and (max-width: 1050px) {
+        .check-out-our-latest-works_container>div:last-child>div {
+            padding: 0 40px;
+        }
+    }
+
+    @media (min-width: 1051px) and (max-width: 1100px) {
+        .check-out-our-latest-works_container>div:last-child>div {
+            padding: 0 48px;
+        }
+    }
+
+    @media (min-width: 1100px) and (max-width: 1199px) {
+        .check-out-our-latest-works_container>div:last-child>div {
+            padding: 0 65px;
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+    header {
+        background-image: url('../img/header/background_contacts.png');
+        @include background-repeat-duplicate;
+    }
+
+    .navbar {
+        background-image: url('../img/nav/background_nav.png');
+        @include background-repeat-duplicate;
+    }
+
+    .carousel {
+        background: url("../img/coruosel/item_designers.png");
+        @include background-repeat-duplicate;
+    }
+
+    .check-out-our-latest-works {
+        background-image: url('../img/check-out-our-latest-works/background_check-out-our-latest-works.png');
+        @include background-repeat-duplicate;
+    }
+
+    .footer_footer-ending_container {
+        background-image: url('../img/footer/footer ending/background_footer-ending.png');
+        @include background-repeat-duplicate;
+    }
+
+    @include global-font;
+
+    @include header-font-all-p;
+
+    @include navbar-header-properties;
+
+
+    .navbar-header_contact_mail {
+        @include navbar-header_contact_mail-properties;
+        margin: 0 0 0 10px;
+        align-self: center;
+    }
+
+    .navbar-header_contact_number {
+        @include navbar-header_contact_number-properties;
+        align-self: center;
+    }
+
+    .navbar-header_social {
+        right: 22px;
+        width: 159px;
+    }
+
+    .navbar-header_contact {
+        @include navbar-header_contact-properties;
+        margin: 4px 0 4px;
+    }
+
+    .navbar-header_social {
+        display: flex;
+        align-items: center;
+        margin: 0 10px 0 0;
+    }
+
+    .navbar-header_social ol {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-header_social ol li {
+        list-style-type: none;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+1) {
+        width: 28px;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+2) {
+        width: 30px;
+    }
+
+    .navbar-header_social ol li:nth-child(3) {
+        width: 31px;
+    }
+
+    .navbar-header_social ol li:last-child {
+        width: 12px;
+    }
+
+
+
+    .nav {
+        display: none;
+    }
+
+    .navbar_logo {
+        display: none;
+    }
+
+    .navbar_container {
+        display: none;
+    }
+
+    .dropdown-content ul li {
+        list-style-type: none;
+    }
+
+    .dropdown-content ul li {
+        font-family: font-family;
+        font-size: 15px;
+        font-weight: bold;
+        color: $color-first;
+        cursor: $cursor-properties;
+    }
+
+    .dropdown-content ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        text-transform: uppercase;
+    }
+
+
+    .dropbtn {
+        background-image: url('../img/nav/icon_hamburger.png');
+        @include background-repeat-once;
+        height: 20px;
+        width: 20px;
+        border: none;
+        cursor: $cursor-properties;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-image: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 8px 0 0 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: rgb(240, 240, 240);
+        width: 100px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 5px 0 5px 7px;
+    }
+
+    #myDropdown ul li:hover {
+        background-color: rgba(40, 161, 40, 0.2);
+    }
+
+    .dropdown button:hover {
+        background: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+
+    }
+
+    #myDropdown ul li {
+        width: 100%;
+    }
+
+    .show {
+        display: block;
+    }
+
+
+
+    .carousel_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-item_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow-prev,
+    .arrow-next {
+        cursor: $cursor-properties;
+    }
+
+    .carousel-item_heading p {
+        font-family: font-family;
+        font-size: 48px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    .carousel-item_heading {
+        margin: 100px 0 40px 0;
+    }
+
+    .carousel-item_content p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $carousel-item_content-p-color;
+        text-align: center;
+    }
+
+    .carousel-item_button {
+        margin: 45px 0 0 0;
+    }
+
+    .carousel-item_button button {
+        background: url("../img/coruosel/icon_btn_made_for_designers.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 295px;
+        height: 65px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    button p {
+        font-family: font-family;
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    @include button-hover-properties;
+
+    .carousel-item_paginator {
+        width: 145px;
+        height: 45px;
+        background: url("../img/coruosel/icon_pagination_background.png");
+        @include background-repeat-once;
+        margin: 0 0 -23px 0;
+        margin-top: 60px;
+
+        ul {
+            text-align: center;
+            padding-top: 17px;
+
+            li {
+                left: 0;
+                display: inline-block;
+                height: 45px;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .carousel-item_paginator ul li:last-child {
+        width: 15px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:first-child {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_green.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(2) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(3) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(4) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+
+
+    .who-we-are_article h1 {
+        font-family: font-family;
+        font-size: 34px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container h2 {
+        font-family: font-family;
+        font-size: 18px;
+        color: $color-first;
+        margin: 0 0 15px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $color-first;
+    }
+
+    .who-we-are_passion-creativity-quality_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+
+    .who-we-are_passions,
+    .who-we-are_creativity,
+    .who-we-are_quality {
+        padding-left: 70px;
+        @include background-repeat-once;
+    }
+
+    .who-we-are_passions {
+        background-image: url('../img/who-we-are/icon-heart-empty-1.png');
+        margin-left: 25px;
+    }
+
+    .who-we-are_creativity {
+        background-image: url('../img/who-we-are/icon-lamp.png');
+    }
+
+    .who-we-are_quality {
+        background-image: url('../img/who-we-are/icon-star-empty-1.png');
+        padding-right: 15px;
+    }
+
+    .who-we-are_article p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $color-first;
+    }
+
+    .who-we-are_article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 70px 0 0;
+    }
+
+
+
+    .big_article {
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
+
+    .big_font-banner {
+        font-family: font-family;
+        font-size: 34px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 20px 0;
+    }
+
+    .big_font-content {
+        font-family: font-family;
+        font-size: 18px;
+        color: $color-first;
+    }
+
+    .check-out-our-latest-works-box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .check-out-our-latest-works_container>div:last-child {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+    .check-out-our-latest-works_box_brand_content h3 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-first;
+        padding: 32px 0 10px 0;
+    }
+
+    .check-out-our-latest-works_box_brand_content p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $color-first;
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        width: inherit;
+        @include background-repeat-once;
+    }
+
+    .check-out-our-latest-works_box_brand_content {
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        text-align: center;
+        @include background-repeat-once;
+        height: 111px;
+    }
+
+    .brand_brand_content_container {
+        flex-basis: 570px;
+    }
+
+    .check-out-our-latest-works_container>div:last-child>div {
+        padding: 0 35px;
+    }
+
+
+
+    .get-in-touch {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .get-in-touch_big_article {
+        padding: 60px 0 40px 0;
+    }
+
+    .get-in-touch_content h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .get-in-touch_content p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .get-in-touch_button button {
+        background: url("../img/get-in-touch/get-in-touch_button.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    @include button-hover-properties;
+
+
+
+    footer {
+        background: url("../img/footer/footer_background.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_who-we-are p:nth-child(2) {
+        font-family: font-family;
+        font-size: 14px;
+        font-weight: bold;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are,
+    .footer_get-in-touch {
+        flex-basis: 270px;
+        margin: 0 10px;
+    }
+
+    .footer_logo {
+        margin-bottom: 22px;
+        cursor: $cursor-properties;
+        width: 130px;
+    }
+
+    .footer_who-we-are :nth-child(3),
+    .footer_get-in-touch p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are h5 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        font-weight: bold;
+        margin-top: 20px;
+        background: url("../img/footer/who-we-are/icon-right.png");
+        @include background-repeat-once;
+        background-position: right center;
+        width: 105px;
+        cursor: $cursor-properties;
+    }
+
+    .footer_container {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 0 10px 0;
+    }
+
+    .footer_container h4 {
+        font-family: font-family;
+        font-size: 16px;
+        font-weight: bold;
+        color: $color-second-font;
+        margin: 20px 0 25px;
+        text-transform: uppercase;
+    }
+
+    .footer_latest-works>h4 {
+        text-align: center;
+    }
+
+    .footer_latest-works {
+        display: none;
+    }
+
+    .footer_get-in-touch ol {
+        list-style-type: none;
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        margin-top: 20px;
+    }
+
+    .footer_get-in-touch ol li {
+        padding: 0 0 0 20px;
+    }
+
+    .footer_get-in-touch ol li>span {
+        cursor: $cursor-properties;
+    }
+
+    .footer_get-in-touch ol li:first-child {
+        background: url("../img/footer/get-in-touch/icon-location.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(2) {
+        background: url("../img/footer/get-in-touch/icon-mobile.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(3) {
+        background: url("../img/footer/get-in-touch/icon-mail.png");
+        @include background-repeat-once;
+        background-position: left 4px;
+    }
+
+    .footer_get-in-touch {
+        padding-left: 15px;
+    }
+
+    .footer_latest-works_image-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .footer_latest-works_image-container>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+        padding: 0 0 20px 0;
+    }
+
+    .footer_latest-works_image-container>div>div {
+        margin: 0 25px;
+    }
+
+    .footer_footer-ending {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_footer-ending h1 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        padding: 35px 10px;
+    }
+
+    .footer_footer-ending h1:last-child {
+        padding: 35px 65px 35px 0;
+    }
+
+    .footer_footer-ending h1>span {
+        cursor: $cursor-properties;
+    }
+
+    .btn-scrollUp {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 570px) and (max-width: 767px) {
+
+    header {
+        background-image: url('../img/header/background_contacts.png');
+        @include background-repeat-duplicate;
+    }
+
+    .navbar {
+        background-image: url('../img/nav/background_nav.png');
+        @include background-repeat-duplicate;
+    }
+
+    .carousel {
+        background: url("../img/coruosel/item_designers.png");
+        @include background-repeat-duplicate;
+    }
+
+    .check-out-our-latest-works {
+        background-image: url('../img/check-out-our-latest-works/background_check-out-our-latest-works.png');
+        @include background-repeat-duplicate;
+    }
+
+    .footer_footer-ending_container {
+        background-image: url('../img/footer/footer ending/background_footer-ending.png');
+        @include background-repeat-duplicate;
+    }
+
+    @include global-font;
+
+    @include header-font-all-p;
+
+    @include navbar-header-properties;
+
+
+    .navbar-header_contact_mail {
+        @include navbar-header_contact_mail-properties;
+        margin: 0 0 0 10px;
+        align-self: center;
+    }
+
+    .navbar-header_contact_number {
+        @include navbar-header_contact_number-properties;
+        align-self: center;
+    }
+
+    .navbar-header_social {
+        right: 22px;
+        width: 159px;
+    }
+
+    .navbar-header_contact {
+        @include navbar-header_contact-properties;
+        margin: 4px 0 4px;
+    }
+
+    .navbar-header_social {
+        display: flex;
+        align-items: center;
+        margin: 0 10px 0 0;
+    }
+
+    .navbar-header_social ol {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-header_social ol li {
+        list-style-type: none;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+1) {
+        width: 28px;
+    }
+
+    .navbar-header_social ol li:nth-child(3n+2) {
+        width: 30px;
+    }
+
+    .navbar-header_social ol li:nth-child(3) {
+        width: 31px;
+    }
+
+    .navbar-header_social ol li:last-child {
+        width: 12px;
+    }
+
+
+
+    .nav {
+        display: none;
+    }
+
+    .navbar_logo {
+        display: none;
+    }
+
+    .navbar_container {
+        display: none;
+    }
+
+    .dropdown-content ul li {
+        list-style-type: none;
+    }
+
+    .dropdown-content ul li {
+        font-family: font-family;
+        font-size: 15px;
+        font-weight: bold;
+        color: $color-first;
+        cursor: $cursor-properties;
+    }
+
+    .dropdown-content ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        text-transform: uppercase;
+    }
+
+
+    .dropbtn {
+        background-image: url('../img/nav/icon_hamburger.png');
+        @include background-repeat-once;
+        height: 20px;
+        width: 20px;
+        border: none;
+        cursor: $cursor-properties;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-image: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 8px 0 0 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: rgb(240, 240, 240);
+        width: 100px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 5px 0 5px 7px;
+    }
+
+    #myDropdown ul li:hover {
+        background-color: rgba(40, 161, 40, 0.2);
+    }
+
+    .dropdown button:hover {
+        background: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+
+    }
+
+    #myDropdown ul li {
+        width: 100%;
+    }
+
+    .show {
+        display: block;
+    }
+
+
+
+    .carousel_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-item_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow-prev,
+    .arrow-next {
+        cursor: $cursor-properties;
+    }
+
+    .carousel-item_heading p {
+        font-family: font-family;
+        font-size: 48px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    .carousel-item_heading {
+        margin: 100px 0 40px 0;
+    }
+
+    .carousel-item_content p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $carousel-item_content-p-color;
+        text-align: center;
+    }
+
+    .carousel-item_button {
+        margin: 45px 0 0 0;
+    }
+
+    .carousel-item_button button {
+        background: url("../img/coruosel/icon_btn_made_for_designers.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 295px;
+        height: 65px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    button p {
+        font-family: font-family;
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    @include button-hover-properties;
+
+    .carousel-item_paginator {
+        width: 145px;
+        height: 45px;
+        background: url("../img/coruosel/icon_pagination_background.png");
+        @include background-repeat-once;
+        margin: 0 0 -23px 0;
+        margin-top: 60px;
+
+        ul {
+            text-align: center;
+            padding-top: 17px;
+
+            li {
+                left: 0;
+                display: inline-block;
+                height: 45px;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .carousel-item_paginator ul li:last-child {
+        width: 15px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:first-child {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_green.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(2) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(3) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(4) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+
+
+    .who-we-are_article h1 {
+        font-family: font-family;
+        font-size: 34px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container h2 {
+        font-family: font-family;
+        font-size: 18px;
+        color: $color-first;
+        margin: 0 0 15px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $color-first;
+    }
+
+    .who-we-are_passion-creativity-quality_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+
+    .who-we-are_passions,
+    .who-we-are_creativity,
+    .who-we-are_quality {
+        padding-left: 70px;
+        @include background-repeat-once;
+    }
+
+    .who-we-are_passions {
+        background-image: url('../img/who-we-are/icon-heart-empty-1.png');
+        margin-left: 25px;
+    }
+
+    .who-we-are_creativity {
+        background-image: url('../img/who-we-are/icon-lamp.png');
+    }
+
+    .who-we-are_quality {
+        background-image: url('../img/who-we-are/icon-star-empty-1.png');
+        padding-right: 15px;
+    }
+
+    .who-we-are_article p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $color-first;
+    }
+
+    .who-we-are_article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 70px 0 0;
+    }
+
+
+
+    .big_article {
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
+
+    .big_font-banner {
+        font-family: font-family;
+        font-size: 34px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 20px 0;
+    }
+
+    .big_font-content {
+        font-family: font-family;
+        font-size: 18px;
+        color: $color-first;
+    }
+
+    .check-out-our-latest-works-box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .check-out-our-latest-works_container>div:last-child {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+    .check-out-our-latest-works_box_brand_content h3 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-first;
+        padding: 32px 0 10px 0;
+    }
+
+    .check-out-our-latest-works_box_brand_content p {
+        font-family: font-family;
+        font-size: 14px;
+        color: $color-first;
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        width: inherit;
+        @include background-repeat-once;
+    }
+
+    .check-out-our-latest-works_box_brand_content {
+        background: url('../img/check-out-our-latest-works/backgound_content.png');
+        text-align: center;
+        @include background-repeat-once;
+        height: 111px;
+    }
+
+    .brand_brand_content_container {
+        flex-basis: 570px;
+    }
+
+    .check-out-our-latest-works_container>div:last-child>div {
+        padding: 0 35px;
+    }
+
+
+
+    .get-in-touch {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .get-in-touch_big_article {
+        padding: 60px 0 40px 0;
+    }
+
+    .get-in-touch_content h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .get-in-touch_content p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .get-in-touch_button button {
+        background: url("../img/get-in-touch/get-in-touch_button.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    @include button-hover-properties;
+
+
+
+    footer {
+        background: url("../img/footer/footer_background.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_who-we-are p:nth-child(2) {
+        font-family: font-family;
+        font-size: 14px;
+        font-weight: bold;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are,
+    .footer_get-in-touch {
+        width: 300px;
+        margin: 5px 10px;
+    }
+
+    .footer_logo {
+        display: none;
+    }
+
+    .footer_who-we-are :nth-child(3),
+    .footer_get-in-touch p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are h5 {
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+        font-weight: bold;
+        margin-top: 20px;
+        background: url("../img/footer/who-we-are/icon-right.png");
+        @include background-repeat-once;
+        background-position: right center;
+        width: 125px;
+        cursor: $cursor-properties;
+    }
+
+    .footer_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0 10px 0;
+    }
+
+    .footer_container h4 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-second-font;
+        margin: 20px 0 25px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .footer_latest-works {
+        display: none;
+    }
+
+    .footer_get-in-touch ol {
+        list-style-type: none;
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+        margin-top: 20px;
+    }
+
+    .footer_get-in-touch ol li {
+        padding: 0 0 0 20px;
+    }
+
+    .footer_get-in-touch ol li>span {
+        cursor: $cursor-properties;
+    }
+
+    .footer_get-in-touch ol li:first-child {
+        background: url("../img/footer/get-in-touch/icon-location.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(2) {
+        background: url("../img/footer/get-in-touch/icon-mobile.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(3) {
+        background: url("../img/footer/get-in-touch/icon-mail.png");
+        @include background-repeat-once;
+        background-position: left 8px;
+    }
+
+    .footer_latest-works_image-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .footer_latest-works_image-container>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+        padding: 0 0 20px 0;
+    }
+
+    .footer_latest-works_image-container>div>div {
+        margin: 0 25px;
+    }
+
+    .footer_footer-ending {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_footer-ending h1 {
+        font-family: font-family;
+        font-size: 22px;
+        color: $footer-color;
+        padding: 35px 10px;
+    }
+
+    .footer_footer-ending h1:first-child {
+        display: none;
+    }
+
+    .footer_footer-ending h1:last-child {
+        padding: 35px 0;
+    }
+
+    .footer_footer-ending h1>span {
+        cursor: $cursor-properties;
+    }
+
+    .btn-scrollUp {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+    }
+}
+
+
+
+
+
+@media (min-width: 480px) and (max-width: 569px) {
+
+    header {
+        background-image: url('../img/header/background_contacts.png');
+        @include background-repeat-duplicate;
+    }
+
+    .navbar {
+        background-image: url('../img/nav/background_nav.png');
+        @include background-repeat-duplicate;
+    }
+
+    .carousel {
+        background: url("../img/coruosel/item_designers.png");
+        @include background-repeat-duplicate;
+    }
+
+    .check-out-our-latest-works {
+        background-image: url('../img/check-out-our-latest-works/background_check-out-our-latest-works.png');
+        @include background-repeat-duplicate;
+    }
+
+    .footer_footer-ending_container {
+        background-image: url('../img/footer/footer ending/background_footer-ending.png');
+        @include background-repeat-duplicate;
+    }
+
+    @include global-font;
+
+    @include header-font-all-p;
+
+    @include navbar-header-properties;
+
+
+    .navbar-header_contact_mail {
+        @include navbar-header_contact_mail-properties;
+        margin: 0 0 0 10px;
+        align-self: center;
+    }
+
+    .navbar-header_contact_number {
+        @include navbar-header_contact_number-properties;
+        align-self: center;
+    }
+
+    .navbar-header_social {
+        display: none;
+    }
+
+    .navbar-header_contact {
+        @include navbar-header_contact-properties;
+        margin: 4px 0 4px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .navbar_logo {
+        display: none;
+    }
+
+    .navbar_container {
+        display: none;
+    }
+
+    .dropdown-content ul li {
+        list-style-type: none;
+    }
+
+    .dropdown-content ul li {
+        font-family: font-family;
+        font-size: 15px;
+        font-weight: bold;
+        color: $color-first;
+        cursor: $cursor-properties;
+    }
+
+    .dropdown-content ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        text-transform: uppercase;
+    }
+
+
+    .dropbtn {
+        background-image: url('../img/nav/icon_hamburger.png');
+        @include background-repeat-once;
+        height: 20px;
+        width: 20px;
+        border: none;
+        cursor: $cursor-properties;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-image: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 8px 0 0 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: rgb(240, 240, 240);
+        width: 100px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 5px 0 5px 7px;
+    }
+
+    #myDropdown ul li:hover {
+        background-color: rgba(40, 161, 40, 0.2);
+    }
+
+    .dropdown button:hover {
+        background: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+
+    }
+
+    #myDropdown ul li {
+        width: 100%;
+    }
+
+    .show {
+        display: block;
+    }
+
+
+
+    .carousel_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-item_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow-prev,
+    .arrow-next {
+        cursor: $cursor-properties;
+    }
+
+    .carousel-item_heading p {
+        font-family: font-family;
+        font-size: 38px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .carousel-item_heading {
+        margin: 40px 0 40px 0;
+    }
+
+    .carousel-item_content p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $carousel-item_content-p-color;
+        text-align: center;
+    }
+
+    .carousel-item_button {
+        margin: 45px 0 0 0;
+    }
+
+    .carousel-item_button button {
+        background: url("../img/coruosel/icon_btn_made_for_designers.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 295px;
+        height: 65px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    button p {
+        font-family: font-family;
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    @include button-hover-properties;
+
+    .carousel-item_paginator {
+        width: 145px;
+        height: 45px;
+        background: url("../img/coruosel/icon_pagination_background.png");
+        @include background-repeat-once;
+        margin: 0 0 -23px 0;
+        margin-top: 60px;
+
+        ul {
+            text-align: center;
+            padding-top: 17px;
+
+            li {
+                left: 0;
+                display: inline-block;
+                height: 45px;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .carousel-item_paginator ul li:last-child {
+        width: 15px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:first-child {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_green.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(2) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(3) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+    .carousel-item_paginator ul li:nth-child(4) {
+        width: 25px;
+        background: url("../img/coruosel/icon_pagination_indicator_blue.png");
+        @include background-repeat-once;
+    }
+
+
+
+    .who-we-are_article h1 {
+        font-family: font-family;
+        font-size: 34px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 25px 0;
+    }
+
+    .who-we-are_passion-creativity-quality_container {
+        display: none;
+    }
+
+    .who-we-are_article p {
+        font-family: font-family;
+        font-size: 13px;
+        color: $color-first;
+    }
+
+    .who-we-are_article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 70px 0 0;
+    }
+
+
+
+    .big_article {
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
+
+    .big_font-banner {
+        font-family: font-family;
+        font-size: 34px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 20px 0;
+    }
+
+    .big_font-content {
+        font-family: font-family;
+        font-size: 18px;
+        color: $color-first;
+    }
+
+    .check-out-our-latest-works-box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .check-out-our-latest-works_container>div:last-child {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+    .brand_brand_content_container {
+        display: none;
+    }
+
+    .check-out-our-latest-works_container>div:last-child>div {
+        padding: 0 35px;
+    }
+
+
+
+    .get-in-touch {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .get-in-touch_big_article {
+        padding: 60px 0 40px 0;
+    }
+
+    .get-in-touch_content h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .get-in-touch_content p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .get-in-touch_button button {
+        background: url("../img/get-in-touch/get-in-touch_button.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    @include button-hover-properties;
+
+
+
+    footer {
+        background: url("../img/footer/footer_background.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_who-we-are p:nth-child(2) {
+        font-family: font-family;
+        font-size: 14px;
+        font-weight: bold;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are,
+    .footer_get-in-touch {
+        width: 300px;
+        margin: 5px 10px;
+    }
+
+    .footer_logo {
+        display: none;
+    }
+
+    .footer_who-we-are :nth-child(3),
+    .footer_get-in-touch p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are h5 {
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+        font-weight: bold;
+        margin-top: 20px;
+        background: url("../img/footer/who-we-are/icon-right.png");
+        @include background-repeat-once;
+        background-position: right center;
+        width: 125px;
+        cursor: $cursor-properties;
+    }
+
+    .footer_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0 10px 0;
+    }
+
+    .footer_container h4 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-second-font;
+        margin: 20px 0 25px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .footer_latest-works {
+        display: none;
+    }
+
+    .footer_get-in-touch ol {
+        list-style-type: none;
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+        margin-top: 20px;
+    }
+
+    .footer_get-in-touch ol li {
+        padding: 0 0 0 20px;
+    }
+
+    .footer_get-in-touch ol li>span {
+        cursor: $cursor-properties;
+    }
+
+    .footer_get-in-touch ol li:first-child {
+        background: url("../img/footer/get-in-touch/icon-location.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(2) {
+        background: url("../img/footer/get-in-touch/icon-mobile.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(3) {
+        background: url("../img/footer/get-in-touch/icon-mail.png");
+        @include background-repeat-once;
+        background-position: left 8px;
+    }
+
+    .footer_latest-works_image-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .footer_latest-works_image-container>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+        padding: 0 0 20px 0;
+    }
+
+    .footer_latest-works_image-container>div>div {
+        margin: 0 25px;
+    }
+
+    .footer_footer-ending {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_footer-ending h1 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        padding: 35px 10px;
+    }
+
+    .footer_footer-ending h1:first-child {
+        display: none;
+    }
+
+    .footer_footer-ending h1:last-child {
+        padding: 35px 0;
+    }
+
+    .footer_footer-ending h1>span {
+        cursor: $cursor-properties;
+    }
+
+    .btn-scrollUp {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+    header {
+        background-image: url('../img/header/background_contacts.png');
+        @include background-repeat-duplicate;
+    }
+
+    .navbar {
+        background-image: url('../img/nav/background_nav.png');
+        @include background-repeat-duplicate;
+    }
+
+    .carousel {
+        background: url("../img/coruosel/item_designers.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_footer-ending_container {
+        background-image: url('../img/footer/footer ending/background_footer-ending.png');
+        @include background-repeat-duplicate;
+    }
+
+    @include global-font;
+
+    @include header-font-all-p;
+
+    @include navbar-header-properties;
+
+
+    .navbar-header_contact_mail {
+        @include navbar-header_contact_mail-properties;
+        margin: 0 0 0 10px;
+        align-self: center;
+    }
+
+    .navbar-header_contact_number {
+        @include navbar-header_contact_number-properties;
+        align-self: center;
+    }
+
+    .navbar-header_social {
+        display: none;
+    }
+
+    .navbar-header_contact {
+        @include navbar-header_contact-properties;
+        margin: 4px 0 4px;
+    }
+
+
+
+    .nav {
+        display: none;
+    }
+
+    .navbar_logo {
+        display: none;
+    }
+
+    .navbar_container {
+        display: none;
+    }
+
+    .dropdown-content ul li {
+        list-style-type: none;
+    }
+
+    .dropdown-content ul li {
+        font-family: font-family;
+        font-size: 15px;
+        font-weight: bold;
+        color: $color-first;
+        cursor: $cursor-properties;
+    }
+
+    .dropdown-content ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        text-transform: uppercase;
+    }
+
+
+    .dropbtn {
+        background-image: url('../img/nav/icon_hamburger.png');
+        @include background-repeat-once;
+        height: 20px;
+        width: 20px;
+        border: none;
+        cursor: $cursor-properties;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-image: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 8px 0 0 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: rgb(240, 240, 240);
+        width: 100px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 5px 0 5px 7px;
+    }
+
+    #myDropdown ul li:hover {
+        background-color: rgba(40, 161, 40, 0.2);
+    }
+
+    .dropdown button:hover {
+        background: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+
+    }
+
+    #myDropdown ul li {
+        width: 100%;
+    }
+
+    .show {
+        display: block;
+    }
+
+
+
+    .carousel_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-item_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow-prev,
+    .arrow-next {
+        display: none;
+    }
+
+    .carousel-item_heading p {
+        font-family: font-family;
+        font-size: 38px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .carousel-item_heading {
+        margin: 40px 0 40px 0;
+    }
+
+    .carousel-item_content p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $carousel-item_content-p-color;
+        text-align: center;
+    }
+
+    .carousel-item_button {
+        margin: 45px 0 0 0;
+    }
+
+    .carousel-item_button button {
+        background: url("../img/coruosel/icon_btn_made_for_designers.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 295px;
+        height: 65px;
+        margin: 0 0 20px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    button p {
+        font-family: font-family;
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    @include button-hover-properties;
+
+    .carousel-item_paginator {
+        display: none;
+    }
+
+
+
+    .who-we-are_article_container {
+        display: none;
+    }
+
+
+
+    .big_article {
+        padding: 20px 0 20px 0;
+        text-align: center;
+    }
+
+    .big_font-banner {
+        font-family: font-family;
+        font-size: 34px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 5px 0;
+    }
+
+    .big_font-content {
+        font-family: font-family;
+        font-size: 16px;
+        color: $color-first;
+    }
+
+    .check-out-our-latest-works-box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .check-out-our-latest-works_container>div:last-child {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .brand_brand_content_container {
+        display: none;
+    }
+
+    .check-out-our-latest-works_container>div:last-child>div {
+        padding: 0 35px;
+    }
+
+
+
+    .get-in-touch {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .get-in-touch_big_article {
+        padding: 20px 0 40px 0;
+    }
+
+    .get-in-touch_content h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 45px 0;
+    }
+
+    .get-in-touch_content p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .get-in-touch_button button {
+        background: url("../img/get-in-touch/get-in-touch_button.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    @include button-hover-properties;
+
+
+
+    footer {
+        background: url("../img/footer/footer_background.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_who-we-are p:nth-child(2) {
+        font-family: font-family;
+        font-size: 14px;
+        font-weight: bold;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are,
+    .footer_get-in-touch {
+        width: 300px;
+        margin: 5px 10px;
+    }
+
+    .footer_logo {
+        display: none;
+    }
+
+    .footer_who-we-are :nth-child(3),
+    .footer_get-in-touch p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are h5 {
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+        font-weight: bold;
+        margin-top: 20px;
+        background: url("../img/footer/who-we-are/icon-right.png");
+        @include background-repeat-once;
+        background-position: right center;
+        width: 125px;
+        cursor: $cursor-properties;
+    }
+
+    .footer_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0 10px 0;
+    }
+
+    .footer_container h4 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-second-font;
+        margin: 20px 0 25px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .footer_latest-works {
+        display: none;
+    }
+
+    .footer_get-in-touch ol {
+        list-style-type: none;
+        font-family: font-family;
+        font-size: 18px;
+        color: $footer-color;
+        margin-top: 20px;
+    }
+
+    .footer_get-in-touch ol li {
+        padding: 0 0 0 20px;
+    }
+
+    .footer_get-in-touch ol li>span {
+        cursor: $cursor-properties;
+    }
+
+    .footer_get-in-touch ol li:first-child {
+        background: url("../img/footer/get-in-touch/icon-location.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(2) {
+        background: url("../img/footer/get-in-touch/icon-mobile.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(3) {
+        background: url("../img/footer/get-in-touch/icon-mail.png");
+        @include background-repeat-once;
+        background-position: left 8px;
+    }
+
+    .footer_latest-works_image-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .footer_latest-works_image-container>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+        padding: 0 0 20px 0;
+    }
+
+    .footer_latest-works_image-container>div>div {
+        margin: 0 25px;
+    }
+
+    .footer_footer-ending {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_footer-ending h1 {
+        font-family: font-family;
+        font-size: 14px;
+        color: $footer-color;
+        padding: 35px 10px;
+    }
+
+    .footer_footer-ending h1:first-child {
+        display: none;
+    }
+
+    .footer_footer-ending h1:last-child {
+        padding: 35px 0;
+    }
+
+    .footer_footer-ending h1>span {
+        cursor: $cursor-properties;
+    }
+
+    .btn-scrollUp {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+    }
+
+    @media (min-width: 320px) and (max-width: 355px) {
+        .footer_footer-ending {
+            display: none;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 370px) {
+        .carousel-item_button button {
+            width: 180px;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 345px) {
+        .check-out-our-latest-works_container {
+            display: none;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+@media (min-width: 50px) and (max-width: 320px) {
+
+
+    header {
+        background-image: url('../img/header/background_contacts.png');
+        @include background-repeat-duplicate;
+    }
+
+    .navbar {
+        background-image: url('../img/nav/background_nav.png');
+        @include background-repeat-duplicate;
+    }
+
+    .carousel {
+        background: url("../img/coruosel/item_designers.png");
+        @include background-repeat-duplicate;
+    }
+
+    .check-out-our-latest-works {
+        background-image: url('../img/check-out-our-latest-works/background_check-out-our-latest-works.png');
+        @include background-repeat-duplicate;
+    }
+
+    .footer_footer-ending_container {
+        background-image: url('../img/footer/footer ending/background_footer-ending.png');
+        @include background-repeat-duplicate;
+    }
+
+    @include global-font;
+
+    header p {
+        font-family: font-family;
+        font-size: 16px;
+        color: $color-first
+    }
+
+    @include navbar-header-properties;
+
+
+    .navbar-header_contact_mail {
+        background-image: url('../img/header/mail_icon.png');
+        background-position: left 8px;
+        @include background-repeat-once;
+        width: 120px;
+        text-align: right;
+        padding: 0 20px 0 0px;
+        margin: 0 0 0 15px;
+        align-self: center;
+    }
+
+    .navbar-header_contact_number {
+        display: none;
+    }
+
+    .navbar-header_social {
+        display: none;
+    }
+
+    .navbar-header_contact {
+        @include navbar-header_contact-properties;
+        margin: 4px 0 4px;
+    }
+
+
+
+    .nav {
+        display: none;
+    }
+
+    .navbar_logo {
+        display: none;
+    }
+
+    .navbar_container {
+        display: none;
+    }
+
+    .dropdown-content ul li {
+        list-style-type: none;
+    }
+
+    .dropdown-content ul li {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-first;
+        cursor: $cursor-properties;
+    }
+
+    .dropdown-content ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        text-transform: uppercase;
+    }
+
+
+    .dropbtn {
+        background-image: url('../img/nav/icon_hamburger.png');
+        @include background-repeat-once;
+        height: 20px;
+        width: 20px;
+        border: none;
+        cursor: $cursor-properties;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-image: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 8px 0 0 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: rgb(240, 240, 240);
+        width: 150px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 5px 0 5px 7px;
+    }
+
+    #myDropdown ul li:hover {
+        background-color: rgba(40, 161, 40, 0.2);
+    }
+
+    .dropdown button:hover {
+        background: url('../img/nav/icon_hamburger_dark.png');
+        @include background-repeat-once;
+
+    }
+
+    #myDropdown ul li {
+        width: 100%;
+    }
+
+    .show {
+        display: block;
+    }
+
+
+
+
+
+    .carousel_container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-item_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow-prev,
+    .arrow-next {
+        display: none;
+    }
+
+    .carousel-item_heading p {
+        font-family: font-family;
+        font-size: 28px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .carousel-item_heading {
+        margin: 25px 0 25px 0;
+    }
+
+    .carousel-item_content p {
+        font-family: font-family;
+        font-size: 18px;
+        color: $carousel-item_content-p-color;
+        text-align: center;
+    }
+
+    .carousel-item_button {
+        margin: 25px 0 0 0;
+    }
+
+    .carousel-item_button button {
+        background: url("../img/coruosel/icon_btn_made_for_designers.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 180px;
+        height: 55px;
+        margin: 0 0 20px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    button p {
+        font-family: font-family;
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-second-font;
+        text-transform: uppercase;
+    }
+
+    @include button-hover-properties;
+
+    .carousel-item_paginator {
+        display: none;
+    }
+
+
+
+    .who-we-are_article_container {
+        display: none;
+    }
+
+
+
+    .big_article {
+        padding: 20px 0 20px 0;
+        text-align: center;
+    }
+
+    .big_font-banner {
+        font-family: font-family;
+        font-size: 28px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 5px 0;
+    }
+
+    .big_font-content {
+        font-family: font-family;
+        font-size: 16px;
+        color: $color-first;
+    }
+
+
+
+    .check-out-our-latest-works_container {
+        display: none;
+    }
+
+    .brand_brand_content_container {
+        display: none;
+    }
+
+
+
+    .get-in-touch {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .get-in-touch_big_article {
+        padding: 10px 0 20px 0;
+    }
+
+    .get-in-touch_content h1 {
+        font-family: font-family;
+        font-size: 44px;
+        font-weight: bold;
+        color: $color-first;
+        margin: 0 0 20px 0;
+    }
+
+    .get-in-touch_content p {
+        font-family: font-family;
+        font-size: 22px;
+        color: $color-first;
+    }
+
+    .get-in-touch_button button {
+        background: url("../img/get-in-touch/get-in-touch_button.png");
+        @include background-repeat-once;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: $cursor-properties;
+    }
+
+    @include button-hover-properties;
+
+
+
+    footer {
+        background: url("../img/footer/footer_background.png");
+        @include background-repeat-duplicate;
+    }
+
+    .footer_who-we-are p:nth-child(2) {
+        font-family: font-family;
+        font-size: 14px;
+        font-weight: bold;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are,
+    .footer_get-in-touch {
+        /* width: 300px; */
+        margin: 5px 10px;
+    }
+
+    .footer_logo {
+        display: none;
+    }
+
+    .footer_who-we-are :nth-child(3),
+    .footer_get-in-touch p {
+        font-family: font-family;
+        font-size: 16px;
+        color: $footer-color;
+    }
+
+    .footer_who-we-are h5 {
+        font-family: font-family;
+        font-size: 16px;
+        color: $footer-color;
+        font-weight: bold;
+        margin-top: 20px;
+        background: url("../img/footer/who-we-are/icon-right.png");
+        @include background-repeat-once;
+        background-position: right center;
+        width: 125px;
+        cursor: $cursor-properties;
+    }
+
+    .footer_container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0 10px 0;
+    }
+
+    .footer_container h4 {
+        font-family: font-family;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-second-font;
+        margin: 10px 0 15px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .footer_latest-works {
+        display: none;
+    }
+
+    .footer_get-in-touch ol {
+        list-style-type: none;
+        font-family: font-family;
+        font-size: 16px;
+        color: $footer-color;
+        margin-top: 20px;
+    }
+
+    .footer_get-in-touch ol li {
+        padding: 0 0 0 20px;
+    }
+
+    .footer_get-in-touch ol li>span {
+        cursor: $cursor-properties;
+    }
+
+    .footer_get-in-touch ol li:first-child {
+        background: url("../img/footer/get-in-touch/icon-location.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(2) {
+        background: url("../img/footer/get-in-touch/icon-mobile.png");
+        @include background-repeat-once;
+        background-position: 2px center;
+    }
+
+    .footer_get-in-touch ol li:nth-child(3) {
+        background: url("../img/footer/get-in-touch/icon-mail.png");
+        @include background-repeat-once;
+        background-position: left 8px;
+    }
+
+    .footer_latest-works_image-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .footer_latest-works_image-container>div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+        padding: 0 0 20px 0;
+    }
+
+    .footer_latest-works_image-container>div>div {
+        margin: 0 25px;
+    }
+
+    .footer_footer-ending {
+        display: none;
+    }
+
+    .btn-scrollUp {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+    }
+}
+
+@media (min-width: 50px) and (max-width: 219px) {
+
+    header,
+    .carousel-item_container,
+    .get-in-touch_big_article,
+    .get-in-touch_button,
+    .footer_container,
+    .btn-scrollUp {
+        display: none;
+    }
+
+}
