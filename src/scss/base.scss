@@ -5,10 +5,10 @@
 }
 
 .header {
-    margin-bottom: 115px;
+    margin-bottom: 20px;
 }
 
-// .navbar-background,
+.navbar-background,
 .footer_footer-ending {
     background-color: #830051;
 }
@@ -31,19 +31,11 @@ a {
 }
 
 footer .container .row {
-    margin: 190px 0 100px 0;
+    margin: 40px 0;
 }
 
 #responsive-menu ul {
     margin-top: 22px;
-}
-
-@media (min-width: 50px) and (max-width: 604px) {
-    #responsive-menu ul {
-        margin-top: 0;
-        color: red;
-    }
-
 }
 
 table {
@@ -57,18 +49,107 @@ table {
 td {
     border: 2px ridge #830051;
 }
-.accommodation{
-background: #f9eea4;
+
+.img_aboutUs {
+    width: 100%;
+    height: auto;
 }
-a[role="button"]{
-    background: #830051!important;
-    border: none!important;
-   }
-   .main{
-       h1{
-           text-align: center;
-       }
-       h3{margin: 0;}
-          }
-   .description{
-    font-size: 18px;}
+
+.carousel_block {
+    margin: 10px 0;
+}
+
+td {
+    border: 2px ridge #830051;
+}
+
+.accommodation {
+    background: #f9eea4;
+}
+
+a[role="button"] {
+    background: #830051 !important;
+    border: none !important;
+}
+
+.main {
+    h1 {
+        text-align: center;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.description {
+    font-size: 18px;
+}
+
+.text_p {
+    font-size: 18px;
+    opacity: 0.8;
+
+    @media(max-width: 767px) {
+        font-size: 12px;
+    }
+
+    @media(max-width: 540px) {
+        font-size: 10px;
+    }
+
+    @media(max-width: 480px) {
+        font-size: 8px;
+    }
+}
+
+.title_h3 {
+    color: rgb(201, 174, 23);
+    font-size: 42px;
+    font-weight: bolder;
+
+    @media(max-width:480px) {
+        font-size: 26px;
+    }
+}
+
+.carousel_text {
+    text-align: center;
+    width: 800px;
+    margin: 20px auto;
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        width: 700px;
+        margin: 20px auto;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 700px;
+        margin: 20px auto;
+    }
+
+    @media (max-width: 767px) {
+        width: 500px;
+        margin: 20px auto;
+    }
+
+    @media(max-width: 480px) {
+        margin: 20px auto;
+        width: 200px;
+    }
+
+    @media (max-width: 320px) {
+        margin: 20px auto;
+        width: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 819px) {
+    #responsive-menu ul {
+        display: none;
+    }
+
+    #icon-hamburger {
+        display: block;
+    }
+}
