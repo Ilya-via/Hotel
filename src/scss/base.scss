@@ -102,8 +102,24 @@ footer .container .row {
 }
 
 
+.tabs {
+    padding: 60px 0 0 0;
+}
+.tabs>ul>li {
+    background-color: rgba(128, 128, 128, 0.24);
+}
 
-
+.tabs>ul>li>a {
+    font-family: "agenda-light";
+    font-size: 18px;
+    color: #830051;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    width: 250px;
+    height: 70px;
+    padding: 20px 0 0 0;
+}
 
 
 
@@ -126,6 +142,29 @@ td {
 
 .carousel_block {
     margin: 10px 0;
+}
+
+.accommodation {
+    background: #f9eea4;
+}
+
+a[role="button"] {
+    background: #830051 !important;
+    border: none !important;
+}
+
+.main {
+    h1 {
+        text-align: center;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.description {
+    font-size: 18px;
 }
 
 .text_p {
