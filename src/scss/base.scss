@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "agenda-light";
+    src: url("../fonts/agenda-light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 .btn-scrollUp {
     position: fixed;
     bottom: 22px;
@@ -27,7 +34,7 @@ footer ol li {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 footer .container .row {
@@ -37,6 +44,68 @@ footer .container .row {
 #responsive-menu ul {
     margin-top: 22px;
 }
+
+.preview {
+    margin: 40px 0;
+}
+
+.preview span {
+    font-family: "agenda-light";
+    font-size: 36px;
+    color: #830051;
+    font-weight: bold;
+}
+
+.preview a {
+    font-family: "agenda-light";
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.preview-tabs-banner {
+    font-family: Arial;
+    font-size: 24px;
+    color: #cf0072;
+    font-weight: bold;
+}
+
+.preview-tabs-banner-big {
+    font-family: Arial;
+    font-size: 40px;
+    color: #cf0072;
+    font-weight: bold;
+}
+
+#fitness-center {
+    overflow-y: auto;
+    height: 1440px;
+}
+
+#restaurants-bars {
+    overflow-y: auto;
+    height: 1920px;
+}
+
+.tab-content img {
+    margin: 0 0 5px;
+}
+
+#fitness-center::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+#restaurants-bars::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+
 
 table {
     border: 2px ridge #830051;
@@ -121,6 +190,7 @@ td {
     #responsive-menu ul {
         display: none;
     }
+
     #icon-hamburger {
         display: block;
     }
