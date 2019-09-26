@@ -148,33 +148,45 @@ td {
     h3{
         color: goldenrod;
         font-weight: bolder;
+        margin:0 0 10px 0 !important;
     }
     p{
         color: grey;
     }
 }
-.aboutUs_box{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid rgb(182, 179, 179);
-}
-.about_text, .about_text_garant{
-    background: rgb(238, 235, 235);
-    width: 355px;
-    height: 200px;
-    padding: 20px;
-}
 
-.about_text_services{
-    background: rgb(238, 235, 235);
-    width: 550px;
-    height: 350px;
+@media(max-width: 480px) {
+    .aboutUs_info h3{
+        font-size:22px;
+    }
+    .aboutUs_info p{
+        font-size:7px;
+    }
+    .about_text{
+      height: 170px !important;
+  }
+}
+@media (max-width: 320px) {
+    .aboutUs_info h3{
+        font-size:14px;
+    }
+    .aboutUs_info p{
+        font-size:7px;
+    }
+   .about_text{
+       height: 170px !important;
+   }
+}
+/**/
+
+.about_text{
+    background: rgb(247, 245, 245);
     padding: 20px;
+    height: 250px;
+    border: 1px solid rgb(206, 203, 203);
+    
 }
-.aboutUs_box_hand{
-    margin: 73px 0;
-    border: 2px solid rgb(182, 179, 179);
-}
+/**/
 .carousel_control_size{
     height: 600px;
     @media (min-width: 992px) and (max-width: 1199px) {
