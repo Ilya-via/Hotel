@@ -167,28 +167,6 @@ td {
     border: 2px ridge #830051;
 }
 
-.img_aboutUs {
-    width: 100%;
-    height: auto;
-}
-
-.carousel_block {
-    margin: 5px 0;
-}
-
-.aboutUs_info {
-    margin: 100px 0;
-
-    h3 {
-        color: goldenrod;
-        font-weight: bolder;
-        margin: 0 0 10px 0 !important;
-    }
-
-    p {
-        color: grey;
-    }
-}
 
 
 .accommodation {
@@ -213,52 +191,8 @@ a[role="button"] {
 .description {
     font-size: 18px;
 }
-.panel-body{
-    padding: 0px!important;
-form {
-    background: #830051 !important;
-    h1 {
-        text-align: center;
-        padding:10px 0 20px 0;
-        margin-top: 0px!important;
-    }
-    .coment{padding:0 0 15px 15px;
-    button{
-        background: #f9eea4!important;
-    }}
-    color: #fff!important;
-}}
 
-@media(max-width: 480px) {
-    .aboutUs_info h3 {
-        font-size: 22px;
-    }
-
-    .aboutUs_info p {
-        font-size: 7px;
-    }
-
-    .about_text {
-        height: 170px !important;
-    }
-}
-
-@media (max-width: 320px) {
-    .aboutUs_info h3 {
-        font-size: 14px;
-    }
-
-    .aboutUs_info p {
-        font-size: 7px;
-    }
-
-    .about_text {
-        height: 170px !important;
-    }
-}
-
-/**/
-
+// Vlad - область для кода ниже
 .about_text {
     background: rgb(247, 245, 245);
     padding: 20px;
@@ -267,7 +201,30 @@ form {
 
 }
 
-/**/
+.img_aboutUs {
+    width: 100%;
+    height: auto;
+}
+
+.carousel_block {
+    margin: 5px 0;
+}
+
+.aboutUs_info {
+    margin: 100px 0;
+
+    h3 {
+        color: goldenrod;
+        font-weight: bolder;
+        margin: 0 0 10px 0 !important;
+    }
+
+    p {
+        color: grey;
+    }
+}
+
+
 .carousel_control_size {
     height: 600px;
 
@@ -291,8 +248,6 @@ form {
         height: 150px;
     }
 }
-
-// Vlad - область для кода ниже
 
 .text_p {
     font-size: 18px;
@@ -353,8 +308,6 @@ form {
     }
 }
 
-
-
 @media (min-width: 768px) and (max-width: 819px) {
     #responsive-menu ul {
         display: none;
@@ -363,4 +316,111 @@ form {
     #icon-hamburger {
         display: block;
     }
+}
+
+@media(max-width: 480px) {
+    .aboutUs_info h3 {
+        font-size: 22px;
+    }
+
+    .aboutUs_info p {
+        font-size: 7px;
+    }
+
+    .about_text {
+        height: 170px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .aboutUs_info h3 {
+        font-size: 14px;
+    }
+
+    .aboutUs_info p {
+        font-size: 7px;
+    }
+
+    .about_text {
+        height: 170px !important;
+    }
+}
+
+//Vlad offer style
+.specialOffer {
+    h2 {
+        color: #830051;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    a {
+        color: rgb(68, 68, 68);
+        font-size: 12.5px;
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: #830051;
+    }
+}
+
+.newlayd {
+    h3 {
+        color: rgb(107, 106, 106);
+        
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+.glyphicon {
+    color: white;
+}
+
+.btn {
+    width: 70px; 
+}
+
+
+.loaylty {
+   h3{
+       color: rgb(107, 106, 106);
+       
+   }
+    h4 {
+        color: goldenrod;
+        font-size:22px;
+    }
+    p{
+        font-size: 15px;
+        color:black;
+    }
+    li{
+        font-size: 16px;
+    }
+}
+.business{
+    h3{
+        color: rgb(107, 106, 106);
+       
+    }
+    p{
+        font-size: 15px;
+        color:black;
+    }
+    li{
+        font-size: 16px;
+    }
+    
 }
