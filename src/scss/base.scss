@@ -147,6 +147,7 @@ footer .container .row {
     @media (min-width: 200px) and (max-width: 495px) {
         font-size: 10px;
     }
+
     @media (max-width: 405px) {
         display: none;
     }
@@ -174,68 +175,22 @@ td {
 .carousel_block {
     margin: 5px 0;
 }
-.aboutUs_info{
+
+.aboutUs_info {
     margin: 100px 0;
-    h3{
+
+    h3 {
         color: goldenrod;
         font-weight: bolder;
-        margin:0 0 10px 0 !important;
+        margin: 0 0 10px 0 !important;
     }
-    p{
+
+    p {
         color: grey;
     }
 }
 
-@media(max-width: 480px) {
-    .aboutUs_info h3{
-        font-size:22px;
-    }
-    .aboutUs_info p{
-        font-size:7px;
-    }
-    .about_text{
-      height: 170px !important;
-  }
-}
-@media (max-width: 320px) {
-    .aboutUs_info h3{
-        font-size:14px;
-    }
-    .aboutUs_info p{
-        font-size:7px;
-    }
-   .about_text{
-       height: 170px !important;
-   }
-}
-/**/
 
-.about_text{
-    background: rgb(247, 245, 245);
-    padding: 20px;
-    height: 250px;
-    border: 1px solid rgb(206, 203, 203);
-    
-}
-/**/
-.carousel_control_size{
-    height: 600px;
-    @media (min-width: 992px) and (max-width: 1199px) {
-        height:490px;
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-        height:380px;
-    }
-    @media (max-width: 767px) {
-        height:380px;
-    }
-    @media(max-width: 480px) {
-        height:237px;
-    }
-    @media (max-width: 320px) {
-        height: 150px;
-    }
-}
 .accommodation {
     background: #f9eea4;
 }
@@ -258,11 +213,82 @@ a[role="button"] {
 .description {
     font-size: 18px;
 }
-
-form{
-    h1{
+.panel-body{
+    padding: 0px!important;
+form {
+    background: #830051 !important;
+    h1 {
         text-align: center;
-        padding-bottom: 20px;
+        padding:10px 0 20px 0;
+        margin-top: 0px!important;
+    }
+    .coment{padding:0 0 15px 15px;
+    button{
+        background: #f9eea4!important;
+    }}
+    color: #fff!important;
+}}
+
+@media(max-width: 480px) {
+    .aboutUs_info h3 {
+        font-size: 22px;
+    }
+
+    .aboutUs_info p {
+        font-size: 7px;
+    }
+
+    .about_text {
+        height: 170px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .aboutUs_info h3 {
+        font-size: 14px;
+    }
+
+    .aboutUs_info p {
+        font-size: 7px;
+    }
+
+    .about_text {
+        height: 170px !important;
+    }
+}
+
+/**/
+
+.about_text {
+    background: rgb(247, 245, 245);
+    padding: 20px;
+    height: 250px;
+    border: 1px solid rgb(206, 203, 203);
+
+}
+
+/**/
+.carousel_control_size {
+    height: 600px;
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        height: 490px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        height: 380px;
+    }
+
+    @media (max-width: 767px) {
+        height: 380px;
+    }
+
+    @media(max-width: 480px) {
+        height: 237px;
+    }
+
+    @media (max-width: 320px) {
+        height: 150px;
     }
 }
 
@@ -271,7 +297,7 @@ form{
 .text_p {
     font-size: 18px;
     opacity: 0.8;
-    
+
 
     @media(max-width: 767px) {
         font-size: 12px;
