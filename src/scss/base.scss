@@ -65,14 +65,15 @@ footer .container .row {
 }
 
 .preview-tabs-banner {
-    font-family: Arial;
+    font-family: "agenda-light", sans-serif;
     font-size: 24px;
     color: #cf0072;
     font-weight: bold;
+    margin: 15px 0;
 }
 
 .preview-tabs-banner-big {
-    font-family: Arial;
+    font-family: "agenda-light";
     font-size: 40px;
     color: #cf0072;
     font-weight: bold;
@@ -151,6 +152,25 @@ footer .container .row {
         display: none;
     }
 }
+
+// .carousel_control_size{
+//     height: 600px;
+//     @media (min-width: 992px) and (max-width: 1199px) {
+//         height:490px;
+//     }
+//     @media (min-width: 768px) and (max-width: 991px) {
+//         height:380px;
+//     }
+//     @media (max-width: 767px) {
+//         height:380px;
+//     }
+//     @media(max-width: 480px) {
+//         height:237px;
+//     }
+//     @media (max-width: 320px) {
+//         height: 150px;
+//     }
+// }
 
 // Artiom - область для кода ниже
 
@@ -331,3 +351,4 @@ a[role="button"] {
         display: block;
     }
 }
+
