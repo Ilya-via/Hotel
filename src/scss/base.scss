@@ -218,7 +218,9 @@ a[role="button"] {
         font-weight: bolder;
         margin: 0 0 10px 0 !important;
     }
-   
+    p {
+        color: grey;
+    }
 }
 
 .carousel_control_size {
@@ -367,7 +369,7 @@ a[role="button"] {
 .newlayd {
     h3 {
         color: rgb(107, 106, 106);
-        margin-top:0;
+        
     }
 
     p {
@@ -391,7 +393,7 @@ a[role="button"] {
 .loaylty {
    h3{
        color: rgb(107, 106, 106);
-       margin-top:0;
+       
    }
     h4 {
         color: goldenrod;
@@ -408,7 +410,7 @@ a[role="button"] {
 .business{
     h3{
         color: rgb(107, 106, 106);
-        margin-top:0;
+       
     }
     p{
         font-size: 15px;
