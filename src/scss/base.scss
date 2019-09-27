@@ -148,6 +148,7 @@ footer .container .row {
     @media (min-width: 200px) and (max-width: 495px) {
         font-size: 10px;
     }
+
     @media (max-width: 405px) {
         display: none;
     }
@@ -186,76 +187,8 @@ td {
     border: 2px ridge #830051;
 }
 
-.img_aboutUs {
-    width: 100%;
-    height: auto;
-}
 
-.carousel_block {
-    margin: 5px 0;
-}
-.aboutUs_info{
-    margin: 100px 0;
-    h3{
-        color: goldenrod;
-        font-weight: bolder;
-        margin:0 0 10px 0 !important;
-    }
-    p{
-        color: grey;
-    }
-}
 
-@media(max-width: 480px) {
-    .aboutUs_info h3{
-        font-size:22px;
-    }
-    .aboutUs_info p{
-        font-size:7px;
-    }
-    .about_text{
-      height: 170px !important;
-  }
-}
-@media (max-width: 320px) {
-    .aboutUs_info h3{
-        font-size:14px;
-    }
-    .aboutUs_info p{
-        font-size:7px;
-    }
-   .about_text{
-       height: 170px !important;
-   }
-}
-/**/
-
-.about_text{
-    background: rgb(247, 245, 245);
-    padding: 20px;
-    height: 250px;
-    border: 1px solid rgb(206, 203, 203);
-    
-}
-/**/
-.carousel_control_size{
-    height: 600px;
-    @media (min-width: 992px) and (max-width: 1199px) {
-        height:490px;
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-        height:380px;
-    }
-    @media (max-width: 767px) {
-        height:380px;
-    }
-    @media(max-width: 480px) {
-        height:237px;
-    }
-    @media (max-width: 320px) {
-        height: 150px;
-    }
-}
 .accommodation {
     background: #f9eea4;
 }
@@ -280,11 +213,66 @@ a[role="button"] {
 }
 
 // Vlad - область для кода ниже
+.about_text {
+    background: rgb(247, 245, 245);
+    padding: 20px;
+    height: 250px;
+    border: 1px solid rgb(206, 203, 203);
+
+}
+
+.img_aboutUs {
+    width: 100%;
+    height: auto;
+}
+
+.carousel_block {
+    margin: 5px 0;
+}
+
+.aboutUs_info {
+    margin: 100px 0;
+
+    h3 {
+        color: goldenrod;
+        font-weight: bolder;
+        margin: 0 0 10px 0 !important;
+    }
+
+    p {
+        color: grey;
+    }
+}
+
+
+.carousel_control_size {
+    height: 600px;
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        height: 490px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        height: 380px;
+    }
+
+    @media (max-width: 767px) {
+        height: 380px;
+    }
+
+    @media(max-width: 480px) {
+        height: 237px;
+    }
+
+    @media (max-width: 320px) {
+        height: 150px;
+    }
+}
 
 .text_p {
     font-size: 18px;
     opacity: 0.8;
-    
+
 
     @media(max-width: 767px) {
         font-size: 12px;
@@ -340,8 +328,6 @@ a[role="button"] {
     }
 }
 
-
-
 @media (min-width: 768px) and (max-width: 819px) {
     #responsive-menu ul {
         display: none;
@@ -350,5 +336,112 @@ a[role="button"] {
     #icon-hamburger {
         display: block;
     }
+}
+
+@media(max-width: 480px) {
+    .aboutUs_info h3 {
+        font-size: 22px;
+    }
+
+    .aboutUs_info p {
+        font-size: 7px;
+    }
+
+    .about_text {
+        height: 170px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .aboutUs_info h3 {
+        font-size: 14px;
+    }
+
+    .aboutUs_info p {
+        font-size: 7px;
+    }
+
+    .about_text {
+        height: 170px !important;
+    }
+}
+
+//Vlad offer style
+.specialOffer {
+    h2 {
+        color: #830051;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    a {
+        color: rgb(68, 68, 68);
+        font-size: 12.5px;
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: #830051;
+    }
+}
+
+.newlayd {
+    h3 {
+        color: rgb(107, 106, 106);
+        
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+.glyphicon {
+    color: white;
+}
+
+.btn {
+    width: 70px; 
+}
+
+
+.loaylty {
+   h3{
+       color: rgb(107, 106, 106);
+       
+   }
+    h4 {
+        color: goldenrod;
+        font-size:22px;
+    }
+    p{
+        font-size: 15px;
+        color:black;
+    }
+    li{
+        font-size: 16px;
+    }
+}
+.business{
+    h3{
+        color: rgb(107, 106, 106);
+       
+    }
+    p{
+        font-size: 15px;
+        color:black;
+    }
+    li{
+        font-size: 16px;
+    }
+    
 }
 
