@@ -16,11 +16,30 @@
     margin-bottom: 20px;
 }
 
+.container-for-header {
+    display: flex;
+    // justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #830051;
+
+    a {
+        display: block;
+    }
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        flex-direction: column;
+    }
+}
+
+
 .navbar-background {
     background-image: url('../img/header/logo_metropol_hotel_light.png');
     background-repeat: no-repeat;
     background-position: left center;
-    height: 120px !important;
+    height: 120px;
+    width: 120px;
+    margin: 0 15px;
 }
 
 .navbar-inverse>.container-fluid,
@@ -55,28 +74,28 @@ header {
         margin-top: 35px;
 
         @media (min-width: 0px) and (max-width: 767px) {
-            margin-top: 0;
+            margin-top: 10px;
         }
     }
 }
 
 #icon-hamburger {
-    margin: 43px 7px 0 0;
+    margin: 0 7px 0 0;
+    position: absolute;
+    right: 7px;
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        margin: 40px 7px 0 0;
+    }
 }
 
 header button:hover {
     background: #5a0038 !important;
     border-radius: 25%;
+    order: 2;
+    position: absolute;
+    right: 7px;
 }
-
-
-
-
-
-
-
-
-
 
 .preview {
     margin: 40px 0;
