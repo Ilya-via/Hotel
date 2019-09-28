@@ -150,7 +150,8 @@ header button:hover {
 }
 
 #tab-1 h1,
-#tab-2 h1,.specialOffer h2{
+#tab-2 h1,
+.specialOffer h2 {
     font-family: "agenda-light";
     font-size: 40px;
     color: #830051;
@@ -158,6 +159,16 @@ header button:hover {
     margin: 40px 0 20px;
 }
 
+.specialOffer h2 {
+    @media (min-width: 295px) and (max-width: 450px) {
+        font-size: 30px;
+    }
+
+    @media (min-width: 0px) and (max-width: 295px) {
+        font-size: 25px;
+    }
+
+}
 
 .fitness-center,
 .restaurants-bars {
@@ -195,7 +206,7 @@ header button:hover {
     height: 0;
 }
 
-#restaurants-bars::-webkit-scrollbar {
+.restaurants-bars::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
