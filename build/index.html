@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo-page.ico">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
+    <title>METROPOL</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar-inverse">
+                    <div class="container-for-header">
+                        <a href="index.html" alt="Brand">
+                            <div class="navbar-background" href="index.html">
+                            </div>
+                        </a>
+    
+                        <button style="border: none" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#responsive-menu" id="icon-hamburger">
+                            <img src="img\header\icon_hamburger.png" alt="">
+                        </button>
+    
+                        <div class="collapse navbar-collapse" id="responsive-menu">
+                            <ul class="nav navbar-nav">
+                                <li><a class="text-uppercase" href="catalog.html">
+                                        <p>Каталог номеров</p>
+                                    </a></li>
+                                <li><a class="text-uppercase" href="specialoffer.html">
+                                        <p>Спецпредложение</p>
+                                    </a></li>
+                                <li><a class="text-uppercase" href="aboutUs.html">
+                                        <p>О нас</p>
+                                    </a></li>
+                                <li><a class="text-uppercase" class="btn btn-primary" role="button" data-toggle="modal"
+                                        data-target=".bs-example-modal-lg">
+                                        <p>Забронируйте прямо сейчас</p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    </header>
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+    
+          <div class="panel panel-default" style="background-color: #CCC">
+            <div class="panel-body">
+              <form id="form1" name="form1" method="post" action="" class="form-horizontal">
+                <h1>БРОНИРОВАНИЕ НОМЕРОВ</h1>
+                <!-- START THE FORM -->
+                <div class="col-sm-6">
+                  <!-- FIRST COLUMN -->
+                  <div class="form-group">
+                    <label for="inputName" class="col-sm-4 control-label">Имя</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputFirstname" placeholder="Иван">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputTel" class="col-sm-4 control-label">Телефон</label>
+                    <div class="col-sm-8">
+                      <input type="tel" class="form-control" id="inputLastname" placeholder="+375()xxxxxxx">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputData" class="col-sm-4 control-label">Дата заезда</label>
+                    <div class="col-sm-8">
+                      <input type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputТumbers" class="col-sm-4 control-label">Номера</label>
+                    <div class="col-sm-8">
+                      <select class="form-control">
+                        <option>Singleе</option>
+                        <option>Twin</option>
+                        <option>Double</option>
+                        <option>Double Superior</option>
+                        <option>De Lux</option>
+                        <option>Suite</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-sm-6">
+                  <!-- SECOND COLUMN -->
+                  <div class="form-group">
+                    <label for="inputSurname" class="col-sm-4 control-label">Фамилия</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputEmail" placeholder="Иванов">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="inputUsername">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputData" class="col-sm-4 control-label">Дата выезда</label>
+                    <div class="col-sm-8">
+                      <input type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAccommodation" class="col-sm-4 control-label">Размещение в номере</label>
+                    <div class="col-sm-8">
+                      <select class="form-control">
+                        <option>Одноместное размещение</option>
+                        <option>Двухместное размещение</option>
+                        <option>Трехместное размещение</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="coment">
+                <h3>Коментарий</h3>
+                <textarea name="Address of residence" cols="52" rows="8"></textarea>
+                <br>
+                <button type="submit" class="btn btn-default">Забронировать</button>
+              </div>
+              </form> <!-- END THE FORM -->
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    <div class="container">
+        <div class="preview">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <span>METROPOL</span> <br />
+                <a href="https://goo.gl/maps/p9MqBXGgys73jHUM9"> Kirova Street 13, Minsk &#124; 220030 &#124; Belarus</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab-1" data-toggle="tab">
+                                <p>Фитнес&#45;центр</p>
+                            </a></li>
+                        <li><a href="#tab-2" data-toggle="tab">
+                                <p>Рестораны и бары</p>
+                            </a></li>
+                    </ul>
+                    <div class="tab-content especially-role-background-index">
+
+                        <div class="tab-pane fade in active col-lg-12 col-md-12 col-sm-12 col-xs-12" id="tab-1">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <h1>Фитнес и здоровье</h1>
+                                <p>В поездке сложно вести привычный образ жизни, особенно
+                                    когда у Вас мало времени и Вы очень заняты. Мы понимаем это. И предлагаем Вам свое
+                                    решение. Занимайтесь спортом тогда, когда Вы этого хотите, &#45; это поможет Вам
+                                    сохранять концентрацию, бодрость и быть всегда в отличной форме. Поэтому заряжайтесь
+                                    энергией, чтобы быть готовым к любой ситуации. Для этого к Вашим услугам наш
+                                    полностью оборудованный тренажерный зал и велнес&#45;центр. </p>
+                                <hr />
+                                <h2 class="preview-tabs-banner">Информация о фитнес&#45;центре в отеле</h2>
+                                <br />
+                                <p><b>Часы работы&#58;</b> 6&#58;30 AM&#45;11&#58;00 PM</p>
+                                <p>Фитнесс центр оборудован новейшими тренажерами мирового лидера в производстве
+                                    спортивного оборудование Lifefitness. Высококвалифицированные специалисты всегда
+                                    готовы оказать Вам помощь в проведении тренировок, в том числе провести
+                                    индивидуальные занятия.</p>
+                                <br />
+                                <ul>
+                                    <li>Гребной тренажер</li>
+                                    <li>Степпер</li>
+                                    <li>Беговая дорожка</li>
+                                    <li>Эллиптические тренажеры</li>
+                                    <li>Свободные веса</li>
+                                    <li>Велотренажер</li>
+                                </ul>
+                                <hr />
+                                <h2 class="preview-tabs-banner">Ближайший центр
+                                    отдыха</h2><br />
+                                <ul>
+                                    <li>Плавание</li>
+                                    <li>Горизонтальные солярии</li>
+                                </ul>
+                                <hr />
+                                <h2 class="preview-tabs-banner">Spa</h2><br />
+                                <p><b>PRINCESS SPA</b><br /><b>Часы работы&#58;</b> 6&#58;30 AM&#45;11&#58;00 PM</p>
+                                <p>Все процедуры SPA&#45;салона отличают расслабляющие ароматы, натуральность формул и
+                                    ингредиентов. Салон рад предложить различные процедуры по уходу за лицом и телом для
+                                    мужчин и женщин. Вы также сможете посетить наш бассейн, джакузи, сауны, тренажерный
+                                    зал. </p>
+                                <p class="small-preview">Спа&#45;салон&#58;</p>
+                                <ul>
+                                    <li>Массаж</li>
+                                </ul>
+                                <p class="small-preview">Спа&#45;процедуры&#58;</p>
+                                <ul>
+                                    <li>Косметические процедуры</li>
+                                    <li>Скрабирование тела</li>
+                                    <li>Маски для лица</li>
+                                    <li>Восковая депиляция</li>
+                                    <li>Рефлексотерапия ног</li>
+                                    <li>Маникюр и педикюр</li>
+                                    <li>Обертывания тела</li>
+                                    <li>Парафиновые ванночки для рук</li>
+                                    <li>Рефлексотерапия шеи</li>
+                                    <li>Ванночки для ног</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 fitness-center">
+                                <img src="img\fitness-center\2991978018-4x3-1.jpg" alt="fitness-center">
+                                <img src="img\fitness-center\2991978018-4x3-2.jpg" alt="fitness-center">
+                                <img src="img\fitness-center\2991978018-4x3-3.jpg" alt="fitness-center">
+                                <img src="img\fitness-center\2991978018-4x3-4.jpg" alt="fitness-center">
+                                <img src="img\fitness-center\2991978018-4x3-5.jpg" alt="fitness-center">
+                                <img src="img\fitness-center\2991978018-4x3-6.jpg" alt="fitness-center">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 carousel-parent">
+                                <div id="carousel-fitness-center" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-fitness-center" data-slide-to="0" class="active">
+                                        </li>
+                                        <li data-target="#carousel-fitness-center" data-slide-to="1"></li>
+                                        <li data-target="#carousel-fitness-center" data-slide-to="2"></li>
+                                        <li data-target="#carousel-fitness-center" data-slide-to="3"></li>
+                                        <li data-target="#carousel-fitness-center" data-slide-to="4"></li>
+                                        <li data-target="#carousel-fitness-center" data-slide-to="5"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="img\fitness-center\2991978018-4x3-1.jpg" alt="fitness-center">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\fitness-center\2991978018-4x3-2.jpg" alt="fitness-center">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\fitness-center\2991978018-4x3-3.jpg" alt="fitness-center">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\fitness-center\2991978018-4x3-4.jpg" alt="fitness-center">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\fitness-center\2991978018-4x3-5.jpg" alt="fitness-center">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\fitness-center\2991978018-4x3-6.jpg" alt="fitness-center">
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-fitness-center" role="button"
+                                        data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-fitness-center" role="button"
+                                        data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="tab-pane fade col-lg-12 col-md-12 col-sm-12 col-xs-12" id="tab-2">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <h1>Рестораны и бары</h1>
+                                <p>Мы готовы предложить Вам еду и напитки в удобное для Вас время и в
+                                    наиболее удобном для Вас месте. Наслаждайтесь прекрасным выбором блюд и напитков
+                                    в
+                                    течение всего дня, от легких закусок до изысканной кухни, в нашем полносервисном
+                                    ресторане и в нашем лаундже. В любое удобное время Вы также можете
+                                    воспользоваться
+                                    услугой заказа еды и напитков в номер.</p>
+                                <hr />
+                                <h2 class="preview-tabs-banner">Питание в номере</h2><br />
+                                <p><b>ОГРАНИЧЕННОЕ МЕНЮ</b><br />
+                                    <b>Часы работы&#58;</b> 12&#58;00 AM&#45;12&#58;00 PM</i></p>
+                                <hr />
+                                <h1>Рестораны отеля</h1>
+                                <h2 class="preview-tabs-banner">Империя</h2><br />
+                                <p><b>Месторасположение&#58;</b> 6th floor</p>
+                                <p><b>Предлагаются&#58;</b> Завтрак</p>
+                                <p><b>Телефон&#58;</b> 375&#45;17&#45;2183400</p>
+                                <p><b>Часы работы&#58;</b> 6&#58;30 AM&#45;11&#58;00 PM</p><br />
+                                <p>Ресторан предлагает своим посетителям завтрак &#34;шведский стол&#34;.
+                                    Эффективное и
+                                    внимательное обслуживание в современной и непринужденной обстановке позволит Вам
+                                    насладиться блюдами европейской кухни на фоне чарующего городского пейзажа.</p>
+                                <br />
+                                <hr />
+                                <h2 class="preview-tabs-banner">Star cafe</h2><br />
+                                <p><b>Месторасположение&#58;</b> Lobby</p>
+                                <p><b>Предлагаются&#58;</b> Поздний завтрак &#40;бранч&#41;, Обед, Ужин, Десерт</p>
+                                <p><b>Телефон&#58;</b> 375&#45;17&#45;2183400</p>
+                                <p><b>Часы работы&#58;</b> 12&#58;00 PM&#45;12&#58;00 AM</p><br />
+                                <p>The Lobby Bar with stylish designed atmosphere offers you a wide variety of the
+                                    cocktails and snack menu. Wide selection of cigars is available for genuine
+                                    experts
+                                    and lovers. </p>
+                                <hr />
+                                <h1>Бары и лаунджи отеля</h1>
+                                <h2 class="preview-tabs-banner">Star Bar</h2><br />
+                                <p><b>Месторасположение&#58;</b> 1 этаж</p>
+                                <p><b>Часы работы&#58;</b> 1&#58;00 AM &#45; 1&#58;00 AM</p>
+                                <p><b>Телефон&#58;</b> 375&#45;17&#45;2183400</p><br />
+                                <p>В меню нашего лобби&#45;бара Вы сможете найти большое разнообразие алкогольных и
+                                    безалкогольных напитков, легких закусок. Для любителей и ценителей сигар
+                                    предоставлен широкий их выбор. Лобби&#45;бар открыт 24 часа ежедневно.</p><br />
+                            </div>
+                            <div class="col-lg-6 col-md-6 addScroll restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-1.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-2.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-3.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-4.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-5.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-6.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-7.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-8.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-9.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-10.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-11.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-12.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-13.jpg" alt="restaurants-bars">
+                                <img src="img\restaurants-bars\4328427145-4x3-14.jpg" alt="restaurants-bars">
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 carousel-parent">
+                                <div id="carousel-restaurants-bars" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="0" class="active">
+                                        </li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="1"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="2"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="3"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="4"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="6"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="7"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="8"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="9"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="10"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="11"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="12"></li>
+                                        <li data-target="#carousel-restaurants-bars" data-slide-to="13"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="img\restaurants-bars\4328427145-4x3-1.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-2.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-3.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-4.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-5.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-6.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-7.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-8.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-9.jpg" alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-10.jpg"
+                                                alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-11.jpg"
+                                                alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-12.jpg"
+                                                alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-13.jpg"
+                                                alt="restaurants-bars">
+                                        </div>
+                                        <div class="item">
+                                            <img src="img\restaurants-bars\4328427145-4x3-14.jpg"
+                                                alt="restaurants-bars">
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-restaurants-bars" role="button"
+                                        data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-restaurants-bars" role="button"
+                                        data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-sm-1 col-xs-1" id="footer-logo">
+                        <img alt="Brand" src="img\header\logo_metropol_hotel_dark.png">
+                    </div>
+                    <div class="col-md-6 col-sm-11 col-xs-11" id="footer-info">
+                        <ol>
+                            <li><strong class="col-md-4 col-sm-4 col-xs-4">Адрес:</strong><a
+                                    class="hotel-home col-md-8 col-sm-8 col-xs-8" href="https://goo.gl/maps/p9MqBXGgys73jHUM9"
+                                    target="_blank">Kirova Street 13, Minsk &#124; 220030 &#124; Belarus</a></li>
+                            <li><strong class="col-md-4 col-sm-4 col-xs-4">Бронирование</br>номеров:</strong>
+                                &#160;&#160;&#160;&#160;&#43;375 17 329 7777</br><a class="col-md-8 col-sm-8 col-xs-8" href="#"
+                                    title="Написать письмо">metropol&#45;reservations&#64;bghotel.by</a>
+                            </li>
+                            <li><strong class="col-md-4 col-sm-4 col-xs-4">Общие вопросы&#58;</strong><a
+                                    class="col-md-8 col-sm-8 col-xs-8" href="#" title="Написать письмо">metropol&#64;bghotel.by</a>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-5 hidden-sm hidden-xs" id="footer-item">
+                        <div class="col-md-6"><img src="img\footer\logo-awards.png" alt="logo"></div>
+                        <div class="col-md-6">
+                            <p>Отель &#34;Metropol&#34; &#45; <br> Лучший отель Беларуси 2018 и 2019 <br> в номинации World Travel Awards
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_footer-ending">
+                <h6>&#169; 2019 IHG. All rights reserved. Most hotels are independently owned and operated.</h6>
+            </div>
+        </footer>
+        <div class="btn-scrollUp">
+            <a href="#top"><img src="img\btn-scrollUp.png" alt="button_scroll_up"></a>
+        </div>
+</body>
+
+</html>

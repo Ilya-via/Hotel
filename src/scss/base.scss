@@ -18,7 +18,6 @@
 
 .container-for-header {
     display: flex;
-    // justify-content: space-between;
     flex-direction: row;
     align-items: center;
     background-color: #830051;
@@ -42,7 +41,6 @@
     margin: 0 15px;
 }
 
-.navbar-inverse>.container-fluid,
 .footer_footer-ending {
     background-color: #830051;
 }
@@ -69,13 +67,13 @@ footer .container .row {
     margin: 40px 0;
 }
 
-header {
-    .navbar-nav {
-        margin-top: 35px;
+.navbar-nav {
+    margin-top: 10px;
+}
 
-        @media (min-width: 0px) and (max-width: 767px) {
-            margin-top: 10px;
-        }
+#responsive-menu {
+    @media (min-width: 1200px) and (max-width: 10000px) {
+        margin: 0 auto;
     }
 }
 
@@ -119,6 +117,13 @@ header button:hover {
     }
 }
 
+.specialOffer a {
+    font-family: "agenda-light";
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
 .preview-tabs-banner {
     font-family: "agenda-light", sans-serif;
     font-size: 24px;
@@ -145,13 +150,14 @@ header button:hover {
 }
 
 #tab-1 h1,
-#tab-2 h1 {
+#tab-2 h1,.specialOffer h2{
     font-family: "agenda-light";
     font-size: 40px;
     color: #830051;
     text-transform: uppercase;
     margin: 40px 0 20px;
 }
+
 
 .fitness-center,
 .restaurants-bars {
@@ -273,7 +279,7 @@ td {
 }
 
 .especially-role-background-index a[role="button"] {
-    background: #83005157 !important;
+    background: #83005180 !important;
     border: none;
 }
 
@@ -323,6 +329,9 @@ td {
     }
 }
 
+.btn-default {
+    margin-left: 22px;
+}
 
 .carousel_control_size {
     height: 600px;
