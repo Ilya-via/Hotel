@@ -1,7 +1,7 @@
 // Ilya - область для кода ниже
 @font-face {
     font-family: "agenda-light";
-    src: url("../fonts/agenda-light.ttf") format("truetype");
+    src: url("../fonts/agenda-light.otf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -16,7 +16,33 @@
     margin-bottom: 20px;
 }
 
-.navbar-background,
+.container-for-header {
+    display: flex;
+    // justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #830051;
+
+    a {
+        display: block;
+    }
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        flex-direction: column;
+    }
+}
+
+
+.navbar-background {
+    background-image: url('../img/header/logo_metropol_hotel_light.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 120px;
+    width: 120px;
+    margin: 0 15px;
+}
+
+.navbar-inverse>.container-fluid,
 .footer_footer-ending {
     background-color: #830051;
 }
@@ -24,6 +50,7 @@
 header p,
 .footer_footer-ending h6 {
     color: #fff;
+    font-size: 12x;
 }
 
 .footer_footer-ending h6 {
@@ -42,26 +69,54 @@ footer .container .row {
     margin: 40px 0;
 }
 
-#responsive-menu ul {
-    margin-top: 22px;
+header {
+    .navbar-nav {
+        margin-top: 35px;
+
+        @media (min-width: 0px) and (max-width: 767px) {
+            margin-top: 10px;
+        }
+    }
+}
+
+#icon-hamburger {
+    margin: 0 7px 0 0;
+    position: absolute;
+    right: 7px;
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        margin: 40px 7px 0 0;
+    }
+}
+
+header button:hover {
+    background: #5a0038 !important;
+    border-radius: 25%;
+    order: 2;
+    position: absolute;
+    right: 7px;
 }
 
 .preview {
     margin: 40px 0;
-}
 
-.preview span {
-    font-family: "agenda-light";
-    font-size: 36px;
-    color: #830051;
-    font-weight: bold;
-}
+    @media (min-width: 0px) and (max-width: 600px) {
+        margin: 10px 0;
+    }
 
-.preview a {
-    font-family: "agenda-light";
-    font-size: 16px;
-    color: black;
-    font-weight: bold;
+    span {
+        font-family: "agenda-light";
+        font-size: 36px;
+        color: #830051;
+        font-weight: bold;
+    }
+
+    a {
+        font-family: "agenda-light";
+        font-size: 16px;
+        color: black;
+        font-weight: bold;
+    }
 }
 
 .preview-tabs-banner {
@@ -69,31 +124,67 @@ footer .container .row {
     font-size: 24px;
     color: #cf0072;
     font-weight: bold;
-    margin: 15px 0;
+    margin: 15px 0 0;
+    text-transform: uppercase;
 }
 
 .preview-tabs-banner-big {
     font-family: "agenda-light";
     font-size: 40px;
     color: #cf0072;
+    text-transform: uppercase;
+}
+
+.small-preview {
+    font-family: "agenda-light", sans-serif;
+    font-size: 18px;
+    color: #cf0072;
     font-weight: bold;
+    margin: 10px 0 5px 10px;
+    text-transform: uppercase;
 }
 
-#fitness-center {
-    overflow-y: auto;
-    height: 1440px;
+#tab-1 h1,
+#tab-2 h1 {
+    font-family: "agenda-light";
+    font-size: 40px;
+    color: #830051;
+    text-transform: uppercase;
+    margin: 40px 0 20px;
 }
 
-#restaurants-bars {
+.fitness-center,
+.restaurants-bars {
     overflow-y: auto;
-    height: 1920px;
+    height: 1450px;
+
+    @media (min-width: 0px) and (max-width: 991px) {
+        display: none;
+    }
+}
+
+.carousel-parent {
+    @media (min-width: 991px) {
+        display: none;
+    }
+
+    #carousel-restaurants-bars,
+    #carousel-fitness-center {
+        @media (min-width: 730px) and (max-width: 991px) {
+            width: 640px;
+        }
+    }
 }
 
 .tab-content img {
     margin: 0 0 5px;
+
+    @media (min-width: 0px) and (max-width: 991px) {
+        margin: 0;
+    }
 }
 
-#fitness-center::-webkit-scrollbar {
+.fitness-center::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
@@ -104,7 +195,11 @@ footer .container .row {
 }
 
 .tabs {
-    padding: 60px 0 0 0;
+    padding: 60px 0;
+
+    @media (min-width: 0px) and (max-width: 600px) {
+        padding: 30px 0;
+    }
 }
 
 .tabs>ul>li {
@@ -154,25 +249,6 @@ footer .container .row {
     }
 }
 
-// .carousel_control_size{
-//     height: 600px;
-//     @media (min-width: 992px) and (max-width: 1199px) {
-//         height:490px;
-//     }
-//     @media (min-width: 768px) and (max-width: 991px) {
-//         height:380px;
-//     }
-//     @media (max-width: 767px) {
-//         height:380px;
-//     }
-//     @media(max-width: 480px) {
-//         height:237px;
-//     }
-//     @media (max-width: 320px) {
-//         height: 150px;
-//     }
-// }
-
 // Artiom - область для кода ниже
 
 table {
@@ -187,15 +263,18 @@ td {
     border: 2px ridge #830051;
 }
 
-
-
 .accommodation {
     background: #f9eea4;
 }
 
-a[role="button"] {
+.especially-role-background a[role="button"] {
     background: #830051 !important;
     border: none !important;
+}
+
+.especially-role-background-index a[role="button"] {
+    background: #83005157 !important;
+    border: none;
 }
 
 .main {
@@ -328,16 +407,6 @@ a[role="button"] {
     }
 }
 
-@media (min-width: 768px) and (max-width: 819px) {
-    #responsive-menu ul {
-        display: none;
-    }
-
-    #icon-hamburger {
-        display: block;
-    }
-}
-
 @media(max-width: 480px) {
     .aboutUs_info h3 {
         font-size: 22px;
@@ -392,7 +461,6 @@ a[role="button"] {
 .newlayd {
     h3 {
         color: rgb(107, 106, 106);
-        
     }
 
     p {
@@ -408,63 +476,73 @@ a[role="button"] {
     color: white;
 }
 
-.btn {
-    width: 70px; 
-}
-
-
 .loaylty {
-   h3{
-       color: rgb(107, 106, 106);
-       
-   }
+    h3 {
+        color: rgb(107, 106, 106);
+
+    }
+
     h4 {
         color: goldenrod;
-        font-size:22px;
+        font-size: 22px;
     }
-    p{
+
+    p {
         font-size: 15px;
-        color:black;
+        color: black;
     }
-    li{
+
+    li {
         font-size: 16px;
     }
-}
-.business{
-    h3{
-        color: rgb(107, 106, 106);
-       
-    }
-    p{
-        font-size: 15px;
-        color:black;
-    }
-    li{
-        font-size: 16px;
-    }
-    
 }
 
-.panel-body{
-    padding: 0px!important;
-form {
-    background: #830051 !important;
-    h1 {
-        text-align: center;
-        padding:10px 0 20px 0;
-        margin-top: 0px!important;
+.business {
+    h3 {
+        color: rgb(107, 106, 106);
+
     }
-    .coment{padding:0 0 15px 15px;
-    button{
-        background: #f9eea4!important;
-    }}
-    color: #fff!important;
+
+    p {
+        font-size: 15px;
+        color: black;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
 }
-.btn{
-    width: 160px;
-}
-textarea{
-    resize: none;
-    color:black;
-}
+
+.panel-body {
+    padding: 0px !important;
+
+    form {
+        background: #830051 !important;
+
+        h1 {
+            text-align: center;
+            padding: 10px 0 20px 0;
+            margin-top: 0px !important;
+        }
+
+        .coment {
+            padding: 0 0 15px 15px;
+
+            button {
+                background: #f9eea4 !important;
+            }
+        }
+
+        color: #fff !important;
+    }
+
+    .btn {
+        width: 160px !important;
+    }
+
+    textarea {
+        resize: none;
+        color: black;
+    }
 }
