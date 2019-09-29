@@ -12,6 +12,7 @@
     right: 22px;
     background-color: #83005171;
     border-radius: 25%;
+
     a {
         display: block;
         height: 40px;
@@ -37,6 +38,7 @@
     align-items: center;
     background-color: #830051;
     justify-content: center;
+
     a {
         display: block;
     }
@@ -100,13 +102,14 @@ footer .container .row {
 .navbar-inverse .navbar-toggle:hover {
     background-color: #c40179c5 !important;
 }
+
 // .navbar-inverse .navbar-toggle:focus {
 //     background-color: #5a0038 !important;
 // }
 
 // .container-for-header>button:hover {
 //     -webkit-tap-highlight-color: #5a00388e !important;
-  
+
 // }
 
 // .navbar-toggle {
@@ -119,6 +122,7 @@ header button:hover {
     position: absolute;
     right: 7px;
 }
+
 header button:focus {
     border-radius: 25%;
     background-color: #5a0038 !important;
@@ -579,7 +583,15 @@ td {
             padding: 0 0 15px 15px;
 
             button {
-                background: #f9eea4 !important;
+                background: #c71f65 !important;
+                border: 0;
+                font-family: "agenda-light";
+                font-size: 18px;
+                color:white;
+                width: 250px !important;
+                text-transform: uppercase;
+                letter-spacing: normal;
+                
             }
         }
 
