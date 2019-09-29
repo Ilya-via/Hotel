@@ -459,8 +459,7 @@ td {
         width: 200px;
     }
 }
-
-@media(max-width: 480px) {
+@media(max-width: 480px){
     .aboutUs_info h3 {
         font-size: 22px;
     }
@@ -606,4 +605,9 @@ td {
         resize: none;
         color: black;
     }
+}
+.close{
+    color: white !important;
+    font-size: 40px !important;
+    margin: 0 20px 0;
 }
