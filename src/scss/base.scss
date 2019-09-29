@@ -61,6 +61,10 @@
 
 .footer_footer-ending {
     background-color: #830051;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 header p,
@@ -70,7 +74,7 @@ header p,
 }
 
 .footer_footer-ending h6 {
-    padding: 10px 15px 8px;
+    padding: 10px 8px;
 }
 
 footer ol li {
@@ -182,6 +186,15 @@ header button:focus {
     text-transform: uppercase;
 }
 
+#tab-1 p,
+#tab-2 p,
+footer,
+.footer_footer-ending,
+ul>li {
+    font-family: "agenda-light";
+    font-size: 16px;
+}
+
 #tab-1 h1,
 #tab-2 h1,
 .specialOffer h2 {
@@ -279,7 +292,20 @@ header button:focus {
     }
 }
 
+#footer-info-indentation {
+    padding-bottom: 15px;
+}
+
 #footer-info {
+    ol {
+        li {
+            .row {
+                margin-bottom: 30px;
+                margin-top: 0px;
+            }
+        }
+    }
+
     @media (min-width: 540px) and (max-width: 620px) {
         font-size: 12px;
     }
@@ -310,7 +336,7 @@ table {
     border: 2px ridge #830051;
     width: 100%;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 5px;
 }
 
@@ -333,8 +359,10 @@ td {
 }
 
 .main {
+    font-family: "agenda-light";
     h1 {
         text-align: center;
+        margin: 10px 0 30px;
     }
 
     h3 {
@@ -366,6 +394,7 @@ td {
 
 .aboutUs_info {
     margin: 100px 0;
+    font-family: "agenda-light";
 
     h3 {
         color: goldenrod;
@@ -376,6 +405,9 @@ td {
     p {
         color: grey;
     }
+}
+.text>p :first-child {
+    font-size: 18px;
 }
 
 .btn-default {
@@ -407,30 +439,32 @@ td {
 }
 
 .text_p {
-    font-size: 18px;
+    font-family: "agenda-light";
+    font-size: 20px;
     opacity: 0.8;
 
 
     @media(max-width: 767px) {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     @media(max-width: 540px) {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     @media(max-width: 480px) {
-        font-size: 8px;
+        font-size: 10px;
     }
 }
 
 .title_h3 {
+    font-family: "agenda-light";
     color: rgb(201, 174, 23);
-    font-size: 42px;
+    font-size: 44px;
     font-weight: bolder;
 
     @media(max-width:480px) {
-        font-size: 26px;
+        font-size: 28px;
     }
 }
 
@@ -459,13 +493,16 @@ td {
         width: 200px;
     }
 }
-@media(max-width: 480px){
+
+@media(max-width: 480px) {
     .aboutUs_info h3 {
-        font-size: 22px;
+        font-family: "agenda-light";
+        font-size: 24px;
     }
 
     .aboutUs_info p {
-        font-size: 7px;
+        font-family: "agenda-light";
+        font-size: 10px;
     }
 
     .about_text {
@@ -501,7 +538,7 @@ td {
 
     a {
         color: rgb(68, 68, 68);
-        font-size: 12.5px;
+        font-size: 14px;
         font-weight: bold;
     }
 
@@ -511,14 +548,14 @@ td {
 }
 
 .newlayd {
+    font-family: "agenda-light";
+
     h3 {
         color: rgb(107, 106, 106);
+        font-size: 26px;
     }
 
-    p {
-        font-size: 15px;
-    }
-
+    p,
     li {
         font-size: 16px;
     }
@@ -529,14 +566,16 @@ td {
 }
 
 .loaylty {
+    font-family: "agenda-light";
+
     h3 {
         color: rgb(107, 106, 106);
-
+        font-size: 26px;
     }
 
     h4 {
         color: goldenrod;
-        font-size: 22px;
+        font-size: 24px;
     }
 
     p {
@@ -550,9 +589,11 @@ td {
 }
 
 .business {
+    font-family: "agenda-light";
+
     h3 {
         color: rgb(107, 106, 106);
-
+        font-size: 26px;
     }
 
     p {
@@ -571,6 +612,15 @@ td {
 
     form {
         background: #830051 !important;
+        font-family: "agenda-light";
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="text"]::placeholder {
+            font-size: 16px;
+        }
 
         h1 {
             text-align: center;
@@ -584,9 +634,8 @@ td {
             button {
                 background: #c71f65 !important;
                 border: 0;
-                font-family: "agenda-light";
                 font-size: 18px;
-                color:white;
+                color: white;
                 width: 200px !important;
                 text-transform: uppercase;
                 letter-spacing: normal;
@@ -606,7 +655,8 @@ td {
         color: black;
     }
 }
-.close{
+
+.close {
     color: white !important;
     font-size: 40px !important;
     margin: 0 20px 0;
