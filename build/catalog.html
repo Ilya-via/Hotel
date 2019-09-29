@@ -794,6 +794,8 @@
     
           <div class="panel panel-default" style="background-color: #CCC">
             <div class="panel-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
               <form id="form1" name="form1" method="post" action="" class="form-horizontal">
                 <h1>БРОНИРОВАНИЕ НОМЕРОВ</h1>
                 <!-- START THE FORM -->
@@ -802,21 +804,55 @@
                   <div class="form-group">
                     <label for="inputName" class="col-sm-4 control-label">Имя</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputFirstname" placeholder="Иван">
+                      <input required type="text" class="form-control" id="inputFirstname" placeholder="Иван">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputTel" class="col-sm-4 control-label">Телефон</label>
+                    <label for="inputSurname" class="col-sm-4 control-label">Фамилия</label>
                     <div class="col-sm-8">
-                      <input type="tel" class="form-control" id="inputLastname" placeholder="+375()xxxxxxx">
+                      <input required type="text" class="form-control" id="inputEmail" placeholder="Иванов">
                     </div>
                   </div>
+    
+    
+    
+    
                   <div class="form-group">
                     <label for="inputData" class="col-sm-4 control-label">Дата заезда</label>
                     <div class="col-sm-8">
-                      <input type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                      <input required type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label for="inputData" class="col-sm-4 control-label">Дата выезда</label>
+                    <div class="col-sm-8">
+                      <input required type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    </div>
+                  </div>
+    
+    
+    
+    
+                </div>
+    
+                <div class="col-sm-6">
+    
+                  <!-- SECOND COLUMN -->
+    
+                  <div class="form-group">
+                    <label for="inputTel" class="col-sm-4 control-label">Телефон</label>
+                    <div class="col-sm-8">
+                      <input required type="tel" class="form-control" id="inputLastname" placeholder="+375()xxxxxxx">
+                    </div>
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+                    <div class="col-sm-8">
+                      <input required type="text" class="form-control" id="inputUsername">
+                    </div>
+                  </div>
+    
                   <div class="form-group">
                     <label for="inputТumbers" class="col-sm-4 control-label">Номера</label>
                     <div class="col-sm-8">
@@ -828,28 +864,6 @@
                         <option>De Lux</option>
                         <option>Suite</option>
                       </select>
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="col-sm-6">
-                  <!-- SECOND COLUMN -->
-                  <div class="form-group">
-                    <label for="inputSurname" class="col-sm-4 control-label">Фамилия</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Иванов">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail" class="col-sm-4 control-label">Email</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputUsername">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputData" class="col-sm-4 control-label">Дата выезда</label>
-                    <div class="col-sm-8">
-                      <input type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
                     </div>
                   </div>
                   <div class="form-group">
@@ -864,11 +878,13 @@
                   </div>
                 </div>
                 <div class="coment">
-                <h3>Коментарий</h3>
-                <textarea name="Address of residence" cols="52" rows="8"></textarea>
-                <br>
-                <button type="submit" class="btn btn-default">Забронировать</button>
-              </div>
+                  <div class="col-lg-offset-3">
+                    <h3>Коментарий</h3>
+                    <textarea name="Address of residence" cols="52" rows="8"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-default ">Забронировать</button>
+                  </div>
+                </div>
               </form> <!-- END THE FORM -->
             </div>
           </div>
@@ -887,18 +903,21 @@
                                 class="hotel-home col-md-8 col-sm-8 col-xs-8" href="https://goo.gl/maps/tG7uajq3pS3VFcLi7"
                                 target="_blank">Kirova Street 13, Minsk &#124; 220030 &#124; Belarus</a></li>
                         <li><strong class="col-md-4 col-sm-4 col-xs-4">Бронирование</br>номеров:</strong>
-                            &#160;&#160;&#160;&#160;&#43;375 17 329 7777</br><a class="col-md-8 col-sm-8 col-xs-8" href="#"
+                            <a class="col-md-8 col-sm-8 col-xs-8" href="tel:+375173297777"> +375 17 329 7777</a></br>
+                            <a class="col-md-8 col-sm-8 col-xs-8" href="mailto:metropol-reservations@bghotel.by"
                                 title="Написать письмо">metropol&#45;reservations&#64;bghotel.by</a>
                         </li>
-                        <li><strong class="col-md-4 col-sm-4 col-xs-4">Общие вопросы&#58;</strong><a
-                                class="col-md-8 col-sm-8 col-xs-8" href="#" title="Написать письмо">metropol&#64;bghotel.by</a>
+                        <li><strong class="col-md-4 col-sm-4 col-xs-4">Общие вопросы&#58;</strong>
+                            <a class="col-md-8 col-sm-8 col-xs-8" href="mailto:metropol@bghotel.by"
+                                title="Написать письмо">metropol&#64;bghotel.by</a>
                         </li>
                     </ol>
                 </div>
                 <div class="col-md-5 hidden-sm hidden-xs" id="footer-item">
                     <div class="col-md-6"><img src="img\footer\logo-awards.png" alt="logo"></div>
                     <div class="col-md-6">
-                        <p>Отель &#34;Metropol&#34; &#45; <br> Лучший отель Беларуси 2018 и 2019 <br> в номинации World Travel Awards
+                        <p>Отель &#34;Metropol&#34; &#45; <br> Лучший отель Беларуси 2018 и 2019 <br> в номинации World
+                            Travel Awards
                         </p>
                     </div>
                 </div>
