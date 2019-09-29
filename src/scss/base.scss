@@ -10,6 +10,21 @@
     position: fixed;
     bottom: 22px;
     right: 22px;
+    background-color: #83005171;
+    border-radius: 25%;
+    a {
+        display: block;
+        height: 40px;
+        width: 40px;
+        border-radius: 25%;
+        background-image: url('../img/scrollUp.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.btn-scrollUp:hover {
+    background-color: #830051;
 }
 
 .header {
@@ -21,16 +36,16 @@
     flex-direction: row;
     align-items: center;
     background-color: #830051;
-
+    justify-content: center;
     a {
         display: block;
     }
 
     @media (min-width: 0px) and (max-width: 450px) {
         flex-direction: column;
+        justify-content: flex-start;
     }
 }
-
 
 .navbar-background {
     background-image: url('../img/header/logo_metropol_hotel_light.png');
@@ -39,6 +54,7 @@
     height: 120px;
     width: 120px;
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .footer_footer-ending {
@@ -71,12 +87,6 @@ footer .container .row {
     margin-top: 10px;
 }
 
-#responsive-menu {
-    @media (min-width: 1200px) and (max-width: 10000px) {
-        margin: 0 auto;
-    }
-}
-
 #icon-hamburger {
     margin: 0 7px 0 0;
     position: absolute;
@@ -87,12 +97,31 @@ footer .container .row {
     }
 }
 
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #c40179c5 !important;
+}
+// .navbar-inverse .navbar-toggle:focus {
+//     background-color: #5a0038 !important;
+// }
+
+// .container-for-header>button:hover {
+//     -webkit-tap-highlight-color: #5a00388e !important;
+  
+// }
+
+// .navbar-toggle {
+//     background-color: red !important;
+// }
+
 header button:hover {
-    background: #5a0038 !important;
     border-radius: 25%;
     order: 2;
     position: absolute;
     right: 7px;
+}
+header button:focus {
+    border-radius: 25%;
+    background-color: #5a0038 !important;
 }
 
 .preview {
@@ -220,7 +249,12 @@ header button:hover {
 }
 
 .tabs>ul>li {
-    background-color: rgba(128, 128, 128, 0.24);
+    -webkit-tap-highlight-color: rgba(128, 128, 128, 0.6);
+}
+
+.nav-tabs>li.active>a {
+    background-color: rgba(128, 128, 128, 0.24) !important;
+    color: #830051 !important;
 }
 
 .tabs>ul>li>a {
