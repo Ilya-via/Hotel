@@ -409,6 +409,11 @@ td {
 .text>p :first-child {
     font-size: 18px;
 }
+.text>h2 {
+    @media (max-width: 360px) {
+       font-size: 25px;
+    }
+}
 
 .btn-default {
     margin-left: 22px;
