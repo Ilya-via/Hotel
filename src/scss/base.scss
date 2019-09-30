@@ -344,9 +344,7 @@ td {
     }
 }
 
-.btn-default {
-    margin-left: 22px;
-}
+
 
 .carousel_control_size {
     height: 600px;
@@ -546,6 +544,7 @@ td {
 
         .coment {
             padding: 0 0 15px 15px;
+           
 
             button {
                 background: #f9eea4 !important;
@@ -557,27 +556,30 @@ td {
 
     .btn {
         width: 160px !important;
-        margin: 0 0 0 140px;
-        @media (max-width:480px){
-            margin: 0 0 0 55px;
-        }
-        @media (max-width:320px){
-            margin: 0 0 0 55px;
-        }
+
     }
+    
 
     textarea {
         resize: none;
         color: black;
-        width: 450px;
-        height: 80px;
-        @media (max-width:480px){
-            width: 265px;
-        }
+        width: 350px;
         @media (max-width:320px){
             width: 265px;
         }
+        
+        @media (max-width: 480){
+            width: 340px;
+        }
+        
+    
+       
+    
+        
     }
+   .col-lg-2{
+       padding-right:0 !important;
+   }
 }
 .close{
     color: white !important;
