@@ -307,6 +307,10 @@ td {
 .description {
     font-size: 18px;
 }
+.textarea_form{
+    width: 300px;
+    height: 10px !important;
+}
 
 // Vlad - область для кода ниже
 .about_text {
@@ -553,11 +557,26 @@ td {
 
     .btn {
         width: 160px !important;
+        margin: 0 0 0 140px;
+        @media (max-width:480px){
+            margin: 0 0 0 55px;
+        }
+        @media (max-width:320px){
+            margin: 0 0 0 55px;
+        }
     }
 
     textarea {
         resize: none;
         color: black;
+        width: 450px;
+        height: 80px;
+        @media (max-width:480px){
+            width: 265px;
+        }
+        @media (max-width:320px){
+            width: 265px;
+        }
     }
 }
 .close{
