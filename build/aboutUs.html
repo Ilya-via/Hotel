@@ -25,10 +25,8 @@
             <div class="row">
                 <div class="navbar-inverse">
                     <div class="container-for-header">
-                        <a href="index.html" alt="Brand">
-                            <div class="navbar-background" href="index.html">
-                            </div>
-                        </a>
+    
+                        <a href="index.html" alt="Brand" class="navbar-background"></a>
     
                         <button style="border: none" class="navbar-toggle" data-toggle="collapse"
                             data-target="#responsive-menu" id="icon-hamburger">
@@ -53,100 +51,118 @@
                             </ul>
                         </div>
                     </div>
-    
-    
                 </div>
             </div>
         </div>
-        </div>
-    
     </header>
-      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="panel panel-default" style="background-color: #CCC">
+          <div class="panel-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <form id="form1" name="form1" method="post" action="" class="form-horizontal">
+              <h1>БРОНИРОВАНИЕ НОМЕРОВ</h1>
     
-          <div class="panel panel-default" style="background-color: #CCC">
-            <div class="panel-body">
-              <form id="form1" name="form1" method="post" action="" class="form-horizontal">
-                <h1>БРОНИРОВАНИЕ НОМЕРОВ</h1>
-                <!-- START THE FORM -->
-                <div class="col-sm-6">
-                  <!-- FIRST COLUMN -->
-                  <div class="form-group">
-                    <label for="inputName" class="col-sm-4 control-label">Имя</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputFirstname" placeholder="Иван">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputTel" class="col-sm-4 control-label">Телефон</label>
-                    <div class="col-sm-8">
-                      <input type="tel" class="form-control" id="inputLastname" placeholder="+375()xxxxxxx">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputData" class="col-sm-4 control-label">Дата заезда</label>
-                    <div class="col-sm-8">
-                      <input type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputТumbers" class="col-sm-4 control-label">Номера</label>
-                    <div class="col-sm-8">
-                      <select class="form-control">
-                        <option>Singleе</option>
-                        <option>Twin</option>
-                        <option>Double</option>
-                        <option>Double Superior</option>
-                        <option>De Lux</option>
-                        <option>Suite</option>
-                      </select>
-                    </div>
+              <div class="row">
+                <div class="form-group col-lg-6 col-xs-6 ">
+                  <label for="inputFirstname" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Имя</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <input required type="text" class="form-control" id="inputFirstname" placeholder="Иван">
                   </div>
                 </div>
     
-                <div class="col-sm-6">
-                  <!-- SECOND COLUMN -->
-                  <div class="form-group">
-                    <label for="inputSurname" class="col-sm-4 control-label">Фамилия</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Иванов">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail" class="col-sm-4 control-label">Email</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputUsername">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputData" class="col-sm-4 control-label">Дата выезда</label>
-                    <div class="col-sm-8">
-                      <input type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputAccommodation" class="col-sm-4 control-label">Размещение в номере</label>
-                    <div class="col-sm-8">
-                      <select class="form-control">
-                        <option>Одноместное размещение</option>
-                        <option>Двухместное размещение</option>
-                        <option>Трехместное размещение</option>
-                      </select>
-                    </div>
+                <div class="form-group col-lg-6 col-xs-6">
+                  <label for="inputSecondname"
+                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Фамилия</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <input required type="text" class="form-control" id="inputSecondname" placeholder="Иванов">
                   </div>
                 </div>
-                <div class="coment">
-                <h3>Коментарий</h3>
-                <textarea name="Address of residence" cols="52" rows="8"></textarea>
-                <br>
-                <button type="submit" class="btn btn-default">Забронировать</button>
               </div>
-              </form> <!-- END THE FORM -->
-            </div>
-          </div>
     
+              <div class="row">
+                <div class="form-group col-lg-6 col-xs-6">
+                  <label for="inputDataOne" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Заезда</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <input required type="date" class="form-control" id="inputDataOne" placeholder="Jane Doe">
+                  </div>
+                </div>
+    
+                <div class="form-group col-lg-6 col-xs-6">
+                  <label for="inputDataTwo" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Выезда</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <input required type="date" class="form-control" id="inputDataTwo">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="form-group col-lg-6 col-xs-6">
+                  <label for="inputTel" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Телефон</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <input required type="tel" class="form-control" id="inputTel" placeholder="+375()xxxxxxx">
+                  </div>
+                </div>
+    
+                <div class="form-group col-lg-6 col-xs-6">
+                  <label for="inputEmail" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Email</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <input required type="text" class="form-control" id="inputEmail">
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="form-group col-lg-6 col-xs-6">
+                  <label for="inputRoomclass" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номера</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <select class="form-control" id="inputRoomclass">
+                      <option>Singleе</option>
+                      <option>Twin</option>
+                      <option>Double</option>
+                      <option>Double Superior</option>
+                      <option>De Lux</option>
+                      <option>Suite</option>
+                    </select>
+                  </div>
+                </div>
+    
+                <div class="form-group col-lg-6 col-xs-6">
+                  <label for="inputRoom" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номер</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <select class="form-control" id="inputRoom">
+                      <option>Одноместное размещение</option>
+                      <option>Двухместное размещение</option>
+                      <option>Трехместное размещение</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="coment">
+                <div class="row">
+                  <div class="col-lg-2 col-lg-offset-3 col-sm-offset-2 col-md-offset-3">
+                    <h3>Комментарий</h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4 col-lg-offset-3 col-sm-offset-2 col-md-offset-3">
+                    <textarea name="Address of residence" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4 col-lg-offset-3 col-xs-offset-2 col-sm-offset-2 col-md-offset-3">
+                    <button type="submit" class="btn btn-default ">Забронировать</button>
+    
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+    </div>
     <div id="aboutUs" class="aboutUs">
         <div class="container">
             <div id="carousel" class="carousel slide">
@@ -156,11 +172,13 @@
                             <img class="img_aboutUs" src="img/aboutUs/1850.2.png" alt="">
                             <div class="carousel_text">
                                 <h3 class="title_h3">1850</h3>
-                                <p class="text_p">Во второй половине XIX века в юго&#45;западной части Театральной площади
+                                <p class="text_p">Во второй половине XIX века в юго&#45;западной части Театральной
+                                    площади
                                     около
                                     древней
                                     Китайгородской стены работали очень популярные в Москве бани. В другой части здания
-                                    располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34; &#45; по имени их
+                                    располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34; &#45; по
+                                    имени их
                                     владельца,
                                     купца Петра Челышева.
                                 </p>
@@ -170,7 +188,8 @@
                             <img class="img_aboutUs" src="img/aboutUs/1898.2.png" alt="">
                             <div class="carousel_text">
                                 <h3 class="title_h3">1898</h3>
-                                <p class="text_p">Санкт&#45;Петербургское общество страхований покупает здание &#34;Челышей&#34; и
+                                <p class="text_p">Санкт&#45;Петербургское общество страхований покупает здание
+                                    &#34;Челышей&#34; и
                                     отдает его в аренду Северному домостроительному обществу во главе с Саввой
                                     Мамонтовым.
                                     Савва Мамонтов, будучи меценатом, решает соорудить на месте &#34;Челышей&#34; целый
@@ -186,11 +205,13 @@
                                 <h3 class="title_h3">1899</h3>
                                 <p class="text_p">В январе 1899 года был объявлен конкурс на лучший проект
                                     &#34;первоклассной
-                                    гостиницы&#34;. Принять в нем участие могли русские и иностранные специалисты. Первое
+                                    гостиницы&#34;. Принять в нем участие могли русские и иностранные специалисты.
+                                    Первое
                                     место
                                     занял проект знаменитого русского архитектора Л. Кекушева. Тем не менее реализовали
                                     тот,
-                                    что занял четвертое место. Его автором был 28&#45;летний архитектор Вильям Валькотт. В
+                                    что занял четвертое место. Его автором был 28&#45;летний архитектор Вильям Валькотт.
+                                    В
                                     том
                                     же 1899 году начались строительные работы.
                                 </p>
@@ -206,10 +227,12 @@
                                     демократические свободы. На следующий день новость была опубликована в газетах.
                                     Вечером
                                     в
-                                    ресторане &#34;Метрополь&#34; было многолюдно. Публика поднимала тосты за свободу, звучали
+                                    ресторане &#34;Метрополь&#34; было многолюдно. Публика поднимала тосты за свободу,
+                                    звучали
                                     поздравления. Среди гостей был и певец Федор Иванович Шаляпин. Охваченный всеобщей
                                     радостью,
-                                    он по просьбе публики а капелла исполнил знаменитую &#34;Дубинушку&#34; &#45; народную песню,
+                                    он по просьбе публики а капелла исполнил знаменитую &#34;Дубинушку&#34; &#45;
+                                    народную песню,
                                     считавшуюся тогда весьма крамольной. Потом великий певец взял шляпу, обошел зал и
                                     собрал
                                     внушительную сумму, которую передал революционным рабочим.</p>
@@ -219,14 +242,17 @@
                             <img class="img_aboutUs" src="img/aboutUs/1917.2.png" alt="">
                             <div class="carousel_text">
                                 <h3 class="title_h3">1917</h3>
-                                <p class="text_p">В конце октября &#45; начале ноября 1917 года в Москве развернулись бои с
+                                <p class="text_p">В конце октября &#45; начале ноября 1917 года в Москве развернулись
+                                    бои с
                                     провозглашенной
                                     новой
-                                    властью. &#34;Метрополь&#34; стал одним из пунктов сопротивления большевикам. Курсанты
+                                    властью. &#34;Метрополь&#34; стал одним из пунктов сопротивления большевикам.
+                                    Курсанты
                                     военных
                                     училищ превратили здание в военную крепость. Шесть дней Красная гвардия безуспешно
                                     пыталась
-                                    завладеть &#34;Метрополем&#34;. Только применив артиллерию, большевики смогли заставить
+                                    завладеть &#34;Метрополем&#34;. Только применив артиллерию, большевики смогли
+                                    заставить
                                     юнкеров
                                     покинуть здание.</p>
                             </div>
@@ -242,7 +268,8 @@
                                     общества
                                     наслаждалась изысканной кухней и винами, был превращен в зал заседаний. Его стены
                                     помнят
-                                    выступления Ленина, Троцкого, Свердлова. В роскошных номерах поселились большевики &#45;
+                                    выступления Ленина, Троцкого, Свердлова. В роскошных номерах поселились большевики
+                                    &#45;
                                     Георгий Чичерин, Николай Бухарин, Владимир Антонов&#45;Овсеенко. В некоторых &#45;
                                     располагались
                                     народные комиссариаты, комиссии, комитеты.
@@ -253,15 +280,19 @@
                             <img class="img_aboutUs" src="img/aboutUs/1925.2.png" alt="">
                             <div class="carousel_text">
                                 <h3 class="title_h3">1925</h3>
-                                <p class="text_p">В ноябре 1925 года в зале ресторана &#34;Метрополь&#34; состоялся первый
+                                <p class="text_p">В ноябре 1925 года в зале ресторана &#34;Метрополь&#34; состоялся
+                                    первый
                                     Московский международный шахматный турнир с участием чемпиона мира Капабланки
                                     &#40;Куба&#41;,
-                                    экс-чемпиона Ласкера &#40;Германия&#41;, знаменитых гроссмейстеров Маршалла &#40;США&#41;,
+                                    экс-чемпиона Ласкера &#40;Германия&#41;, знаменитых гроссмейстеров Маршалла
+                                    &#40;США&#41;,
                                     Рубинштейна
-                                    &#40;Польша&#41;, Боголюбова &#40;СССР&#41; и других великих шахматистов. СССР на турнире
+                                    &#40;Польша&#41;, Боголюбова &#40;СССР&#41; и других великих шахматистов. СССР на
+                                    турнире
                                     представляли
                                     Романовский, Ильин-Женевский, Богатырчук и другие мастера. Толпа москвичей собралась
-                                    около &#34;Метрополя&#34; и внимательно следила за ходом игр. Ежедневно турнир посещали
+                                    около &#34;Метрополя&#34; и внимательно следила за ходом игр. Ежедневно турнир
+                                    посещали
                                     около
                                     2000 человек.
                                 </p>
@@ -271,12 +302,15 @@
                             <img class="img_aboutUs" src="img/aboutUs/1931.2.png" alt="">
                             <div class="carousel_text">
                                 <h3 class="title_h3">1931</h3>
-                                <p class="text_p">&#34;Метрополь&#34; вновь стал функционировать как отель, в том числе для
+                                <p class="text_p">&#34;Метрополь&#34; вновь стал функционировать как отель, в том числе
+                                    для
                                     важных
                                     заграничных гостей. Здесь в разное время останавливались Бернард Шоу, Бертольт
                                     Брехт,
-                                    жили Сергей Прокофьев, Александр Вертинский с семьей. В 1950&#45;1970&#45;е годы гостями
-                                    &#34;Метрополя&#34; были Мао Цзэдун, Марчелло Мастроянни, Марлен Дитрих, Джон Стейнбек, Жан
+                                    жили Сергей Прокофьев, Александр Вертинский с семьей. В 1950&#45;1970&#45;е годы
+                                    гостями
+                                    &#34;Метрополя&#34; были Мао Цзэдун, Марчелло Мастроянни, Марлен Дитрих, Джон
+                                    Стейнбек, Жан
                                     Маре, Поль Мориа.
                                 </p>
                             </div>
@@ -300,8 +334,10 @@
                             <div class="carousel_text">
                                 <h3 class="title_h3">1991</h3>
                                 <p class="text_p">Открытие отеля в декабре 1991 года имело огромный резонанс не только в
-                                    стране, но и в мире&#58; презентации отеля прошли в Нью&#45;Йорке, Вашингтоне и Париже.
-                                    Международная комиссия присвоила ему уровень &#34;пять звезд&#34;. Это была одна из первых
+                                    стране, но и в мире&#58; презентации отеля прошли в Нью&#45;Йорке, Вашингтоне и
+                                    Париже.
+                                    Международная комиссия присвоила ему уровень &#34;пять звезд&#34;. Это была одна из
+                                    первых
                                     пятизвездочных гостиниц в новой России.
                                 </p>
                             </div>
@@ -311,11 +347,13 @@
 
                             <div class="carousel_text">
                                 <h3 class="title_h3">2012</h3>
-                                <p class="text_p">Во второй половине XIX века в юго&#45;западной части Театральной площади
+                                <p class="text_p">Во второй половине XIX века в юго&#45;западной части Театральной
+                                    площади
                                     около
                                     древней
                                     Китайгородской стены работали очень популярные в Москве бани. В другой части здания
-                                    располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34; &#45; по имени их
+                                    располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34; &#45; по
+                                    имени их
                                     владельца,
                                     купца Петра Челышева.</p>
                             </div>
@@ -357,7 +395,7 @@
                 </div>
                 <br />
                 <div class="row">
-                    <div class="col-lg-4 col-lg-offset-1  col-sm-5 col-xs-6">
+                    <div class="col-lg-4 col-lg-offset-2  col-sm-5 col-xs-6">
                         <img alt="" src="img/aboutUs/handshake.png" class="img-responsive">
                         <div class="about_text">
                             <h3>Наши гарантии</h3>
@@ -366,22 +404,19 @@
                                 наполнен светом и теплом сферы гостеприимства.</p>
                         </div>
                     </div>
-                    <div class=" col-lg-4 col-lg-offset-2 col-sm-5 col-sm-offset-2 col-xs-6">
+                    <div class="col-lg-4 col-sm-5 col-xs-6">
                         <img alt="" src="img/aboutUs/garant.png" class="img-responsive">
                         <div class="about_text">
                             <h3>Наши ценности</h3>
-                            <p>Наши основные ценности&#58; гостеприимство, добросовестность, лидерство, работа в команде,
+                            <p>Наши основные ценности&#58; гостеприимство, добросовестность, лидерство, работа в
+                                команде,
                                 ответственность и своевременность.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
     <footer>
         <div class="container">
             <div class="row">
@@ -390,34 +425,48 @@
                 </div>
                 <div class="col-md-6 col-sm-11 col-xs-11" id="footer-info">
                     <ol>
-                        <li><strong class="col-md-4 col-sm-4 col-xs-4">Адрес:</strong><a
-                                class="hotel-home col-md-8 col-sm-8 col-xs-8" href="https://goo.gl/maps/p9MqBXGgys73jHUM9"
-                                target="_blank">Kirova Street 13, Minsk &#124; 220030 &#124; Belarus</a></li>
-                        <li><strong class="col-md-4 col-sm-4 col-xs-4">Бронирование</br>номеров:</strong>
-                            &#160;&#160;&#160;&#160;&#43;375 17 329 7777</br><a class="col-md-8 col-sm-8 col-xs-8" href="#"
-                                title="Написать письмо">metropol&#45;reservations&#64;bghotel.by</a>
+                        <li>
+                            <div class="row"><strong class="col-md-4 col-sm-4 col-xs-4">Адрес:</strong><a
+                                    class="hotel-home col-md-8 col-sm-8 col-xs-8"
+                                    href="https://goo.gl/maps/tG7uajq3pS3VFcLi7" target="_blank">Kirova Street 13, Minsk
+                                    &#124; 220030 &#124; Belarus</a>
+                            </div>
                         </li>
-                        <li><strong class="col-md-4 col-sm-4 col-xs-4">Общие вопросы&#58;</strong><a
-                                class="col-md-8 col-sm-8 col-xs-8" href="#" title="Написать письмо">metropol&#64;bghotel.by</a>
+                        <li>
+                            <div class="row"><strong class="col-md-4 col-sm-4 col-xs-4"
+                                    id="footer-info-indentation">Бронирование</br>номеров:</strong>
+                                <a class="col-md-8 col-sm-8 col-xs-8" id="footer-info-indentation" href="tel:+375173297777"
+                                    title="Позвонить"> &#43;375 17
+                                    329 7777</a></br>
+                                <a class="col-md-8 col-sm-8 col-xs-8" href="mailto:metropol-reservations@bghotel.by"
+                                    title="Написать письмо">metropol&#45;reservations&#64;bghotel.by</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row"><strong class="col-md-4 col-sm-4 col-xs-4">Общие вопросы&#58;</strong>
+                                <a class="col-md-8 col-sm-8 col-xs-8" href="mailto:metropol@bghotel.by"
+                                    title="Написать письмо">metropol&#64;bghotel.by</a>
+                            </div>
                         </li>
                     </ol>
                 </div>
                 <div class="col-md-5 hidden-sm hidden-xs" id="footer-item">
                     <div class="col-md-6"><img src="img\footer\logo-awards.png" alt="logo"></div>
                     <div class="col-md-6">
-                        <p>Отель &#34;Metropol&#34; &#45; <br> Лучший отель Беларуси 2018 и 2019 <br> в номинации World Travel Awards
+                        <p>Отель &#34;Metropol&#34; &#45; Лучший отель Беларуси 2018 и 2019 в номинации World Travel Awards.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+    </footer>
+    <div class="container-fluid">
         <div class="footer_footer-ending">
             <h6>&#169; 2019 IHG. All rights reserved. Most hotels are independently owned and operated.</h6>
         </div>
-    </footer>
+    </div>
     <div class="btn-scrollUp">
-        <a href="#top"><img src="img\btn-scrollUp.png" alt="button_scroll_up"></a>
+        <a href="#top"></a>
     </div>
 </body>
-
 </html>
