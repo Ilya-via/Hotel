@@ -381,18 +381,20 @@ td {
     font-size: 18px;
 }
 
+
 .textarea_form {
     width: 300px;
     height: 10px !important;
 }
 
+
 // Vlad - область для кода ниже
+
 .about_text {
     background: rgb(247, 245, 245);
     padding: 20px;
     height: 250px;
     border: 1px solid rgb(206, 203, 203);
-
 }
 
 .img_aboutUs {
@@ -419,7 +421,21 @@ td {
     }
 }
 
+.text>p :first-child {
+    font-size: 18px;
+}
 
+.text>h2 {
+    @media (max-width: 360px) {
+        font-size: 25px;
+    }
+}
+
+
+
+.btn-default {
+    margin-left: 22px;
+}
 
 .carousel_control_size {
     height: 685px;
@@ -649,7 +665,7 @@ td {
     padding: 0px !important;
 
     form {
-        background: #830051 !important;
+        background: #830051;
         font-family: "agenda-light";
 
         label {
@@ -663,14 +679,14 @@ td {
         h1 {
             text-align: center;
             padding: 10px 0 20px 0;
-            margin-top: 0px !important;
+            margin-top: 0px;
         }
 
         .coment {
             padding: 0 0 15px 15px;
 
             button {
-                background: #c71f65 !important;
+                background: #c71f65;
                 border: 0;
                 font-size: 18px;
                 color: white;
@@ -739,13 +755,15 @@ td {
             }
         }
 
-        color: #fff !important;
+        color: #fff;
     }
+
 
     textarea {
         resize: none;
         color: black;
         width: 350px;
+
         margin-left: 280px;
         margin-bottom: 10px;
         @media (min-width: 992px) and (max-width: 1199px) {
@@ -765,9 +783,11 @@ td {
             margin-left: 90px;
         }
         @media (min-width:481px) and (max-width: 500px){
+
             width: 340px;
             margin-left: 60px;
         }
+
         @media (max-width: 480px) {
             width: 340px;
             margin-left: 60px;
@@ -780,6 +800,7 @@ td {
             width: 265px;
             margin-left: 15px;
         }
+
     }
 
     .col-lg-2 {
