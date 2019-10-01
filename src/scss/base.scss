@@ -541,7 +541,11 @@ td {
         width: 200px;
     }
 }
-
+@media (min-width: 768px) and (max-width: 991px) {
+   .about_text{
+    height:290px;
+}
+}
 @media (max-width: 767px) {
     .about_text {
         height: 345px !important;
