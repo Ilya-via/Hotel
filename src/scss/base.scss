@@ -8,7 +8,7 @@
 
 .btn-scrollUp {
     position: fixed;
-    bottom: 75px;
+    bottom: 22px;
     right: 22px;
     background-color: #83005171;
     border-radius: 25%;
@@ -380,10 +380,6 @@ td {
 .description {
     font-size: 18px;
 }
-.textarea_form{
-    width: 300px;
-    height: 10px !important;
-}
 
 // Vlad - область для кода ниже
 .about_text {
@@ -418,7 +414,21 @@ td {
     }
 }
 
+.text>p :first-child {
+    font-size: 18px;
+}
 
+.text>h2 {
+    @media (max-width: 360px) {
+        font-size: 25px;
+    }
+}
+
+
+
+.btn-default {
+    margin-left: 22px;
+}
 
 .carousel_control_size {
     height: 600px;
@@ -636,7 +646,6 @@ td {
 
         .coment {
             padding: 0 0 15px 15px;
-           
 
             button {
                 background: #c71f65 !important;
@@ -655,30 +664,12 @@ td {
 
     .btn {
         width: 160px !important;
-
     }
-    
 
     textarea {
         resize: none;
         color: black;
-        width: 350px;
-        @media (max-width:320px){
-            width: 265px;
-        }
-        
-        @media (max-width: 480){
-            width: 340px;
-        }
-        
-    
-       
-    
-        
     }
-   .col-lg-2{
-       padding-right:0 !important;
-   }
 }
 
 .close {
