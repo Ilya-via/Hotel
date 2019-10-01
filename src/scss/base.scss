@@ -806,6 +806,19 @@ td {
     .col-lg-2 {
         padding-right: 0 !important;
     }
+    .alert_text{
+        text-align: center;
+    }
+    .alert{
+        h2{
+            margin: 0 !important;
+        }
+        height: 100px;
+        margin-top:20px;
+    }
+    .container-fluid{
+        padding-right: 30px !important;
+    }
 }
 
 .close {
