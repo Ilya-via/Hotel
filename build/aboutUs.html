@@ -63,58 +63,57 @@
                 aria-hidden="true">&times;</span></button>
             <form id="form1" name="form1" method="post" action="" class="form-horizontal">
               <h1>БРОНИРОВАНИЕ НОМЕРОВ</h1>
-    
               <div class="row">
-                <div class="form-group col-lg-6 col-xs-6 ">
+                <div class="form-group has-feedback col-lg-6 col-xs-6 ">
                   <label for="inputFirstname" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Имя</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <input required type="text" class="form-control" id="inputFirstname" placeholder="Иван">
+                    <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
-    
-                <div class="form-group col-lg-6 col-xs-6">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputSecondname"
                     class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Фамилия</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <input required type="text" class="form-control" id="inputSecondname" placeholder="Иванов">
+                    <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
               </div>
-    
               <div class="row">
-                <div class="form-group col-lg-6 col-xs-6">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputDataOne" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Заезда</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <input required type="date" class="form-control" id="inputDataOne" placeholder="Jane Doe">
+                    <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
-    
-                <div class="form-group col-lg-6 col-xs-6">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputDataTwo" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Выезда</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <input required type="date" class="form-control" id="inputDataTwo">
+                    <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
               </div>
-    
               <div class="row">
-                <div class="form-group col-lg-6 col-xs-6">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputTel" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Телефон</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <input required type="tel" class="form-control" id="inputTel" placeholder="+375()xxxxxxx">
+                    <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
-    
-                <div class="form-group col-lg-6 col-xs-6">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputEmail" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Email</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <input required type="text" class="form-control" id="inputEmail">
+                    <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
               </div>
-    
               <div class="row">
-                <div class="form-group col-lg-6 col-xs-6">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputRoomclass" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номера</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <select class="form-control" id="inputRoomclass">
@@ -127,8 +126,7 @@
                     </select>
                   </div>
                 </div>
-    
-                <div class="form-group col-lg-6 col-xs-6">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputRoom" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номер</label>
                   <div class="col-lg-8 col-xs-offset-1">
                     <select class="form-control" id="inputRoom">
@@ -139,22 +137,53 @@
                   </div>
                 </div>
               </div>
-    
               <div class="coment">
                 <div class="row">
-                  <div class="col-lg-2 col-lg-offset-3 col-sm-offset-2 col-md-offset-3">
+                  <div class="">
                     <h3>Комментарий</h3>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-lg-4 col-lg-offset-3 col-sm-offset-2 col-md-offset-3">
-                    <textarea name="Address of residence" rows="3"></textarea>
+                  <div class="">
+                    <textarea name="Address of residence" rows="5"></textarea>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-lg-4 col-lg-offset-3 col-xs-offset-2 col-sm-offset-2 col-md-offset-3">
-                    <button type="submit" class="btn btn-default ">Забронировать</button>
-    
+                  <div class="">
+                    <button id="save" type="button" class="btn btn-default ">Забронировать</button>
+                    <div class="container-fluid">
+                      <div class="alert alert-success hidden" id="success-alert">
+                        <div class="alert_text">
+                          <h2>Успех</h2>
+                          <div>Ваши данные были успешно отправлены.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <script src="/assets/demo/jquery/jquery-1.11.2.min.js"></script>
+                    <script src="/assets/demo/bootstrap-3/js/bootstrap.min.js"></script>
+                    <script>
+                      $(function () {
+                        $('#save').click(function () {
+                          var formValid = true;
+                          $('input').each(function () {
+                            var formGroup = $(this).parents('.form-group');
+                            var glyphicon = formGroup.find('.form-control-feedback');
+                            if (this.checkValidity()) {
+                              formGroup.addClass('has-success').removeClass('has-error');
+                              glyphicon.addClass('glyphicon-ok').removeClass('glyphicon-remove');
+                            } else {
+                              formGroup.addClass('has-error').removeClass('has-success');
+                              glyphicon.addClass('glyphicon-remove').removeClass('glyphicon-ok');
+                              formValid = false;
+                            }
+                          });
+                          if (formValid) {
+                            $('#myModal').modal('hide');
+                            $('#success-alert').removeClass('hidden');
+                          }
+                        });
+                      });
+                    </script>
                   </div>
                 </div>
               </div>
@@ -163,254 +192,321 @@
         </div>
       </div>
     </div>
-    <div id="aboutUs" class="aboutUs">
-        <div class="container">
-            <div id="carousel" class="carousel slide">
-                <div class="carousel_block">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="img_aboutUs" src="img/aboutUs/1850.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1850</h3>
-                                <p class="text_p">Во второй половине XIX века в юго&#45;западной части Театральной
-                                    площади
-                                    около
-                                    древней
-                                    Китайгородской стены работали очень популярные в Москве бани. В другой части здания
-                                    располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34; &#45; по
-                                    имени их
-                                    владельца,
-                                    купца Петра Челышева.
-                                </p>
+    <div class="container">
+        <div id="aboutUs" class="aboutUs">
+            <div class="row">
+                <div id="carousel" class="carousel slide">
+                    <div class="carousel_block">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="img_aboutUs" src="img/aboutUs/1850.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1850</h3>
+                                    <p class="text_p">Во второй половине XIX века в юго&#45;западной части
+                                        Театральной
+                                        площади
+                                        около
+                                        древней
+                                        Китайгородской стены работали очень популярные в Москве бани. В другой части
+                                        здания
+                                        располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34;
+                                        &#45;
+                                        по
+                                        имени их
+                                        владельца,
+                                        купца Петра Челышева.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1898.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1898</h3>
-                                <p class="text_p">Санкт&#45;Петербургское общество страхований покупает здание
-                                    &#34;Челышей&#34; и
-                                    отдает его в аренду Северному домостроительному обществу во главе с Саввой
-                                    Мамонтовым.
-                                    Савва Мамонтов, будучи меценатом, решает соорудить на месте &#34;Челышей&#34; целый
-                                    развлекательный комплекс, который включил бы театр, выставочные залы, крытый
-                                    стадион,
-                                    рестораны и гостиничные номера.
-                                </p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1898.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1898</h3>
+                                    <p class="text_p">Санкт&#45;Петербургское общество страхований покупает здание
+                                        &#34;Челышей&#34; и
+                                        отдает его в аренду Северному домостроительному обществу во главе с Саввой
+                                        Мамонтовым.
+                                        Савва Мамонтов, будучи меценатом, решает соорудить на месте
+                                        &#34;Челышей&#34;
+                                        целый
+                                        развлекательный комплекс, который включил бы театр, выставочные залы, крытый
+                                        стадион,
+                                        рестораны и гостиничные номера.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1899.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1899</h3>
-                                <p class="text_p">В январе 1899 года был объявлен конкурс на лучший проект
-                                    &#34;первоклассной
-                                    гостиницы&#34;. Принять в нем участие могли русские и иностранные специалисты.
-                                    Первое
-                                    место
-                                    занял проект знаменитого русского архитектора Л. Кекушева. Тем не менее реализовали
-                                    тот,
-                                    что занял четвертое место. Его автором был 28&#45;летний архитектор Вильям Валькотт.
-                                    В
-                                    том
-                                    же 1899 году начались строительные работы.
-                                </p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1899.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1899</h3>
+                                    <p class="text_p">В январе 1899 года был объявлен конкурс на лучший проект
+                                        &#34;первоклассной
+                                        гостиницы&#34;. Принять в нем участие могли русские и иностранные
+                                        специалисты.
+                                        Первое
+                                        место
+                                        занял проект знаменитого русского архитектора Л. Кекушева. Тем не менее
+                                        реализовали
+                                        тот,
+                                        что занял четвертое место. Его автором был 28&#45;летний архитектор Вильям
+                                        Валькотт.
+                                        В
+                                        том
+                                        же 1899 году начались строительные работы.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1905.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1905</h3>
-                                <p class="text_p">17 октября Николай II подписал Манифест, в котором обещал созвать Думу
-                                    и
-                                    даровать народу
-                                    демократические свободы. На следующий день новость была опубликована в газетах.
-                                    Вечером
-                                    в
-                                    ресторане &#34;Метрополь&#34; было многолюдно. Публика поднимала тосты за свободу,
-                                    звучали
-                                    поздравления. Среди гостей был и певец Федор Иванович Шаляпин. Охваченный всеобщей
-                                    радостью,
-                                    он по просьбе публики а капелла исполнил знаменитую &#34;Дубинушку&#34; &#45;
-                                    народную песню,
-                                    считавшуюся тогда весьма крамольной. Потом великий певец взял шляпу, обошел зал и
-                                    собрал
-                                    внушительную сумму, которую передал революционным рабочим.</p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1905.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1905</h3>
+                                    <p class="text_p">17 октября Николай II подписал Манифест, в котором обещал
+                                        созвать
+                                        Думу
+                                        и
+                                        даровать народу
+                                        демократические свободы. На следующий день новость была опубликована в
+                                        газетах.
+                                        Вечером
+                                        в
+                                        ресторане &#34;Метрополь&#34; было многолюдно. Публика поднимала тосты за
+                                        свободу,
+                                        звучали
+                                        поздравления. Среди гостей был и певец Федор Иванович Шаляпин. Охваченный
+                                        всеобщей
+                                        радостью,
+                                        он по просьбе публики а капелла исполнил знаменитую &#34;Дубинушку&#34;
+                                        &#45;
+                                        народную песню,
+                                        считавшуюся тогда весьма крамольной. Потом великий певец взял шляпу, обошел
+                                        зал
+                                        и
+                                        собрал
+                                        внушительную сумму, которую передал революционным рабочим.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1917.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1917</h3>
-                                <p class="text_p">В конце октября &#45; начале ноября 1917 года в Москве развернулись
-                                    бои с
-                                    провозглашенной
-                                    новой
-                                    властью. &#34;Метрополь&#34; стал одним из пунктов сопротивления большевикам.
-                                    Курсанты
-                                    военных
-                                    училищ превратили здание в военную крепость. Шесть дней Красная гвардия безуспешно
-                                    пыталась
-                                    завладеть &#34;Метрополем&#34;. Только применив артиллерию, большевики смогли
-                                    заставить
-                                    юнкеров
-                                    покинуть здание.</p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1917.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1917</h3>
+                                    <p class="text_p">В конце октября &#45; начале ноября 1917 года в Москве
+                                        развернулись
+                                        бои с
+                                        провозглашенной
+                                        новой
+                                        властью. &#34;Метрополь&#34; стал одним из пунктов сопротивления
+                                        большевикам.
+                                        Курсанты
+                                        военных
+                                        училищ превратили здание в военную крепость. Шесть дней Красная гвардия
+                                        безуспешно
+                                        пыталась
+                                        завладеть &#34;Метрополем&#34;. Только применив артиллерию, большевики
+                                        смогли
+                                        заставить
+                                        юнкеров
+                                        покинуть здание.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1918.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1918</h3>
-                                <p class="text_p">После переезда советского правительства в Москву в 1917 году
-                                    &#34;Метрополь&#34;
-                                    стал резиденцией руководителей большевистской партии и советского государства.
-                                    Центральный ресторан отеля, где еще недавно интеллектуальная и творческая элита
-                                    общества
-                                    наслаждалась изысканной кухней и винами, был превращен в зал заседаний. Его стены
-                                    помнят
-                                    выступления Ленина, Троцкого, Свердлова. В роскошных номерах поселились большевики
-                                    &#45;
-                                    Георгий Чичерин, Николай Бухарин, Владимир Антонов&#45;Овсеенко. В некоторых &#45;
-                                    располагались
-                                    народные комиссариаты, комиссии, комитеты.
-                                </p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1918.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1918</h3>
+                                    <p class="text_p">После переезда советского правительства в Москву в 1917 году
+                                        &#34;Метрополь&#34;
+                                        стал резиденцией руководителей большевистской партии и советского
+                                        государства.
+                                        Центральный ресторан отеля, где еще недавно интеллектуальная и творческая
+                                        элита
+                                        общества
+                                        наслаждалась изысканной кухней и винами, был превращен в зал заседаний. Его
+                                        стены
+                                        помнят
+                                        выступления Ленина, Троцкого, Свердлова. В роскошных номерах поселились
+                                        большевики
+                                        &#45;
+                                        Георгий Чичерин, Николай Бухарин, Владимир Антонов&#45;Овсеенко. В некоторых
+                                        &#45;
+                                        располагались
+                                        народные комиссариаты, комиссии, комитеты.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1925.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1925</h3>
-                                <p class="text_p">В ноябре 1925 года в зале ресторана &#34;Метрополь&#34; состоялся
-                                    первый
-                                    Московский международный шахматный турнир с участием чемпиона мира Капабланки
-                                    &#40;Куба&#41;,
-                                    экс-чемпиона Ласкера &#40;Германия&#41;, знаменитых гроссмейстеров Маршалла
-                                    &#40;США&#41;,
-                                    Рубинштейна
-                                    &#40;Польша&#41;, Боголюбова &#40;СССР&#41; и других великих шахматистов. СССР на
-                                    турнире
-                                    представляли
-                                    Романовский, Ильин-Женевский, Богатырчук и другие мастера. Толпа москвичей собралась
-                                    около &#34;Метрополя&#34; и внимательно следила за ходом игр. Ежедневно турнир
-                                    посещали
-                                    около
-                                    2000 человек.
-                                </p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1925.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1925</h3>
+                                    <p class="text_p">В ноябре 1925 года в зале ресторана &#34;Метрополь&#34;
+                                        состоялся
+                                        первый
+                                        Московский международный шахматный турнир с участием чемпиона мира
+                                        Капабланки
+                                        &#40;Куба&#41;,
+                                        экс-чемпиона Ласкера &#40;Германия&#41;, знаменитых гроссмейстеров Маршалла
+                                        &#40;США&#41;,
+                                        Рубинштейна
+                                        &#40;Польша&#41;, Боголюбова &#40;СССР&#41; и других великих шахматистов.
+                                        СССР
+                                        на
+                                        турнире
+                                        представляли
+                                        Романовский, Ильин-Женевский, Богатырчук и другие мастера. Толпа москвичей
+                                        собралась
+                                        около &#34;Метрополя&#34; и внимательно следила за ходом игр. Ежедневно
+                                        турнир
+                                        посещали
+                                        около
+                                        2000 человек.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1931.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1931</h3>
-                                <p class="text_p">&#34;Метрополь&#34; вновь стал функционировать как отель, в том числе
-                                    для
-                                    важных
-                                    заграничных гостей. Здесь в разное время останавливались Бернард Шоу, Бертольт
-                                    Брехт,
-                                    жили Сергей Прокофьев, Александр Вертинский с семьей. В 1950&#45;1970&#45;е годы
-                                    гостями
-                                    &#34;Метрополя&#34; были Мао Цзэдун, Марчелло Мастроянни, Марлен Дитрих, Джон
-                                    Стейнбек, Жан
-                                    Маре, Поль Мориа.
-                                </p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1931.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1931</h3>
+                                    <p class="text_p">&#34;Метрополь&#34; вновь стал функционировать как отель, в
+                                        том
+                                        числе
+                                        для
+                                        важных
+                                        заграничных гостей. Здесь в разное время останавливались Бернард Шоу,
+                                        Бертольт
+                                        Брехт,
+                                        жили Сергей Прокофьев, Александр Вертинский с семьей. В 1950&#45;1970&#45;е
+                                        годы
+                                        гостями
+                                        &#34;Метрополя&#34; были Мао Цзэдун, Марчелло Мастроянни, Марлен Дитрих,
+                                        Джон
+                                        Стейнбек, Жан
+                                        Маре, Поль Мориа.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1986.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1986</h3>
-                                <p class="text_p">В 1986 году начались масштабные работы по реконструкции и реставрации
-                                    здания.
-                                    Продолжались
-                                    они пять лет. По старым чертежам восстановили фасад и интерьеры в их первоначальном
-                                    виде.
-                                    Сочетая в себе новейшие технические достижения, европейский уровень сервиса и
-                                    самобытность,
-                                    &#34;Метрополь&#34; встал в ряд ведущих отелей мира.</p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1986.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1986</h3>
+                                    <p class="text_p">В 1986 году начались масштабные работы по реконструкции и
+                                        реставрации
+                                        здания.
+                                        Продолжались
+                                        они пять лет. По старым чертежам восстановили фасад и интерьеры в их
+                                        первоначальном
+                                        виде.
+                                        Сочетая в себе новейшие технические достижения, европейский уровень сервиса
+                                        и
+                                        самобытность,
+                                        &#34;Метрополь&#34; встал в ряд ведущих отелей мира.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/1991.2.png" alt="">
-                            <div class="carousel_text">
-                                <h3 class="title_h3">1991</h3>
-                                <p class="text_p">Открытие отеля в декабре 1991 года имело огромный резонанс не только в
-                                    стране, но и в мире&#58; презентации отеля прошли в Нью&#45;Йорке, Вашингтоне и
-                                    Париже.
-                                    Международная комиссия присвоила ему уровень &#34;пять звезд&#34;. Это была одна из
-                                    первых
-                                    пятизвездочных гостиниц в новой России.
-                                </p>
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/1991.2.png" alt="">
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">1991</h3>
+                                    <p class="text_p">Открытие отеля в декабре 1991 года имело огромный резонанс не
+                                        только в
+                                        стране, но и в мире&#58; презентации отеля прошли в Нью&#45;Йорке,
+                                        Вашингтоне и
+                                        Париже.
+                                        Международная комиссия присвоила ему уровень &#34;пять звезд&#34;. Это была
+                                        одна
+                                        из
+                                        первых
+                                        пятизвездочных гостиниц в новой России.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img class="img_aboutUs" src="img/aboutUs/2012.2.png" alt="">
+                            <div class="item">
+                                <img class="img_aboutUs" src="img/aboutUs/2012.2.png" alt="">
 
-                            <div class="carousel_text">
-                                <h3 class="title_h3">2012</h3>
-                                <p class="text_p">Во второй половине XIX века в юго&#45;западной части Театральной
-                                    площади
-                                    около
-                                    древней
-                                    Китайгородской стены работали очень популярные в Москве бани. В другой части здания
-                                    располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34; &#45; по
-                                    имени их
-                                    владельца,
-                                    купца Петра Челышева.</p>
+                                <div class="carousel_text">
+                                    <h3 class="title_h3">2012</h3>
+                                    <p class="text_p">Во второй половине XIX века в юго&#45;западной части
+                                        Театральной
+                                        площади
+                                        около
+                                        древней
+                                        Китайгородской стены работали очень популярные в Москве бани. В другой части
+                                        здания
+                                        располагалась гостиница. Оба заведения москвичи называли &#34;Челыши&#34;
+                                        &#45;
+                                        по
+                                        имени их
+                                        владельца,
+                                        купца Петра Челышева.</p>
+                                </div>
                             </div>
                         </div>
+                        <a href="#carousel"
+                            class="left carousel-control carousel_control_size especially-role-background-aboutUs"
+                            data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a href="#carousel"
+                            class="right carousel-control carousel_control_size especially-role-background-aboutUs"
+                            data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
                     </div>
-                    <a href="#carousel" class="left carousel-control carousel_control_size" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a href="#carousel" class="right carousel-control carousel_control_size" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
                 </div>
             </div>
-        </div>
-        <div class="aboutUs_info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-offset-1 col-lg-10">
-                        <img alt="" src="img/aboutUs/services_2.jpg" class="img-responsive">
-                        <div class="about_text">
-                            <h3>Наши услуги</h3>
-                            <p>Hilton &#45; одна из крупнейших гостиничных корпораций, насчитывающая более 4200 отелей и
-                                курортов, расположенных в 93 городах мира, которые объединяют в себе традиции
-                                прошлого и
-                                современность. В каждом отеле сети Hilton мы гарантируем Вам теплый приём,
-                                прекрасное
-                                обслуживание, комфортабельные, элегантные номера и широкий спектр возможностей для
-                                работы и досуга, а также богатый выбор ресторанов, конференц&#45;центров и банкетных
-                                залов
-                                для проведения деловых и неофициальных мероприятий. В величественных столицах &#45;
-                                Москве,
-                                Лондоне, Берлине, Вене, Праге, Амстердаме, Баку, Риме, Варшаве и Будапеште, а также
-                                в
-                                крупных городах, таких как Дубай, Мюнхен, Тель-Авив, Стамбул, Франкфурт и Венеция &#45;
-                                мы
-                                рады приветствовать Вас в наших отелях, входящих в международную сеть Hilton&#33;</p>
+            <div class="aboutUs_info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-1 col-lg-10">
+                            <img alt="" src="img/aboutUs/services_2-min.jpg" class="img-responsive">
+                            <div class="about_text">
+                                <h3>Наши услуги</h3>
+                                <p>Hilton &#45; одна из крупнейших гостиничных корпораций, насчитывающая более 4200
+                                    отелей и
+                                    курортов, расположенных в 93 городах мира, которые объединяют в себе традиции
+                                    прошлого и
+                                    современность. В каждом отеле сети Hilton мы гарантируем Вам теплый приём,
+                                    прекрасное
+                                    обслуживание, комфортабельные, элегантные номера и широкий спектр возможностей для
+                                    работы и досуга, а также богатый выбор ресторанов, конференц&#45;центров и банкетных
+                                    залов
+                                    для проведения деловых и неофициальных мероприятий. В величественных столицах &#45;
+                                    Москве,
+                                    Лондоне, Берлине, Вене, Праге, Амстердаме, Баку, Риме, Варшаве и Будапеште, а также
+                                    в
+                                    крупных городах, таких как Дубай, Мюнхен, Тель-Авив, Стамбул, Франкфурт и Венеция
+                                    &#45;
+                                    мы
+                                    рады приветствовать Вас в наших отелях, входящих в международную сеть Hilton&#33;
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-lg-4 col-lg-offset-2  col-sm-5 col-xs-6">
-                        <img alt="" src="img/aboutUs/handshake.png" class="img-responsive">
-                        <div class="about_text">
-                            <h3>Наши гарантии</h3>
-                            <p>Мы сделаем все возможное, чтобы каждый гость почувствовал заботу и уважение. Мы
-                                продолжаем миссию Конрада Хилтона, который мечтал чтобы каждый уголок на планете был
-                                наполнен светом и теплом сферы гостеприимства.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-5 col-xs-6">
-                        <img alt="" src="img/aboutUs/garant.png" class="img-responsive">
-                        <div class="about_text">
-                            <h3>Наши ценности</h3>
-                            <p>Наши основные ценности&#58; гостеприимство, добросовестность, лидерство, работа в
-                                команде,
-                                ответственность и своевременность.</p>
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-offset-1 col-lg-10" >
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="block-container">
+                                <div
+                                    class="col-lg-5 col-lg-offset-1  col-sm-6 col-xs-6 col-md-4 col-md-offset-2">
+                                    <img alt="" src="img/aboutUs/hands-min.jpg" class="img-responsive">
+                                    <div>
+                                        <h3>Наши гарантии</h3>
+                                        <p>Мы сделаем все возможное, чтобы каждый гость почувствовал заботу и уважение.
+                                            Мы
+                                            продолжаем миссию Конрада Хилтона, который мечтал чтобы каждый уголок на
+                                            планете
+                                            был
+                                            наполнен светом и теплом сферы гостеприимства.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-5 col-sm-6 col-xs-6 col-md-4">
+                                    <img alt="" src="img/aboutUs/gara-min.jpg" class="img-responsive">
+                                    <div>
+                                        <h3>Наши ценности</h3>
+                                        <p>Наши основные ценности&#58; гостеприимство, добросовестность, лидерство,
+                                            работа в
+                                            команде,
+                                            ответственность и своевременность.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -469,4 +565,5 @@
         <a href="#top"></a>
     </div>
 </body>
+
 </html>
