@@ -205,6 +205,10 @@ ul>li {
     margin: 40px 0 20px;
 }
 
+#tab-2 h3 {
+    font-family: "agenda-light";
+}
+
 .specialOffer h2 {
     @media (min-width: 295px) and (max-width: 450px) {
         font-size: 30px;
@@ -374,6 +378,11 @@ td {
     border: none;
 }
 
+.especially-role-background-aboutUs {
+    background: rgba(0, 0, 0, 0) !important;
+    border: none;
+}
+
 .main {
     font-family: "agenda-light";
 
@@ -405,7 +414,6 @@ td {
     font-size: 18px;
 }
 
-
 .textarea_form {
     width: 300px;
     height: 10px !important;
@@ -413,11 +421,15 @@ td {
 
 
 // Vlad - область для кода ниже
+#block-container {
+    background: rgb(247, 245, 245);
+    border: 1px solid rgb(206, 203, 203);
+    padding: 15px 0;
+}
 
 .about_text {
     background: rgb(247, 245, 245);
-    padding: 20px;
-    height: 250px;
+    padding: 15px;
     border: 1px solid rgb(206, 203, 203);
 }
 
@@ -431,8 +443,12 @@ td {
 }
 
 .aboutUs_info {
-    margin: 100px 0;
+    margin: 25px 0;
     font-family: "agenda-light";
+
+    #block-container h3 {
+        margin: 7px 0 7px 0 !important;
+    }
 
     h3 {
         color: goldenrod;
@@ -454,8 +470,6 @@ td {
         font-size: 25px;
     }
 }
-
-
 
 .btn-default {
     margin-left: 22px;
@@ -578,6 +592,7 @@ td {
     }
 }
 
+
 @media (min-width: 768px) and (max-width: 991px) {
     .about_text {
         height: 290px;
@@ -590,21 +605,19 @@ td {
     }
 }
 
-@media(max-width: 480px) {
+
+@media(max-width: 490px) {
     .aboutUs_info h3 {
         font-family: "agenda-light";
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .aboutUs_info p {
         font-family: "agenda-light";
         font-size: 10px;
     }
-
-    .about_text {
-        height: 285px !important;
-    }
 }
+
 @media (max-width: 355px) {
     .aboutUs_info h3 {
         font-size: 14px;
@@ -850,7 +863,6 @@ td {
             width: 265px;
             margin-left: 15px;
         }
-
     }
 
     .col-lg-2 {
