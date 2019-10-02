@@ -352,22 +352,6 @@ td {
     background: #f9eea4;
 }
 
-.btn_doubleSup {
-    margin-top: 1px !important;
-
-    @media (min-width:768px) and (max-width:991px) {
-        margin-top: 0px !important;
-
-    }
-}
-
-.btn_sin,
-.btn_twin {
-    margin-top: 12px !important;
-}
-
-
-
 .especially-role-background a[role="button"] {
     background: #830051 !important;
     border: none !important;
@@ -385,14 +369,6 @@ td {
 
 .main {
     font-family: "agenda-light";
-
-    .p-double {
-        p {
-            margin: 0 0 5px !important;
-
-            @media (min-width:768px) and (max-width:991px) {}
-        }
-    }
 
     h1:first-child,
     #singl {
@@ -473,7 +449,6 @@ td {
 
 .btn-default {
     margin-left: 22px;
-
 }
 
 .carousel_control_size {
@@ -592,20 +567,6 @@ td {
     }
 }
 
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .about_text {
-        height: 290px;
-    }
-}
-
-@media (max-width: 767px) {
-    .about_text {
-        height: 345px !important;
-    }
-}
-
-
 @media(max-width: 490px) {
     .aboutUs_info h3 {
         font-family: "agenda-light";
@@ -636,72 +597,86 @@ td {
         color: #830051;
         font-weight: bold;
     }
+
     p {
         font-size: 16px;
         font-weight: bold;
     }
+
     a {
         color: rgb(68, 68, 68);
         font-size: 14px;
         font-weight: bold;
     }
+
     a:hover {
         color: #830051;
     }
 }
+
 .newlayd {
     font-family: "agenda-light";
+
     h3 {
         color: rgb(107, 106, 106);
         font-size: 26px;
     }
+
     p,
     li {
         font-size: 16px;
     }
 }
+
 .glyphicon {
     color: white;
 }
+
 .loaylty {
     font-family: "agenda-light";
+
     h3 {
         color: rgb(107, 106, 106);
         font-size: 26px;
     }
+
     h4 {
         color: goldenrod;
         font-size: 24px;
     }
+
     p {
         font-size: 15px;
         color: black;
     }
+
     li {
         font-size: 16px;
     }
 }
+
 .business {
     font-family: "agenda-light";
+
     h3 {
         color: rgb(107, 106, 106);
         font-size: 26px;
     }
+
     p {
         font-size: 15px;
         color: black;
     }
+
     li {
         font-size: 16px;
     }
+
 }
+
 .panel-body {
     padding: 0px !important;
 
-    :focus::-webkit-input-placeholder {
-        color: transparent;
-        
-    }
     form {
         background: #830051;
         font-family: "agenda-light";
@@ -814,6 +789,8 @@ td {
 
         color: #fff;
     }
+
+
     textarea {
         resize: none;
         color: black;
@@ -886,11 +863,9 @@ td {
         padding-right: 30px !important;
     }
 }
+
 .close {
     color: white !important;
     font-size: 40px !important;
     margin: 0 20px 0;
-}
-.has-feedback .form-control {
-    padding-right: 5.5px !important;
 }
