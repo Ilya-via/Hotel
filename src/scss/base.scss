@@ -352,6 +352,19 @@ td {
     background: #f9eea4;
 }
 
+.btn_doubleSup {
+    margin-top: 1px !important;
+
+    @media (min-width:768px) and (max-width:991px) {
+        margin-top: 0px !important;
+    }
+}
+
+.btn_sin,
+.btn_twin {
+    margin-top: 12px !important;
+}
+
 .especially-role-background a[role="button"] {
     background: #830051 !important;
     border: none !important;
@@ -369,6 +382,14 @@ td {
 
 .main {
     font-family: "agenda-light";
+
+    .p-double {
+        p {
+            margin: 0 0 5px !important;
+
+            @media (min-width:768px) and (max-width:991px) {}
+        }
+    }
 
     h1:first-child,
     #singl {
@@ -671,11 +692,14 @@ td {
     li {
         font-size: 16px;
     }
-
 }
 
 .panel-body {
     padding: 0px !important;
+
+    :focus::-webkit-input-placeholder {
+        color: transparent;
+    }
 
     form {
         background: #830051;
@@ -790,7 +814,6 @@ td {
         color: #fff;
     }
 
-
     textarea {
         resize: none;
         color: black;
@@ -868,4 +891,8 @@ td {
     color: white !important;
     font-size: 40px !important;
     margin: 0 20px 0;
+}
+
+.has-feedback .form-control {
+    padding-right: 5.5px !important;
 }
