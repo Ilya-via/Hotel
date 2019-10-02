@@ -207,6 +207,11 @@ ul>li {
 
 #tab-2 h3 {
     font-family: "agenda-light";
+
+    @media (max-width: 455px) {
+        font-size: 18px;
+        padding: 0 0 10px;
+    }
 }
 
 .specialOffer h2 {
@@ -370,9 +375,14 @@ td {
     border: none !important;
 }
 
-.especially-role-background-index a[role="button"] {
+.especially-role-background-index a[role="button"],
+.especially-role-background-newlayd a[role="button"] {
     background: #83005180 !important;
     border: none;
+}
+
+.especially-role-background-newlayd a[role="button"]:hover {
+    background-color: #830051 !important;
 }
 
 .especially-role-background-aboutUs {
@@ -759,6 +769,9 @@ td {
                 @media (max-width: 480px) {
                     margin-left: 135px;
                 }
+                @media (min-width:401px) and (max-width:450px){
+                    margin-left: 100px;
+                }
 
                 @media (min-width:321px) and (max-width:400px) {
                     margin-left: 50px !important;
@@ -799,6 +812,9 @@ td {
 
                 @media (max-width: 480px) {
                     padding-left: 160px;
+                }
+                @media (min-width:401px) and (max-width:450px){
+                    padding-left: 120px;
                 }
 
                 @media (min-width:321px) and (max-width:400px) {
@@ -852,6 +868,9 @@ td {
         @media (max-width: 480px) {
             width: 340px;
             margin-left: 60px;
+        }
+        @media (min-width:401px) and (max-width:450px){
+            margin-left: 20px;
         }
 
         @media (min-width:321px) and (max-width:400px) {
