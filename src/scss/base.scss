@@ -605,17 +605,18 @@ td {
         height: 285px !important;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 355px) {
     .aboutUs_info h3 {
         font-size: 14px;
     }
+}
+
+@media (max-width: 340px) {
     .aboutUs_info p {
-        font-size: 7px;
-    }
-    .about_text {
-        height: 170px !important;
+        font-size: 8px;
     }
 }
+
 //Vlad offer style
 .specialOffer {
     h2 {
