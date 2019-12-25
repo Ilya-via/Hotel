@@ -1,4 +1,3 @@
-// Ilya - область для кода ниже
 @font-face {
     font-family: "agenda-light";
     src: url("../fonts/agenda-light.otf") format("truetype");
@@ -12,6 +11,7 @@
     right: 22px;
     background-color: #83005171;
     border-radius: 25%;
+    transition: .3s linear;
 
     a {
         display: block;
@@ -21,24 +21,38 @@
         background-image: url('../img/scrollUp.png');
         background-repeat: no-repeat;
         background-position: center center;
+        cursor: pointer;
     }
 }
 
 .btn-scrollUp:hover {
     background-color: #830051;
+    transition: .3s linear;
+}
+
+.none {
+    display: none;
+}
+
+.opacityNone {
+    opacity: 0;
 }
 
 .header {
     margin-bottom: 20px;
 }
-
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 .container-for-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #830051;
     justify-content: center;
-
+    
     a {
         display: block;
     }
@@ -106,19 +120,6 @@ footer .container .row {
 .navbar-inverse .navbar-toggle:hover {
     background-color: #c40179c5 !important;
 }
-
-// .navbar-inverse .navbar-toggle:focus {
-//     background-color: #5a0038 !important;
-// }
-
-// .container-for-header>button:hover {
-//     -webkit-tap-highlight-color: #5a00388e !important;
-
-// }
-
-// .navbar-toggle {
-//     background-color: red !important;
-// }
 
 header button:hover {
     border-radius: 25%;
@@ -339,8 +340,6 @@ ul>li {
     }
 }
 
-// Artiom - область для кода ниже
-
 table {
     border: 2px ridge #830051;
     width: 100%;
@@ -373,16 +372,19 @@ td {
 .especially-role-background a[role="button"] {
     background: #830051 !important;
     border: none !important;
+    transition: .3s linear !important;
 }
 
 .especially-role-background-index a[role="button"],
 .especially-role-background-newlayd a[role="button"] {
     background: #83005180 !important;
     border: none;
+    transition: .3s linear;
 }
 
 .especially-role-background-newlayd a[role="button"]:hover {
     background-color: #830051 !important;
+    transition: .3s linear;
 }
 
 .especially-role-background-aboutUs {
@@ -426,8 +428,6 @@ td {
     height: 10px !important;
 }
 
-
-// Vlad - область для кода ниже
 #block-container {
     background: rgb(247, 245, 245);
     border: 1px solid rgb(206, 203, 203);
@@ -478,8 +478,21 @@ td {
     }
 }
 
-.btn-default {
+#btn-back {
     margin-left: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25%;
+    padding: 11px 13px;
+    
+}
+#btn-back>div {
+    text-shadow: black;
+}
+
+#btn-back:hover {
+    background-color: #830051 !important;
+    transition: .3s linear;
 }
 
 .carousel_control_size {
@@ -622,7 +635,6 @@ td {
     }
 }
 
-//Vlad offer style
 .specialOffer {
     h2 {
         color: #830051;
@@ -769,7 +781,8 @@ td {
                 @media (max-width: 480px) {
                     margin-left: 135px;
                 }
-                @media (min-width:401px) and (max-width:450px){
+
+                @media (min-width:401px) and (max-width:450px) {
                     margin-left: 100px;
                 }
 
@@ -813,7 +826,8 @@ td {
                 @media (max-width: 480px) {
                     padding-left: 160px;
                 }
-                @media (min-width:401px) and (max-width:450px){
+
+                @media (min-width:401px) and (max-width:450px) {
                     padding-left: 120px;
                 }
 
@@ -869,7 +883,8 @@ td {
             width: 340px;
             margin-left: 60px;
         }
-        @media (min-width:401px) and (max-width:450px){
+
+        @media (min-width:401px) and (max-width:450px) {
             margin-left: 20px;
         }
 

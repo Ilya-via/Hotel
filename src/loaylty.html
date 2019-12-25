@@ -28,7 +28,7 @@
     //= templates/form.html
     //= templates/header.html
     <div class="loaylty especially-role-background-index">
-        <a class="btn btn-default" href="specialoffer.html" role="button">
+        <a class="btn btn-default" id="btn-back" href="specialoffer.html" role="button">
             <div class="glyphicon glyphicon-arrow-left"></div>
         </a>
         <div class="container">
@@ -165,9 +165,10 @@
     </div>
 
     //= templates/footer.html
-    <div class="btn-scrollUp">
-        <a href="#top"></a>
+    <div class="btn-scrollUp none opacityNone" onmousedown="selectionButton()" onmouseup="noselectionButton()" onmouseout="noselectionButton()">
+        <a></a>
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
