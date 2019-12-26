@@ -33,31 +33,45 @@ $(document).ready(function () {
     });
 });
 
-function selectionButton() {
-    $('.btn-scrollUp').css("boxShadow", 'inset 0 0 10px 4px rgba(0, 0, 0, 0.822)');
+function selectionScrollButton() {
     $('.btn-scrollUp>a').css("backgroundImage", 'url("../img/scrollUpPush.png")');
-    scaleTransform();
+    scaleTransform('.btn-scrollUp');
 }
-function noselectionButton() {
-    $('.btn-scrollUp').css("boxShadow", '0 0 0 0 rgba(0, 0, 0, 0)');
+function noselectionScrollButton() {
     $('.btn-scrollUp>a').css("backgroundImage", 'url("../img/scrollUp.png")');
-    unscaleTransform();
+    unscaleTransform('.btn-scrollUp');
 }
 
-function scaleTransform() {
-    $('.btn-scrollUp').css("-o-transform", 'scale(1.2, 1.2)');
-    $('.btn-scrollUp').css("-ms-transform", 'scale(1.2, 1.2)');
-    $('.btn-scrollUp').css("-moz-transform", 'scale(1.2, 1.2)');
-    $('.btn-scrollUp').css("-webkit-transform", 'scale(1.2, 1.2)');
-    $('.btn-scrollUp').css("transform", 'scale(1.2, 1.2)');
+function selectionButtonHamburger() {
+    scaleTransform('#icon-hamburger');
+    $('#icon-hamburger').css("backgroundColor", 'rgba(46, 6, 39, 0.137)');
+    $('#icon-hamburger').css("borderRadius", '8px');
+
 }
-function unscaleTransform() {
-    $('.btn-scrollUp').css("-o-transform", 'scale(1.0, 1.0)');
-    $('.btn-scrollUp').css("-ms-transform", 'scale(1.0, 1.0)');
-    $('.btn-scrollUp').css("-moz-transform", 'scale(1.0, 1.0)');
-    $('.btn-scrollUp').css("-webkit-transform", 'scale(1.0, 1.0)');
-    $('.btn-scrollUp').css("transform", 'scale(1.0, 1.0)');
+function noselectionButtonHamburger() {
+    unscaleTransform('#icon-hamburger');
+    $('#icon-hamburger').css("backgroundColor", 'rgba(46, 6, 39, 0)');
+    $('#icon-hamburger').css("borderRadius", '0');
 }
+
+function scaleTransform(value) {
+    $(value).css("-o-transform", 'scale(1.2, 1.2)');
+    $(value).css("-ms-transform", 'scale(1.2, 1.2)');
+    $(value).css("-moz-transform", 'scale(1.2, 1.2)');
+    $(value).css("-webkit-transform", 'scale(1.2, 1.2)');
+    $(value).css("transform", 'scale(1.2, 1.2)');
+    $(value).css("boxShadow", 'inset 0 0 10px 4px rgba(0, 0, 0, 0.822)');
+}
+function unscaleTransform(value) {
+    $(value).css("-o-transform", 'scale(1.0, 1.0)');
+    $(value).css("-ms-transform", 'scale(1.0, 1.0)');
+    $(value).css("-moz-transform", 'scale(1.0, 1.0)');
+    $(value).css("-webkit-transform", 'scale(1.0, 1.0)');
+    $(value).css("transform", 'scale(1.0, 1.0)');
+    $(value).css("boxShadow", '0 0 0 0 rgba(0, 0, 0, 0)');
+}
+
+
 
 // Фиксированный header.
 // var header = document.getElementsByClassName('container-for-header');
@@ -83,14 +97,14 @@ function unscaleTransform() {
 // }
 
 
-window.onscroll = function () { myFunction() };
-function myFunction() {
-debugger
-    var header = document.getElementsByClassName('container-for-header');
-    var sticky = header.offsetTop;
-    if (window.pageYOffset >= sticky) {
-        $('.container-for-header').addClass("sticky");
-    } else {
-        $('.container-for-header').removeClass("sticky");
-    }
-}
+// window.onscroll = function () { myFunction() };
+// function myFunction() {
+//     debugger
+//     var header = document.getElementsByClassName('container-for-header');
+//     var sticky = header.offsetTop;
+//     if (window.pageYOffset >= sticky) {
+//         $('.container-for-header').addClass("sticky");
+//     } else {
+//         $('.container-for-header').removeClass("sticky");
+//     }
+// }

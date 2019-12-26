@@ -5,6 +5,10 @@
     font-weight: normal;
 }
 
+* {
+    outline: 0 !important;
+}
+
 .btn-scrollUp {
     position: fixed;
     bottom: 75px;
@@ -41,18 +45,20 @@
 .header {
     margin-bottom: 20px;
 }
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
+
 .container-for-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #830051;
     justify-content: center;
-    
+
     a {
         display: block;
     }
@@ -104,7 +110,25 @@ footer .container .row {
 }
 
 .navbar-nav {
-    margin-top: 10px;
+    li {
+        a {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        a:hover {
+            background-color: rgba(46, 6, 39, 0.137);
+            border-radius: 10px;
+            box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.5);
+
+            @media (min-width: 0px) and (max-width: 767px) {
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 0;
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+    }
 }
 
 #icon-hamburger {
@@ -117,21 +141,11 @@ footer .container .row {
     }
 }
 
-.navbar-inverse .navbar-toggle:hover {
-    background-color: #c40179c5 !important;
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    background-color: #c4017900 !important;
 }
 
-header button:hover {
-    border-radius: 25%;
-    order: 2;
-    position: absolute;
-    right: 7px;
-}
-
-header button:focus {
-    border-radius: 25%;
-    background-color: #5a0038 !important;
-}
 
 .preview {
     margin: 40px 0;
@@ -296,10 +310,16 @@ ul>li {
     padding: 20px 0 0 0;
 }
 
+
+
 #footer-logo {
     @media (max-width: 620px) {
         display: none;
     }
+}
+
+#footer-logo>img {
+    margin: 70% 0 0;
 }
 
 #footer-info-indentation {
@@ -369,6 +389,25 @@ td {
     margin-top: 12px !important;
 }
 
+.btncatalog {
+    background-color: #83005180;
+    color: #fff;
+    border-radius: 10px;
+    transition: .3s linear;
+    display: inline-block;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+
+.btncatalog:hover {
+    background-color: #830051;
+    color: #fff;
+}
+
+.btncatalog:focus {
+    color: #fff;
+}
+
 .especially-role-background a[role="button"] {
     background: #830051 !important;
     border: none !important;
@@ -399,7 +438,7 @@ td {
         p {
             margin: 0 0 5px !important;
 
-            @media (min-width:768px) and (max-width:991px) {}
+
         }
     }
 
@@ -482,10 +521,10 @@ td {
     margin-left: 22px;
     width: 40px;
     height: 40px;
-    border-radius: 25%;
+    border-radius: 10px;
     padding: 11px 13px;
-    
 }
+
 #btn-back>div {
     text-shadow: black;
 }
@@ -746,7 +785,7 @@ td {
 
             button {
                 background: #c71f65;
-                border: 0;
+                border: 10px;
                 font-size: 18px;
                 color: white;
                 width: 200px !important;
@@ -929,4 +968,22 @@ td {
 
 .has-feedback .form-control {
     padding-right: 5.5px !important;
+}
+
+// Preloader
+// #hellopreloader {
+//     display: none;
+// }
+
+#hellopreloader_preload {
+    display: block;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    background: #830051 url('../img/balltriangle.svg') center center no-repeat;
+    background-size: 300px;
 }

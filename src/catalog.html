@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    //= templates/preloader.html
     //= templates/header.html
     <div class="main">
         <div class="container">
@@ -56,7 +57,7 @@
                             <h3>Single</h3>
                             <p>Одноместный однокомнатный номер &#34;Сингл&#34;</p>
                             <div class="btn_sin">
-                                <p><a href="#singl" class="btn btn-primary" role="button">Описание</a> </p>
+                                <p><a href="#singl" class="btncatalog">Описание</a> </p>
                             </div>
                         </div>
                     </div>
@@ -68,8 +69,8 @@
                             <h3>Twin</h3>
                             <p>Двухместный однокомнатный номер &#34;Твин&#34;</p>
                             <div class="btn_twin">
-                            <p><a href="#twin" class="btn btn-primary" role="button">Описание</a> </p>
-                        </div>
+                                <p><a href="#twin" class="btncatalog">Описание</a> </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                         <div class="caption">
                             <h3>Double</h3>
                             <p>Двухместный однокомнатный номер &#34;Дабл&#34;</p>
-                            <p><a href="#double" class="btn btn-primary" role="button">Описание</a> </p>
+                            <p><a href="#double" class="btncatalog">Описание</a> </p>
                         </div>
                     </div>
                 </div>
@@ -90,10 +91,10 @@
                         <div class="caption">
                             <h3>Double Superior</h3>
                             <div class="p-double">
-                            <p>Улучшенный номер &#34;Дабл&#34;</p>
-                        </div>
+                                <p>Улучшенный номер &#34;Дабл&#34;</p>
+                            </div>
                             <div class="btn_doubleSup">
-                                <p><a href="#superior" class="btn btn-primary" role="button">Описание</a> </p>
+                                <p><a href="#superior" class="btncatalog">Описание</a> </p>
                             </div>
                         </div>
                     </div>
@@ -104,7 +105,7 @@
                         <div class="caption">
                             <h3>De Lux</h3>
                             <p>Двухместный однокомнатный номер &#34;Делюкс&#34;</p>
-                            <p><a href="#delux" class="btn btn-primary" role="button">Описание</a> </p>
+                            <p><a href="#delux" class="btncatalog">Описание</a> </p>
                         </div>
                     </div>
                 </div>
@@ -114,7 +115,7 @@
                         <div class="caption">
                             <h3>Suite</h3>
                             <p>Двухместный двухкомнатный номер &#34;Сюит&#34;</p>
-                            <p><a href="#suite" class="btn btn-primary" role="button">Описание</a> </p>
+                            <p><a href="#suite" class="btncatalog">Описание</a> </p>
                         </div>
                     </div>
                 </div>
@@ -251,8 +252,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <a class="btn btn-primary" role="button" data-toggle="modal"
-                            data-target=".bs-example-modal-lg">ЗАБРОНИРОВАТЬ</a>
+                        <a data-toggle="modal" data-target=".bs-example-modal-lg" class="btncatalog">ЗАБРОНИРОВАТЬ</a>
                     </div>
                 </div>
             </div>
@@ -353,8 +353,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <a class="btn btn-primary" role="button" data-toggle="modal"
-                            data-target=".bs-example-modal-lg">ЗАБРОНИРОВАТЬ</a>
+                        <a data-toggle="modal" data-target=".bs-example-modal-lg" class="btncatalog">ЗАБРОНИРОВАТЬ</a>
                     </div>
                 </div>
 
@@ -452,8 +451,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <a class="btn btn-primary" role="button" data-toggle="modal"
-                            data-target=".bs-example-modal-lg">ЗАБРОНИРОВАТЬ</a>
+                        <a data-toggle="modal" data-target=".bs-example-modal-lg" class="btncatalog">ЗАБРОНИРОВАТЬ</a>
                     </div>
 
                 </div>
@@ -554,8 +552,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <a class="btn btn-primary" role="button" data-toggle="modal"
-                            data-target=".bs-example-modal-lg">ЗАБРОНИРОВАТЬ</a>
+                        <a data-toggle="modal" data-target=".bs-example-modal-lg" class="btncatalog">ЗАБРОНИРОВАТЬ</a>
                     </div>
                 </div>
             </div>
@@ -655,8 +652,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <a class="btn btn-primary" role="button" data-toggle="modal"
-                            data-target=".bs-example-modal-lg">ЗАБРОНИРОВАТЬ</a>
+                        <a data-toggle="modal" data-target=".bs-example-modal-lg" class="btncatalog">ЗАБРОНИРОВАТЬ</a>
                     </div>
                 </div>
             </div>
@@ -756,8 +752,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <a class="btn btn-primary" role="button" data-toggle="modal"
-                            data-target=".bs-example-modal-lg">ЗАБРОНИРОВАТЬ</a>
+                        <a data-toggle="modal" data-target=".bs-example-modal-lg" class="btncatalog">ЗАБРОНИРОВАТЬ</a>
                     </div>
                 </div>
             </div>
@@ -765,10 +760,7 @@
     </div>
     //= templates/form.html
     //= templates/footer.html
-    <div class="btn-scrollUp none opacityNone" onmousedown="selectionButton()" onmouseup="noselectionButton()" onmouseout="noselectionButton()">
-        <a></a>
-    </div>
-    <script src="js/main.js"></script>
+    //= templates/btnScrollUp.html
 </body>
 
 </html>
