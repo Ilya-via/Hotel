@@ -42,6 +42,18 @@ $(document).ready(function () {
     });
 });
 
+// Плавный якорь.
+$(document).ready(function () {
+    $(".anchor").click(function () {
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top;
+        $("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 800);
+        return false;
+    });
+});
+
 function selectionScrollButton() {
     $('.btn-scrollUp>a').css("backgroundImage", 'url("../img/scrollUpPush.png")');
     scaleTransform('.btn-scrollUp');
@@ -82,38 +94,126 @@ function unscaleTransform(value) {
 
 
 
-// Фиксированный header.
-// var header = document.getElementsByClassName('container-for-header');
-// var sticky = header.offsetTop;
-// function myFunction() {
-//     if (window.pageYOffset >= sticky) {
-//         $('.container-for-header').addClass("sticky");
-//     } else {
-//         $('.container-for-header').removeClass("sticky");
-//     }
-// }
+// form
+$(function () {
+    $('#save').click(function () {
+        var formValid = true;
+        $('input').each(function () {
+            var formGroup = $(this).parents('.form-group');
+            var glyphicon = formGroup.find('.form-control-feedback');
+            if (this.checkValidity()) {
+                formGroup.addClass('has-success').removeClass('has-error');
+                glyphicon.addClass('glyphicon-ok').removeClass('glyphicon-remove');
+            } else {
+                formGroup.addClass('has-error').removeClass('has-success');
+                glyphicon.addClass('glyphicon-remove').removeClass('glyphicon-ok');
+                formValid = false;
+            }
+        });
+
+        if (formValid && isDataChanged()) {
+            $('#myModal').modal('hide');
+            messageVisible();
+            setTimeout(function () {
+                messageUnvisible();
+            }, 1500);
+
+            someFunc();
+            formData.turn++;
+        }
+    });
+});
+
+function checkValueForm(a) {
+    a.value = a.value
+        .replace(/_/g, "-")
+        .replace(/[^\w.-]|[A-Z]|[/^\d+$/]|^[.-]/g, "")
+    a.value = a.value.replace(/[.-]$/, "")
+}
+
+function checkValueOnlyNumber(a) {
+    a.value = a.value.replace(/\+/g, "")
+    a.value = a.value.replace(/[^+\d]/g, "")
+}
 
 
 
-// function myFunction() {
-//     var header = document.getElementsByClassName("navbar-inverse");
-//     var sticky = header.offset;
-//     if (window.pageYOffset >= sticky) {
-//         header.classList.addClass("sticky");
-//     } else {
-//         header.classList.removeClass("sticky");
-//     }
-// }
+function messageVisible() {
+    var elem = document.querySelector("#success-alert");
+    var massiveClass = elem.classList;
+    var existenceClass = massiveClass.contains("hidden");
+    if (existenceClass == true) {
+        massiveClass.remove("hidden");
+    }
+    setTimeout(function () {
+        massiveClass.remove("success-alert-opacityNone");
+    }, 50);
+}
+
+function messageUnvisible() {
+    var elem = document.querySelector("#success-alert");
+    var massiveClass = elem.classList;
+    massiveClass.add("success-alert-opacityNone");
+    elem.addEventListener("transitionend", addHiddenClass(), false);
+}
+function addHiddenClass() {
+    setTimeout(function () {
+        var elem = document.querySelector("#success-alert");
+        var massiveClass = elem.classList;
+        massiveClass.add("hidden");
+    }, 1500);
+}
 
 
-// window.onscroll = function () { myFunction() };
-// function myFunction() {
-//     debugger
-//     var header = document.getElementsByClassName('container-for-header');
-//     var sticky = header.offsetTop;
-//     if (window.pageYOffset >= sticky) {
-//         $('.container-for-header').addClass("sticky");
-//     } else {
-//         $('.container-for-header').removeClass("sticky");
-//     }
-// }
+
+// Проверка для даты заезда и выезда.
+function checkNowDate() {
+    var nowDate = {
+        date: '',
+        day: '',
+        month: '',
+        year: ''
+    };
+    nowDate.date = new Date();
+    nowDate.day = nowDate.date.getDate();
+    nowDate.month = nowDate.date.getMonth() + 1;
+    nowDate.year = nowDate.date.getFullYear();
+    document.getElementById('inputDataOne').setAttribute('min', nowDate.year + "-" + nowDate.month + "-" + nowDate.day);
+    document.getElementById('inputDataTwo').setAttribute('min', nowDate.year + "-" + nowDate.month + "-" + nowDate.day);
+}
+function setMinDateinputDataTwo() {
+    document.getElementById('inputDataTwo').setAttribute('min', document.getElementById('inputDataOne').value);
+}
+
+// Проверка на одинаковые данные. Если данные одинаковые не делать отправку на сервер.
+function isDataChanged() {
+    if (!(formData.turn === 0)) {
+        if (formData.Firstname == document.getElementById("inputFirstname").value && formData.Secondname == document.getElementById("inputSecondname").value && formData.DataOne == document.getElementById("inputDataOne").value && formData.DataTwo == document.getElementById("inputDataTwo").value && formData.Tel == document.getElementById("inputTel").value && formData.Email == document.getElementById("inputEmail").value && formData.Roomclass == document.getElementById("inputRoomclass").value && formData.Room == document.getElementById("inputRoom").value) {
+            return false
+        } else return true
+    } else return true
+}
+var formData = {
+    Firstname: '',
+    Secondname: '',
+    DataOne: '',
+    DataTwo: '',
+    Tel: '',
+    Email: '',
+    Roomclass: '',
+    Room: '',
+    commentForm: '',
+    turn: 0
+};
+
+function someFunc() {
+    formData.Firstname = document.getElementById("inputFirstname").value;
+    formData.Secondname = document.getElementById("inputSecondname").value;
+    formData.DataOne = document.getElementById("inputDataOne").value;
+    formData.DataTwo = document.getElementById("inputDataTwo").value;
+    formData.Tel = document.getElementById("inputTel").value;
+    formData.Email = document.getElementById("inputEmail").value;
+    formData.Roomclass = document.getElementById("inputRoomclass").value;
+    formData.Room = document.getElementById("inputRoom").value;
+    formData.commentForm = document.getElementById("commentForm").value;
+}
