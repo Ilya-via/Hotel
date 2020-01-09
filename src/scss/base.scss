@@ -132,6 +132,10 @@ footer .container .row {
     }
 }
 
+#responsive-menu {
+    border-color: #830051;
+}
+
 #icon-hamburger {
     margin: 0 7px 0 0;
     position: absolute;
@@ -517,6 +521,7 @@ td {
     background-color: #830051 !important;
     transition: .3s linear;
 }
+
 // invisible role for carousel.
 .carousel_control_size {
     height: 685px;
