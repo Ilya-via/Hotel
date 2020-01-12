@@ -16,5 +16,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "rimraf": "^2.6.3"
+  },
+  "devDependencies": {
+    "gulp-connect-php": "^1.0.3"
   }
 }

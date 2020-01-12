@@ -1,5 +1,4 @@
 //= other.js
-
 //PRELOADER
 $(window).on('load', function () {
     $preloader = $('.loaderArea'),
@@ -120,6 +119,7 @@ $(function () {
 
             someFunc();
             formData.turn++;
+            sendTelegram();
         }
     });
 });
@@ -177,6 +177,10 @@ function checkNowDate() {
     nowDate.date = new Date();
     nowDate.day = nowDate.date.getDate();
     nowDate.month = nowDate.date.getMonth() + 1;
+    // Без добавления "0" ограничение выбора даты не работает.
+    if ((nowDate.date.getMonth() + 1) < 10) {
+        nowDate.month = "0" + (nowDate.date.getMonth() + 1);
+    }
     nowDate.year = nowDate.date.getFullYear();
     document.getElementById('inputDataOne').setAttribute('min', nowDate.year + "-" + nowDate.month + "-" + nowDate.day);
     document.getElementById('inputDataTwo').setAttribute('min', nowDate.year + "-" + nowDate.month + "-" + nowDate.day);
@@ -216,4 +220,34 @@ function someFunc() {
     formData.Roomclass = document.getElementById("inputRoomclass").value;
     formData.Room = document.getElementById("inputRoom").value;
     formData.commentForm = document.getElementById("commentForm").value;
+}
+
+function sendTelegram() {
+    var firstname = 'First name:%20' + formData.Firstname,
+        secondname = 'Second name:%20' + formData.Secondname,
+        dataOne = 'Data One:%20' + formData.DataOne,
+        dataTwo = 'Data Two:%20' + formData.DataTwo,
+        tel = 'Tel:%20' + formData.Tel,
+        email = 'Email:%20' + formData.Email,
+        roomClass = 'Room Class:%20' + formData.Roomclass,
+        room = 'Room:%20' + formData.Room,
+        commentForm = 'Comment Form:%20' + formData.commentForm,
+        space = '%0A',
+
+        text = firstname + space + secondname + space + dataOne + space + dataTwo + space + tel + space + email + space + roomClass + space + room + space + commentForm,
+        api_chat = 'https://api.telegram.org/bot956233939:AAFdyoux_dArRc0iQb_Nd1Mv6c8BOvZA2Ck/sendMessage?chat_id=832304539&text=',
+        message = api_chat + text,
+        xhr = new XMLHttpRequest();
+
+    xhr.open('post', message, true);
+    xhr.send(message);
+    xhr.onreadystatechange = function () {
+        if (this.readyState != 4) return;
+        if (this.status != 200) {
+            // обработать ошибку
+            alert('ошибка: ' + (this.status ? this.statusText : 'запрос не удался'));
+            return;
+        }
+        // получить результат из this.responseText или this.responseXML
+    }
 }

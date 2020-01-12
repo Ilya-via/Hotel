@@ -51,13 +51,11 @@ var config = {
     //tunnel: true,
     host: 'localhost',
     port: 3000,
-	browser: "chrome"
+    browser: "chrome"
 };
 
-
 //build
-
-function html(){
+function html() {
     return gulp
         .src(path.src.html)
         .pipe(rigger())
@@ -65,7 +63,7 @@ function html(){
         .pipe(browserSync.stream());
 }
 
-function vendor(){
+function vendor() {
     return gulp
         .src(path.src.vendor)
         .pipe(rigger())
@@ -76,7 +74,7 @@ function vendor(){
         .pipe(browserSync.stream());
 }
 
-function js(){
+function js() {
     return gulp
         .src(path.src.js)
         .pipe(rigger())
@@ -87,7 +85,7 @@ function js(){
         .pipe(browserSync.stream());
 }
 
-function css(){
+function css() {
     return gulp
         .src(path.src.style)
         .pipe(sourcemaps.init())
@@ -100,14 +98,14 @@ function css(){
         .pipe(browserSync.stream());
 }
 
-function img(){
+function img() {
     return gulp
         .src(path.src.img)
         .pipe(gulp.dest(path.build.img))
         .pipe(browserSync.stream());
 }
 
-function fonts(){
+function fonts() {
     return gulp
         .src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts));
@@ -117,8 +115,8 @@ gulp.task('build', gulp.parallel(html, vendor, js, css, fonts, img));
 
 
 //watch
-gulp.task('watch', function(){
-    gulp.watch(path.watch.html,html);
+gulp.task('watch', function () {
+    gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.style, css);
     gulp.watch(path.watch.vendor, vendor);
     gulp.watch(path.watch.js, js);
