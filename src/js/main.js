@@ -189,7 +189,7 @@ function setMinDateinputDataTwo() {
 // Проверка на одинаковые данные. Если данные одинаковые не делать отправку на сервер.
 function isDataChanged() {
     if (!(formData.turn === 0)) {
-        if (formData.Firstname == document.getElementById("inputFirstname").value && formData.Secondname == document.getElementById("inputSecondname").value && formData.DataOne == document.getElementById("inputDataOne").value && formData.DataTwo == document.getElementById("inputDataTwo").value && formData.Tel == document.getElementById("inputTel").value && formData.Email == document.getElementById("inputEmail").value && formData.Roomclass == document.getElementById("inputRoomclass").value && formData.Room == document.getElementById("inputRoom").value) {
+        if (formData.Firstname == document.getElementById("inputFirstname").value && formData.Secondname == document.getElementById("inputSecondname").value && formData.DataOne == document.getElementById("inputDataOne").value && formData.DataTwo == document.getElementById("inputDataTwo").value && formData.Tel == document.getElementById("inputTel").value && formData.Email == document.getElementById("inputEmail").value && formData.Roomclass == document.getElementById("inputRoomclass").value && formData.Room == document.getElementById("inputRoom").value && formData.commentForm == document.getElementById("commentForm").value) {
             return false
         } else return true
     } else return true
@@ -224,7 +224,7 @@ function sendTelegram() {
         secondname = 'Second name:%20' + formData.Secondname,
         dataOne = 'Data One:%20' + formData.DataOne,
         dataTwo = 'Data Two:%20' + formData.DataTwo,
-        tel = 'Tel:%20' + formData.Tel,
+        tel = 'Tel:%20%2b' + formData.Tel,
         email = 'Email:%20' + formData.Email,
         roomClass = 'Room Class:%20' + formData.Roomclass,
         room = 'Room:%20' + formData.Room,
