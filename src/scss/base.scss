@@ -908,3 +908,9 @@ td {
         transform: rotate(-180deg) skew(-360deg);
     }
 }
+
+#inputFirstname:invalid,
+#inputSecondname:invalid,
+#inputEmail:invalid {
+    color: red;
+}

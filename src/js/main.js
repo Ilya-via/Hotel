@@ -124,18 +124,15 @@ $(function () {
     });
 });
 
-function checkValueForm(a) {
-    a.value = a.value
-        .replace(/_/g, "-")
-        .replace(/[^\w.-]|[A-Z]|[/^\d+$/]|^[.-]/g, "")
-    a.value = a.value.replace(/[.-]$/, "")
-}
-
-function checkValueOnlyNumber(a) {
-    a.value = a.value.replace(/\+/g, "")
-    a.value = a.value.replace(/[^+\d]/g, "")
-}
-
+// Form mask
+$(document).ready(function () {
+    var element = document.getElementById('inputTel');
+    var maskOptions = {
+        mask: '+375(00)000-00-00',
+        lazy: false
+    }
+    var mask = new IMask(element, maskOptions);
+});
 
 
 function messageVisible() {

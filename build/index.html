@@ -377,7 +377,7 @@
                                         </div>
                                     </div>
 
-                                 
+
                                     <a class="left carousel-control" href="#carousel-restaurants-bars" role="button"
                                         data-slide="prev">
                                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -395,7 +395,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <footer>
         <div class="container">
@@ -461,7 +460,7 @@
                   <label for="inputFirstname" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Имя</label>
                   <div class="col-lg-8 col-xs-offset-1 ">
                     <input required type="text" maxlength="20" class="form-control" id="inputFirstname" placeholder="Ivan"
-                      autocomplete="off" oninput="checkValueForm(inputFirstname)">
+                      autocomplete="off" pattern="[A-Za-zА-Яа-яЁё]+">
                     <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
@@ -471,7 +470,7 @@
                     class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Фамилия</label>
                   <div class="col-lg-8 col-xs-offset-1 ">
                     <input required type="text" maxlength="20" class="form-control" id="inputSecondname"
-                      placeholder="Ivanov" autocomplete="off" oninput="checkValueForm(inputSecondname)">
+                      placeholder="Ivanov" autocomplete="off" pattern="[A-Za-zА-Яа-яЁё]+">
                     <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
@@ -501,16 +500,16 @@
                 <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputTel" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Телефон</label>
                   <div class="col-lg-8 col-xs-offset-1">
-                    <input required type="tel" maxlength="13" class="form-control" id="inputTel"
-                      placeholder="375 (**) *** ** **" autocomplete="off" oninput="checkValueOnlyNumber(inputTel)">
+                    <input type="tel" class="form-control" id="inputTel" name="inputTel" placeholder="+375(00)000-00-00"
+                      autocomplete="off">
                     <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
     
                 <div class="form-group has-feedback col-lg-6 col-xs-6">
                   <label for="inputEmail" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Email</label>
-                  <div class="col-lg-8 col-xs-offset-1">
-                    <input required type="email" maxlength="30" class="form-control" id="inputEmail" autocomplete="off">
+                  <div class="col-lg-8 col-xs-offset-1" pattern='"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" +  "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"'>
+                    <input required type="email" maxlength="30" class="form-control" id="inputEmail" autocomplete="off" placeholder="Ivan.Ivanov123@mail.com">
                     <span class="glyphicon form-control-feedback"></span>
                   </div>
                 </div>
@@ -542,7 +541,7 @@
                   </div>
                 </div>
               </div>
-              
+    
               <div class="coment">
                 <div class="row">
                   <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
@@ -583,6 +582,7 @@
     <div class="btn-scrollUp none opacityNone" onmousedown="selectionScrollButton()" onmouseup="noselectionScrollButton()" onmouseout="noselectionScrollButton()">
         <a></a>
     </div>
+    <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
 </body>
 
