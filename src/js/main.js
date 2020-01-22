@@ -17,7 +17,7 @@ $(window).scroll(function () {
             eventObj.appended = false;
         }
         if (!eventObj.appended) {
-            $('.btn-scrollUp').removeClass('none');
+            $('.btn-scrollUp').removeClass('invisible');
             setTimeout(function () {
                 $('.btn-scrollUp').removeClass("opacityNone");
                 eventObj.appended = true;
@@ -27,7 +27,7 @@ $(window).scroll(function () {
     } else if (eventObj.appended) {
         $('.btn-scrollUp').addClass("opacityNone");
         setTimeout(function () {
-            $('.btn-scrollUp').addClass("none");
+            $('.btn-scrollUp').addClass("invisible");
             eventObj.appended = false;
         }, 250);
     }
