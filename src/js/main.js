@@ -54,11 +54,9 @@ $(document).ready(function () {
 });
 
 function selectionScrollButton() {
-    $('.btn-scrollUp>a').css("backgroundImage", 'url("../img/scrollUpPush.png")');
     scaleTransform('.btn-scrollUp');
 }
 function noselectionScrollButton() {
-    $('.btn-scrollUp>a').css("backgroundImage", 'url("../img/scrollUp.png")');
     unscaleTransform('.btn-scrollUp');
 }
 
