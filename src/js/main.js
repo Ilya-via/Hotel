@@ -170,13 +170,17 @@ function checkNowDate() {
         year: ''
     };
     nowDate.date = new Date();
-    nowDate.day = nowDate.date.getDate();
+    nowDate.day = nowDate.date.getDay();
     nowDate.month = nowDate.date.getMonth() + 1;
+    nowDate.year = nowDate.date.getFullYear();
+
     // Без добавления "0" ограничение выбора даты не работает.
     if ((nowDate.date.getMonth() + 1) < 10) {
         nowDate.month = "0" + (nowDate.date.getMonth() + 1);
     }
-    nowDate.year = nowDate.date.getFullYear();
+    if ((nowDate.date.getDate() ) < 10) {
+        nowDate.day = "0" + nowDate.date.getDate();
+    }
     document.getElementById('inputDataOne').setAttribute('min', nowDate.year + "-" + nowDate.month + "-" + nowDate.day);
     document.getElementById('inputDataTwo').setAttribute('min', nowDate.year + "-" + nowDate.month + "-" + nowDate.day);
 }
