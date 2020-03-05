@@ -28,12 +28,15 @@
             <div class="row">
                 <div class="navbar-inverse">
                     <div class="container-for-header">
+    
                         <a href="index.html" title="Brand" class="navbar-background"></a>
+    
                         <button style="border: none" class="navbar-toggle" data-toggle="collapse"
                             data-target="#responsive-menu" id="icon-hamburger" onmousedown="selectionButtonHamburger()"
                             onmouseup="noselectionButtonHamburger()">
-                            <img src="img\header\icon_hamburger.png" alt="">
+                            <img src="img/header/icon_hamburger.png" alt="menu button">
                         </button>
+    
                         <div class="collapse navbar-collapse" id="responsive-menu">
                             <ul class="nav navbar-nav">
                                 <li><a class="text-uppercase" href="catalog.html">
@@ -62,8 +65,7 @@
                 <span>METROPOL</span> <br />
                 <iframe class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.006873667196!2d37.619434915964696!3d55.758382799029064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b0aebf949%3A0x31b6f778d42395d5!2z0JzQtdGC0YDQvtC_0L7Qu9GM!5e0!3m2!1sru!2sby!4v1579814393941!5m2!1sru!2sby"
-                    width="1140" height="450" frameborder="0" style="border:0; padding-right: 0;"
-                    allowfullscreen=""></iframe>
+                    width="1140" height="450" frameborder="0" style="border:0; padding-right: 0;" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>
@@ -414,8 +416,8 @@
                         <li>
                             <div class="row"><strong class="col-md-4 col-sm-4 col-xs-4"
                                     id="footer-info-indentation">Бронирование</br>номеров:</strong>
-                                <a class="col-md-8 col-sm-8 col-xs-8" id="footer-info-indentation"
-                                    href="tel:+375173297777" title="Позвонить"> &#43;375 17
+                                <a class="col-md-8 col-sm-8 col-xs-8" id="footer-info-indentation" href="tel:+375173297777"
+                                    title="Позвонить"> &#43;375 17
                                     329 7777</a></br>
                                 <a class="col-md-8 col-sm-8 col-xs-8" href="mailto:metropol-reservations@bghotel.by"
                                     title="Написать письмо">metropol&#45;reservations&#64;bghotel.by</a>
@@ -432,8 +434,7 @@
                 <div class="col-md-5 hidden-sm hidden-xs" id="footer-item">
                     <div class="col-md-6"><img src="img\footer\logo-awards.png" alt="logo"></div>
                     <div class="col-md-6">
-                        <p>Отель &#34;Metropol&#34; &#45; Лучший отель Беларуси 2018 и 2019 в номинации World Travel
-                            Awards.
+                        <p>Отель &#34;Metropol&#34; &#45; Лучший отель Беларуси 2018 и 2019 в номинации World Travel Awards.
                         </p>
                     </div>
                 </div>
@@ -448,146 +449,137 @@
         </div>
     </div>
     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="panel panel-default" style="background-color: #CCC">
-                <div class="panel-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <form id="form1" name="form1" method="post" action="" class="form-horizontal">
-                        <h1>БРОНИРОВАНИЕ НОМЕРОВ</h1>
-
-                        <div class="row">
-                            <div class="form-group has-feedback col-lg-6 col-xs-6 ">
-                                <label for="inputFirstname"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Имя</label>
-                                <div class="col-lg-8 col-xs-offset-1 ">
-                                    <input required type="text" maxlength="20" class="form-control" id="inputFirstname"
-                                        placeholder="Ivan" autocomplete="off" pattern="[A-Za-zА-Яа-яЁё]+">
-                                    <span class="glyphicon form-control-feedback"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group has-feedback col-lg-6 col-xs-6">
-                                <label for="inputSecondname"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Фамилия</label>
-                                <div class="col-lg-8 col-xs-offset-1 ">
-                                    <input required type="text" maxlength="20" class="form-control" id="inputSecondname"
-                                        placeholder="Ivanov" autocomplete="off" pattern="[A-Za-zА-Яа-яЁё]+">
-                                    <span class="glyphicon form-control-feedback"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group has-feedback col-lg-6 col-xs-6">
-                                <label for="inputDataOne"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Заезд</label>
-                                <div class="col-lg-8 col-xs-offset-1 col-xs-11">
-                                    <input required type="date" class="form-control" id="inputDataOne"
-                                        autocomplete="off" min="" max="2020-12-31" onchange="setMinDateinputDataTwo()">
-                                    <span class="glyphicon form-control-feedback"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group has-feedback col-lg-6 col-xs-6">
-                                <label for="inputDataTwo"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Выезд</label>
-                                <div class="col-lg-8 col-xs-offset-1 col-xs-11">
-                                    <input required type="date" class="form-control" id="inputDataTwo"
-                                        autocomplete="off" min="" max="2020-12-31">
-                                    <span class="glyphicon form-control-feedback"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group has-feedback col-lg-6 col-xs-6">
-                                <label for="inputTel"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Телефон</label>
-                                <div class="col-lg-8 col-xs-offset-1">
-                                    <input type="tel" class="form-control" id="inputTel" name="inputTel"
-                                        placeholder="+375(00)000-00-00" autocomplete="off">
-                                    <span class="glyphicon form-control-feedback"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group has-feedback col-lg-6 col-xs-6">
-                                <label for="inputEmail"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Email</label>
-                                <div class="col-lg-8 col-xs-offset-1"
-                                    pattern='"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" +  "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"'>
-                                    <input required type="email" maxlength="30" class="form-control" id="inputEmail"
-                                        autocomplete="off" placeholder="Ivan.Ivanov123@mail.com">
-                                    <span class="glyphicon form-control-feedback"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group has-feedback col-lg-6 col-xs-6">
-                                <label for="inputRoomclass"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номера</label>
-                                <div class="col-lg-8 col-xs-offset-1">
-                                    <select class="form-control" id="inputRoomclass">
-                                        <option>Singleе</option>
-                                        <option>Twin</option>
-                                        <option>Double</option>
-                                        <option>Double Superior</option>
-                                        <option>De Lux</option>
-                                        <option>Suite</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group has-feedback col-lg-6 col-xs-6">
-                                <label for="inputRoom"
-                                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номер</label>
-                                <div class="col-lg-8 col-xs-offset-1">
-                                    <select class="form-control" id="inputRoom">
-                                        <option>Одноместное размещение</option>
-                                        <option>Двухместное размещение</option>
-                                        <option>Трехместное размещение</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="coment">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-                                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10">
-                                    <h3>Комментарий</h3>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-                                <textarea class="col-lg-6 col-md-6 col-sm-8 col-xs-10" name="Address of residence"
-                                    maxlength="2000" rows="5" id="commentForm"></textarea>
-                                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-                                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10"><button id="save" type="button"
-                                        class="btn btn-default">Забронировать</button></div>
-                                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="alert alert-success hidden" id="success-alert">
-                                        <div class="alert_text">
-                                            <h2>Успех</h2>
-                                            <div>Ваши данные были успешно отправлены.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="panel panel-default" style="background-color: #CCC">
+          <div class="panel-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <form id="form1" name="form1" method="post" action="" class="form-horizontal">
+              <h1>БРОНИРОВАНИЕ НОМЕРОВ</h1>
+    
+              <div class="row">
+                <div class="form-group has-feedback col-lg-6 col-xs-6 ">
+                  <label for="inputFirstname" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Имя</label>
+                  <div class="col-lg-8 col-xs-offset-1 ">
+                    <input required type="text" maxlength="20" class="form-control" id="inputFirstname" placeholder="Ivan"
+                      autocomplete="off" pattern="[A-Za-zА-Яа-яЁё]+">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
                 </div>
-            </div>
+    
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
+                  <label for="inputSecondname"
+                    class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Фамилия</label>
+                  <div class="col-lg-8 col-xs-offset-1 ">
+                    <input required type="text" maxlength="20" class="form-control" id="inputSecondname"
+                      placeholder="Ivanov" autocomplete="off" pattern="[A-Za-zА-Яа-яЁё]+">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
+                  <label for="inputDataOne" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Заезд</label>
+                  <div class="col-lg-8 col-xs-offset-1 col-xs-11">
+                    <input required type="date" class="form-control" id="inputDataOne" autocomplete="off" min=""
+                      max="2020-12-31" onchange="setMinDateinputDataTwo()">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
+                </div>
+    
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
+                  <label for="inputDataTwo" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Выезд</label>
+                  <div class="col-lg-8 col-xs-offset-1 col-xs-11">
+                    <input required type="date" class="form-control" id="inputDataTwo" autocomplete="off" min=""
+                      max="2020-12-31">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
+                  <label for="inputTel" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Телефон</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <input type="tel" class="form-control" id="inputTel" name="inputTel" placeholder="+375(00)000-00-00"
+                      autocomplete="off">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
+                </div>
+    
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
+                  <label for="inputEmail" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Email</label>
+                  <div class="col-lg-8 col-xs-offset-1" pattern='"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" +  "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"'>
+                    <input required type="email" maxlength="30" class="form-control" id="inputEmail" autocomplete="off" placeholder="Ivan.Ivanov123@mail.com">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
+                  <label for="inputRoomclass" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номера</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <select class="form-control" id="inputRoomclass">
+                      <option>Singleе</option>
+                      <option>Twin</option>
+                      <option>Double</option>
+                      <option>Double Superior</option>
+                      <option>De Lux</option>
+                      <option>Suite</option>
+                    </select>
+                  </div>
+                </div>
+    
+                <div class="form-group has-feedback col-lg-6 col-xs-6">
+                  <label for="inputRoom" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Номер</label>
+                  <div class="col-lg-8 col-xs-offset-1">
+                    <select class="form-control" id="inputRoom">
+                      <option>Одноместное размещение</option>
+                      <option>Двухместное размещение</option>
+                      <option>Трехместное размещение</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="coment">
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+                  <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10">
+                    <h3>Комментарий</h3>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+                  <textarea class="col-lg-6 col-md-6 col-sm-8 col-xs-10" name="Address of residence" maxlength="2000"
+                    rows="5" id="commentForm"></textarea>
+                  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+                </div>
+                <div class="row">
+    
+                  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+                  <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10"><button id="save" type="button"
+                      class="btn btn-default">Забронировать</button></div>
+                  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="alert alert-success hidden" id="success-alert">
+                      <div class="alert_text">
+                        <h2>Успех</h2>
+                        <div>Ваши данные были успешно отправлены.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
     <div class="btn-scrollUp" onmousedown="selectionScrollButton()" onmouseup="noselectionScrollButton()"
         onmouseout="noselectionScrollButton()">
