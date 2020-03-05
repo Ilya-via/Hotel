@@ -32,8 +32,7 @@
             <div class="form-group has-feedback col-lg-6 col-xs-6">
               <label for="inputDataOne" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Заезд</label>
               <div class="col-lg-8 col-xs-offset-1 col-xs-11">
-                <!-- Аттрибут min заполняется после открытия формы - текущая дата -->
-                <input required type="date" class="form-control" id="inputDataOne" autocomplete="off" min=""
+                <input required type="date" class="form-control" id="inputDataOne" autocomplete="off" min="2020-01-01"
                   max="2020-12-31" onchange="setMinDateinputDataTwo()">
                 <span class="glyphicon form-control-feedback"></span>
               </div>
@@ -42,7 +41,7 @@
             <div class="form-group has-feedback col-lg-6 col-xs-6">
               <label for="inputDataTwo" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Выезд</label>
               <div class="col-lg-8 col-xs-offset-1 col-xs-11">
-                <input required type="date" class="form-control" id="inputDataTwo" autocomplete="off" min=""
+                <input required type="date" class="form-control" id="inputDataTwo" autocomplete="off" min="2020-01-01"
                   max="2020-12-31">
                 <span class="glyphicon form-control-feedback"></span>
               </div>
@@ -62,7 +61,8 @@
             <div class="form-group has-feedback col-lg-6 col-xs-6">
               <label for="inputEmail" class="control-label col-lg-2 col-lg-offset-1 col-xs-offset-1">Email</label>
               <div class="col-lg-8 col-xs-offset-1">
-                <input required type="email" maxlength="30" class="form-control" id="inputEmail" autocomplete="off" placeholder="Ivan.Ivanov123@mail.com">
+                <input required type="email" maxlength="30" class="form-control" id="inputEmail" autocomplete="off"
+                  placeholder="Ivan.Ivanov123@mail.com">
                 <span class="glyphicon form-control-feedback"></span>
               </div>
             </div>
